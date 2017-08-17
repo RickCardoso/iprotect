@@ -1432,12 +1432,16 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-btn > .form-control-plaintext.btn,
 .input-group-sm > .input-group-btn > .form-control-plaintext.btnStd,
 .input-group-sm > .input-group-btn > .form-control-plaintext.navBtn,
-.input-group-sm > .input-group-btn > .form-control-plaintext.logBtn, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control,
+.input-group-sm > .input-group-btn > .form-control-plaintext.logBtn,
+.input-group-sm > .input-group-btn > .form-control-plaintext.portBtn,
+.input-group-sm > .input-group-btn > .form-control-plaintext.fooBtn, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control,
 .input-group-lg > .form-control-plaintext.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-plaintext.btn,
 .input-group-lg > .input-group-btn > .form-control-plaintext.btnStd,
 .input-group-lg > .input-group-btn > .form-control-plaintext.navBtn,
-.input-group-lg > .input-group-btn > .form-control-plaintext.logBtn {
+.input-group-lg > .input-group-btn > .form-control-plaintext.logBtn,
+.input-group-lg > .input-group-btn > .form-control-plaintext.portBtn,
+.input-group-lg > .input-group-btn > .form-control-plaintext.fooBtn {
   padding-right: 0;
   padding-left: 0; }
 
@@ -1446,7 +1450,9 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > .btnStd,
 .input-group-sm > .input-group-btn > .navBtn,
-.input-group-sm > .input-group-btn > .logBtn {
+.input-group-sm > .input-group-btn > .logBtn,
+.input-group-sm > .input-group-btn > .portBtn,
+.input-group-sm > .input-group-btn > .fooBtn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1457,7 +1463,9 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btnStd:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.navBtn:not([size]):not([multiple]),
-.input-group-sm > .input-group-btn > select.logBtn:not([size]):not([multiple]) {
+.input-group-sm > .input-group-btn > select.logBtn:not([size]):not([multiple]),
+.input-group-sm > .input-group-btn > select.portBtn:not([size]):not([multiple]),
+.input-group-sm > .input-group-btn > select.fooBtn:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px); }
 
 .form-control-lg, .input-group-lg > .form-control,
@@ -1465,7 +1473,9 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > .btnStd,
 .input-group-lg > .input-group-btn > .navBtn,
-.input-group-lg > .input-group-btn > .logBtn {
+.input-group-lg > .input-group-btn > .logBtn,
+.input-group-lg > .input-group-btn > .portBtn,
+.input-group-lg > .input-group-btn > .fooBtn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -1476,7 +1486,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btnStd:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.navBtn:not([size]):not([multiple]),
-.input-group-lg > .input-group-btn > select.logBtn:not([size]):not([multiple]) {
+.input-group-lg > .input-group-btn > select.logBtn:not([size]):not([multiple]),
+.input-group-lg > .input-group-btn > select.portBtn:not([size]):not([multiple]),
+.input-group-lg > .input-group-btn > select.fooBtn:not([size]):not([multiple]) {
   height: calc(2.3125rem + 2px); }
 
 .form-group {
@@ -1708,7 +1720,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
   .form-inline .has-feedback .form-control-feedback {
     top: 0; } }
-.btn, .btnStd, .navBtn, .logBtn {
+.btn, .btnStd, .navBtn, .logBtn, .portBtn, .fooBtn {
   display: inline-block;
   font-weight: normal;
   text-align: center;
@@ -1725,24 +1737,26 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-radius: 0.25rem;
   transition: all 0.15s ease-in-out; }
 
-.btn:focus, .btnStd:focus, .navBtn:focus, .logBtn:focus, .btn:hover, .btnStd:hover, .navBtn:hover, .logBtn:hover {
+.btn:focus, .btnStd:focus, .navBtn:focus, .logBtn:focus, .portBtn:focus, .fooBtn:focus, .btn:hover, .btnStd:hover, .navBtn:hover, .logBtn:hover, .portBtn:hover, .fooBtn:hover {
   text-decoration: none; }
 
-.btn:focus, .btnStd:focus, .navBtn:focus, .logBtn:focus, .btn.focus, .focus.btnStd, .focus.navBtn, .focus.logBtn {
+.btn:focus, .btnStd:focus, .navBtn:focus, .logBtn:focus, .portBtn:focus, .fooBtn:focus, .btn.focus, .focus.btnStd, .focus.navBtn, .focus.logBtn, .focus.portBtn, .focus.fooBtn {
   outline: 0;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); }
 
-.btn.disabled, .disabled.btnStd, .disabled.navBtn, .disabled.logBtn, .btn:disabled, .btnStd:disabled, .navBtn:disabled, .logBtn:disabled {
+.btn.disabled, .disabled.btnStd, .disabled.navBtn, .disabled.logBtn, .disabled.portBtn, .disabled.fooBtn, .btn:disabled, .btnStd:disabled, .navBtn:disabled, .logBtn:disabled, .portBtn:disabled, .fooBtn:disabled {
   opacity: .65; }
 
-.btn:active, .btnStd:active, .navBtn:active, .logBtn:active, .btn.active, .active.btnStd, .active.navBtn, .active.logBtn {
+.btn:active, .btnStd:active, .navBtn:active, .logBtn:active, .portBtn:active, .fooBtn:active, .btn.active, .active.btnStd, .active.navBtn, .active.logBtn, .active.portBtn, .active.fooBtn {
   background-image: none; }
 
-a.btn.disabled, a.disabled.btnStd, a.disabled.navBtn, a.disabled.logBtn,
+a.btn.disabled, a.disabled.btnStd, a.disabled.navBtn, a.disabled.logBtn, a.disabled.portBtn, a.disabled.fooBtn,
 fieldset[disabled] a.btn,
 fieldset[disabled] a.btnStd,
 fieldset[disabled] a.navBtn,
-fieldset[disabled] a.logBtn {
+fieldset[disabled] a.logBtn,
+fieldset[disabled] a.portBtn,
+fieldset[disabled] a.fooBtn {
   pointer-events: none; }
 
 .btn-primary {
@@ -2147,13 +2161,13 @@ fieldset[disabled] a.logBtn {
 .btn-link:disabled:focus, .btn-link:disabled:hover {
   text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btnStd, .btn-group-lg > .navBtn, .btn-group-lg > .logBtn {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btnStd, .btn-group-lg > .navBtn, .btn-group-lg > .logBtn, .btn-group-lg > .portBtn, .btn-group-lg > .fooBtn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btnStd, .btn-group-sm > .navBtn, .btn-group-sm > .logBtn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btnStd, .btn-group-sm > .navBtn, .btn-group-sm > .logBtn, .btn-group-sm > .portBtn, .btn-group-sm > .fooBtn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2247,7 +2261,7 @@ tbody.collapse.show {
   overflow: hidden;
   border-top: 1px solid #e9ecef; }
 
-.dropdown-item {
+.dropdown-item, .dropItem {
   display: block;
   width: 100%;
   padding: 0.25rem 1.5rem;
@@ -2259,17 +2273,17 @@ tbody.collapse.show {
   background: none;
   border: 0; }
 
-.dropdown-item:focus, .dropdown-item:hover {
+.dropdown-item:focus, .dropItem:focus, .dropdown-item:hover, .dropItem:hover {
   color: #16181b;
   text-decoration: none;
   background-color: #f8f9fa; }
 
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active, .active.dropItem, .dropdown-item:active, .dropItem:active {
   color: #fff;
   text-decoration: none;
   background-color: #007bff; }
 
-.dropdown-item.disabled, .dropdown-item:disabled {
+.dropdown-item.disabled, .disabled.dropItem, .dropdown-item:disabled, .dropItem:disabled {
   color: #868e96;
   background-color: transparent; }
 
@@ -2294,72 +2308,110 @@ tbody.collapse.show {
   display: inline-flex;
   vertical-align: middle; }
 
-.btn-group > .btn, .btn-group > .btnStd, .btn-group > .navBtn, .btn-group > .logBtn,
+.btn-group > .btn, .btn-group > .btnStd, .btn-group > .navBtn, .btn-group > .logBtn, .btn-group > .portBtn, .btn-group > .fooBtn,
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btnStd,
 .btn-group-vertical > .navBtn,
-.btn-group-vertical > .logBtn {
+.btn-group-vertical > .logBtn,
+.btn-group-vertical > .portBtn,
+.btn-group-vertical > .fooBtn {
   position: relative;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   margin-bottom: 0; }
 
-.btn-group > .btn:hover, .btn-group > .btnStd:hover, .btn-group > .navBtn:hover, .btn-group > .logBtn:hover,
+.btn-group > .btn:hover, .btn-group > .btnStd:hover, .btn-group > .navBtn:hover, .btn-group > .logBtn:hover, .btn-group > .portBtn:hover, .btn-group > .fooBtn:hover,
 .btn-group-vertical > .btn:hover,
 .btn-group-vertical > .btnStd:hover,
 .btn-group-vertical > .navBtn:hover,
-.btn-group-vertical > .logBtn:hover {
+.btn-group-vertical > .logBtn:hover,
+.btn-group-vertical > .portBtn:hover,
+.btn-group-vertical > .fooBtn:hover {
   z-index: 2; }
 
-.btn-group > .btn:focus, .btn-group > .btnStd:focus, .btn-group > .navBtn:focus, .btn-group > .logBtn:focus, .btn-group > .btn:active, .btn-group > .btnStd:active, .btn-group > .navBtn:active, .btn-group > .logBtn:active, .btn-group > .btn.active, .btn-group > .active.btnStd, .btn-group > .active.navBtn, .btn-group > .active.logBtn,
+.btn-group > .btn:focus, .btn-group > .btnStd:focus, .btn-group > .navBtn:focus, .btn-group > .logBtn:focus, .btn-group > .portBtn:focus, .btn-group > .fooBtn:focus, .btn-group > .btn:active, .btn-group > .btnStd:active, .btn-group > .navBtn:active, .btn-group > .logBtn:active, .btn-group > .portBtn:active, .btn-group > .fooBtn:active, .btn-group > .btn.active, .btn-group > .active.btnStd, .btn-group > .active.navBtn, .btn-group > .active.logBtn, .btn-group > .active.portBtn, .btn-group > .active.fooBtn,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .btnStd:focus,
 .btn-group-vertical > .navBtn:focus,
 .btn-group-vertical > .logBtn:focus,
+.btn-group-vertical > .portBtn:focus,
+.btn-group-vertical > .fooBtn:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .btnStd:active,
 .btn-group-vertical > .navBtn:active,
 .btn-group-vertical > .logBtn:active,
+.btn-group-vertical > .portBtn:active,
+.btn-group-vertical > .fooBtn:active,
 .btn-group-vertical > .btn.active,
 .btn-group-vertical > .active.btnStd,
 .btn-group-vertical > .active.navBtn,
-.btn-group-vertical > .active.logBtn {
+.btn-group-vertical > .active.logBtn,
+.btn-group-vertical > .active.portBtn,
+.btn-group-vertical > .active.fooBtn {
   z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group .btnStd + .btn, .btn-group .navBtn + .btn, .btn-group .logBtn + .btn, .btn-group .btn + .btnStd, .btn-group .btnStd + .btnStd, .btn-group .navBtn + .btnStd, .btn-group .logBtn + .btnStd, .btn-group .btn + .navBtn, .btn-group .btnStd + .navBtn, .btn-group .navBtn + .navBtn, .btn-group .logBtn + .navBtn, .btn-group .btn + .logBtn, .btn-group .btnStd + .logBtn, .btn-group .navBtn + .logBtn, .btn-group .logBtn + .logBtn,
+.btn-group .btn + .btn, .btn-group .btnStd + .btn, .btn-group .navBtn + .btn, .btn-group .logBtn + .btn, .btn-group .portBtn + .btn, .btn-group .fooBtn + .btn, .btn-group .btn + .btnStd, .btn-group .btnStd + .btnStd, .btn-group .navBtn + .btnStd, .btn-group .logBtn + .btnStd, .btn-group .portBtn + .btnStd, .btn-group .fooBtn + .btnStd, .btn-group .btn + .navBtn, .btn-group .btnStd + .navBtn, .btn-group .navBtn + .navBtn, .btn-group .logBtn + .navBtn, .btn-group .portBtn + .navBtn, .btn-group .fooBtn + .navBtn, .btn-group .btn + .logBtn, .btn-group .btnStd + .logBtn, .btn-group .navBtn + .logBtn, .btn-group .logBtn + .logBtn, .btn-group .portBtn + .logBtn, .btn-group .fooBtn + .logBtn, .btn-group .btn + .portBtn, .btn-group .btnStd + .portBtn, .btn-group .navBtn + .portBtn, .btn-group .logBtn + .portBtn, .btn-group .portBtn + .portBtn, .btn-group .fooBtn + .portBtn, .btn-group .btn + .fooBtn, .btn-group .btnStd + .fooBtn, .btn-group .navBtn + .fooBtn, .btn-group .logBtn + .fooBtn, .btn-group .portBtn + .fooBtn, .btn-group .fooBtn + .fooBtn,
 .btn-group .btn + .btn-group,
 .btn-group .btnStd + .btn-group,
 .btn-group .navBtn + .btn-group,
 .btn-group .logBtn + .btn-group,
+.btn-group .portBtn + .btn-group,
+.btn-group .fooBtn + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .btnStd,
 .btn-group .btn-group + .navBtn,
 .btn-group .btn-group + .logBtn,
+.btn-group .btn-group + .portBtn,
+.btn-group .btn-group + .fooBtn,
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
 .btn-group-vertical .btnStd + .btn,
 .btn-group-vertical .navBtn + .btn,
 .btn-group-vertical .logBtn + .btn,
+.btn-group-vertical .portBtn + .btn,
+.btn-group-vertical .fooBtn + .btn,
 .btn-group-vertical .btn + .btnStd,
 .btn-group-vertical .btnStd + .btnStd,
 .btn-group-vertical .navBtn + .btnStd,
 .btn-group-vertical .logBtn + .btnStd,
+.btn-group-vertical .portBtn + .btnStd,
+.btn-group-vertical .fooBtn + .btnStd,
 .btn-group-vertical .btn + .navBtn,
 .btn-group-vertical .btnStd + .navBtn,
 .btn-group-vertical .navBtn + .navBtn,
 .btn-group-vertical .logBtn + .navBtn,
+.btn-group-vertical .portBtn + .navBtn,
+.btn-group-vertical .fooBtn + .navBtn,
 .btn-group-vertical .btn + .logBtn,
 .btn-group-vertical .btnStd + .logBtn,
 .btn-group-vertical .navBtn + .logBtn,
 .btn-group-vertical .logBtn + .logBtn,
+.btn-group-vertical .portBtn + .logBtn,
+.btn-group-vertical .fooBtn + .logBtn,
+.btn-group-vertical .btn + .portBtn,
+.btn-group-vertical .btnStd + .portBtn,
+.btn-group-vertical .navBtn + .portBtn,
+.btn-group-vertical .logBtn + .portBtn,
+.btn-group-vertical .portBtn + .portBtn,
+.btn-group-vertical .fooBtn + .portBtn,
+.btn-group-vertical .btn + .fooBtn,
+.btn-group-vertical .btnStd + .fooBtn,
+.btn-group-vertical .navBtn + .fooBtn,
+.btn-group-vertical .logBtn + .fooBtn,
+.btn-group-vertical .portBtn + .fooBtn,
+.btn-group-vertical .fooBtn + .fooBtn,
 .btn-group-vertical .btn + .btn-group,
 .btn-group-vertical .btnStd + .btn-group,
 .btn-group-vertical .navBtn + .btn-group,
 .btn-group-vertical .logBtn + .btn-group,
+.btn-group-vertical .portBtn + .btn-group,
+.btn-group-vertical .fooBtn + .btn-group,
 .btn-group-vertical .btn-group + .btn,
 .btn-group-vertical .btn-group + .btnStd,
 .btn-group-vertical .btn-group + .navBtn,
 .btn-group-vertical .btn-group + .logBtn,
+.btn-group-vertical .btn-group + .portBtn,
+.btn-group-vertical .btn-group + .fooBtn,
 .btn-group-vertical .btn-group + .btn-group {
   margin-left: -1px; }
 
@@ -2374,17 +2426,17 @@ tbody.collapse.show {
 .btn-toolbar .input-group {
   width: auto; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btnStd:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .navBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .logBtn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btnStd:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .navBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .logBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .portBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .fooBtn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .btn-group > .btnStd:first-child, .btn-group > .navBtn:first-child, .btn-group > .logBtn:first-child {
+.btn-group > .btn:first-child, .btn-group > .btnStd:first-child, .btn-group > .navBtn:first-child, .btn-group > .logBtn:first-child, .btn-group > .portBtn:first-child, .btn-group > .fooBtn:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btnStd:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .navBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .logBtn:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btnStd:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .navBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .logBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .portBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .fooBtn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > .btnStd:last-child:not(:first-child), .btn-group > .navBtn:last-child:not(:first-child), .btn-group > .logBtn:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .btnStd:last-child:not(:first-child), .btn-group > .navBtn:last-child:not(:first-child), .btn-group > .logBtn:last-child:not(:first-child), .btn-group > .portBtn:last-child:not(:first-child), .btn-group > .fooBtn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -2392,30 +2444,30 @@ tbody.collapse.show {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btnStd, .btn-group > .btn-group:not(:first-child):not(:last-child) > .navBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .logBtn {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btnStd, .btn-group > .btn-group:not(:first-child):not(:last-child) > .navBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .logBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .portBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .fooBtn {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btnStd:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .navBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .logBtn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btnStd:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .navBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .logBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .portBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .fooBtn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btnStd:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .navBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .logBtn:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btnStd:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .navBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .logBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .portBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .fooBtn:first-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn + .dropdown-toggle-split, .btnStd + .dropdown-toggle-split, .navBtn + .dropdown-toggle-split, .logBtn + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .btnStd + .dropdown-toggle-split, .navBtn + .dropdown-toggle-split, .logBtn + .dropdown-toggle-split, .portBtn + .dropdown-toggle-split, .fooBtn + .dropdown-toggle-split {
   padding-right: 0.5625rem;
   padding-left: 0.5625rem; }
 
-.btn + .dropdown-toggle-split::after, .btnStd + .dropdown-toggle-split::after, .navBtn + .dropdown-toggle-split::after, .logBtn + .dropdown-toggle-split::after {
+.btn + .dropdown-toggle-split::after, .btnStd + .dropdown-toggle-split::after, .navBtn + .dropdown-toggle-split::after, .logBtn + .dropdown-toggle-split::after, .portBtn + .dropdown-toggle-split::after, .fooBtn + .dropdown-toggle-split::after {
   margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .btnStd + .dropdown-toggle-split, .btn-group-sm > .navBtn + .dropdown-toggle-split, .btn-group-sm > .logBtn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .btnStd + .dropdown-toggle-split, .btn-group-sm > .navBtn + .dropdown-toggle-split, .btn-group-sm > .logBtn + .dropdown-toggle-split, .btn-group-sm > .portBtn + .dropdown-toggle-split, .btn-group-sm > .fooBtn + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .btnStd + .dropdown-toggle-split, .btn-group-lg > .navBtn + .dropdown-toggle-split, .btn-group-lg > .logBtn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .btnStd + .dropdown-toggle-split, .btn-group-lg > .navBtn + .dropdown-toggle-split, .btn-group-lg > .logBtn + .dropdown-toggle-split, .btn-group-lg > .portBtn + .dropdown-toggle-split, .btn-group-lg > .fooBtn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2429,59 +2481,69 @@ tbody.collapse.show {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.btn-group-vertical .btn, .btn-group-vertical .btnStd, .btn-group-vertical .navBtn, .btn-group-vertical .logBtn,
+.btn-group-vertical .btn, .btn-group-vertical .btnStd, .btn-group-vertical .navBtn, .btn-group-vertical .logBtn, .btn-group-vertical .portBtn, .btn-group-vertical .fooBtn,
 .btn-group-vertical .btn-group {
   width: 100%; }
 
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btnStd + .btn, .btn-group-vertical > .navBtn + .btn, .btn-group-vertical > .logBtn + .btn, .btn-group-vertical > .btn + .btnStd, .btn-group-vertical > .btnStd + .btnStd, .btn-group-vertical > .navBtn + .btnStd, .btn-group-vertical > .logBtn + .btnStd, .btn-group-vertical > .btn + .navBtn, .btn-group-vertical > .btnStd + .navBtn, .btn-group-vertical > .navBtn + .navBtn, .btn-group-vertical > .logBtn + .navBtn, .btn-group-vertical > .btn + .logBtn, .btn-group-vertical > .btnStd + .logBtn, .btn-group-vertical > .navBtn + .logBtn, .btn-group-vertical > .logBtn + .logBtn,
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btnStd + .btn, .btn-group-vertical > .navBtn + .btn, .btn-group-vertical > .logBtn + .btn, .btn-group-vertical > .portBtn + .btn, .btn-group-vertical > .fooBtn + .btn, .btn-group-vertical > .btn + .btnStd, .btn-group-vertical > .btnStd + .btnStd, .btn-group-vertical > .navBtn + .btnStd, .btn-group-vertical > .logBtn + .btnStd, .btn-group-vertical > .portBtn + .btnStd, .btn-group-vertical > .fooBtn + .btnStd, .btn-group-vertical > .btn + .navBtn, .btn-group-vertical > .btnStd + .navBtn, .btn-group-vertical > .navBtn + .navBtn, .btn-group-vertical > .logBtn + .navBtn, .btn-group-vertical > .portBtn + .navBtn, .btn-group-vertical > .fooBtn + .navBtn, .btn-group-vertical > .btn + .logBtn, .btn-group-vertical > .btnStd + .logBtn, .btn-group-vertical > .navBtn + .logBtn, .btn-group-vertical > .logBtn + .logBtn, .btn-group-vertical > .portBtn + .logBtn, .btn-group-vertical > .fooBtn + .logBtn, .btn-group-vertical > .btn + .portBtn, .btn-group-vertical > .btnStd + .portBtn, .btn-group-vertical > .navBtn + .portBtn, .btn-group-vertical > .logBtn + .portBtn, .btn-group-vertical > .portBtn + .portBtn, .btn-group-vertical > .fooBtn + .portBtn, .btn-group-vertical > .btn + .fooBtn, .btn-group-vertical > .btnStd + .fooBtn, .btn-group-vertical > .navBtn + .fooBtn, .btn-group-vertical > .logBtn + .fooBtn, .btn-group-vertical > .portBtn + .fooBtn, .btn-group-vertical > .fooBtn + .fooBtn,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .btnStd + .btn-group,
 .btn-group-vertical > .navBtn + .btn-group,
 .btn-group-vertical > .logBtn + .btn-group,
+.btn-group-vertical > .portBtn + .btn-group,
+.btn-group-vertical > .fooBtn + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .btnStd,
 .btn-group-vertical > .btn-group + .navBtn,
 .btn-group-vertical > .btn-group + .logBtn,
+.btn-group-vertical > .btn-group + .portBtn,
+.btn-group-vertical > .btn-group + .fooBtn,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btnStd:not(:first-child):not(:last-child), .btn-group-vertical > .navBtn:not(:first-child):not(:last-child), .btn-group-vertical > .logBtn:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btnStd:not(:first-child):not(:last-child), .btn-group-vertical > .navBtn:not(:first-child):not(:last-child), .btn-group-vertical > .logBtn:not(:first-child):not(:last-child), .btn-group-vertical > .portBtn:not(:first-child):not(:last-child), .btn-group-vertical > .fooBtn:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btnStd:first-child:not(:last-child), .btn-group-vertical > .navBtn:first-child:not(:last-child), .btn-group-vertical > .logBtn:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btnStd:first-child:not(:last-child), .btn-group-vertical > .navBtn:first-child:not(:last-child), .btn-group-vertical > .logBtn:first-child:not(:last-child), .btn-group-vertical > .portBtn:first-child:not(:last-child), .btn-group-vertical > .fooBtn:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btnStd:last-child:not(:first-child), .btn-group-vertical > .navBtn:last-child:not(:first-child), .btn-group-vertical > .logBtn:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btnStd:last-child:not(:first-child), .btn-group-vertical > .navBtn:last-child:not(:first-child), .btn-group-vertical > .logBtn:last-child:not(:first-child), .btn-group-vertical > .portBtn:last-child:not(:first-child), .btn-group-vertical > .fooBtn:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btnStd, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .navBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .logBtn {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btnStd, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .navBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .logBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .portBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .fooBtn {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btnStd:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .navBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .logBtn:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btnStd:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .navBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .logBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .portBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .fooBtn:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btnStd:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .navBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .logBtn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btnStd:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .navBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .logBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .portBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .fooBtn:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btnStd input[type="radio"], [data-toggle="buttons"] > .navBtn input[type="radio"], [data-toggle="buttons"] > .logBtn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btnStd input[type="radio"], [data-toggle="buttons"] > .navBtn input[type="radio"], [data-toggle="buttons"] > .logBtn input[type="radio"], [data-toggle="buttons"] > .portBtn input[type="radio"], [data-toggle="buttons"] > .fooBtn input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btnStd input[type="checkbox"],
 [data-toggle="buttons"] > .navBtn input[type="checkbox"],
 [data-toggle="buttons"] > .logBtn input[type="checkbox"],
+[data-toggle="buttons"] > .portBtn input[type="checkbox"],
+[data-toggle="buttons"] > .fooBtn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btnStd input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .navBtn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .logBtn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .portBtn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .fooBtn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btnStd input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .navBtn input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .logBtn input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > .logBtn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .portBtn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .fooBtn input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none; }
@@ -2538,7 +2600,9 @@ tbody.collapse.show {
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 .input-group-sm > .input-group-btn > .input-group-addon.btnStd,
 .input-group-sm > .input-group-btn > .input-group-addon.navBtn,
-.input-group-sm > .input-group-btn > .input-group-addon.logBtn {
+.input-group-sm > .input-group-btn > .input-group-addon.logBtn,
+.input-group-sm > .input-group-btn > .input-group-addon.portBtn,
+.input-group-sm > .input-group-btn > .input-group-addon.fooBtn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -2548,7 +2612,9 @@ tbody.collapse.show {
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 .input-group-lg > .input-group-btn > .input-group-addon.btnStd,
 .input-group-lg > .input-group-btn > .input-group-addon.navBtn,
-.input-group-lg > .input-group-btn > .input-group-addon.logBtn {
+.input-group-lg > .input-group-btn > .input-group-addon.logBtn,
+.input-group-lg > .input-group-btn > .input-group-addon.portBtn,
+.input-group-lg > .input-group-btn > .input-group-addon.fooBtn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
@@ -2563,19 +2629,27 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > .btnStd,
 .input-group-btn:not(:last-child) > .navBtn,
 .input-group-btn:not(:last-child) > .logBtn,
+.input-group-btn:not(:last-child) > .portBtn,
+.input-group-btn:not(:last-child) > .fooBtn,
 .input-group-btn:not(:last-child) > .btn-group > .btn,
 .input-group-btn:not(:last-child) > .btn-group > .btnStd,
 .input-group-btn:not(:last-child) > .btn-group > .navBtn,
 .input-group-btn:not(:last-child) > .btn-group > .logBtn,
+.input-group-btn:not(:last-child) > .btn-group > .portBtn,
+.input-group-btn:not(:last-child) > .btn-group > .fooBtn,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btnStd:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .navBtn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .logBtn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .portBtn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .fooBtn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btnStd,
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .navBtn,
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .logBtn {
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .logBtn,
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .portBtn,
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .fooBtn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
@@ -2588,19 +2662,27 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > .btnStd,
 .input-group-btn:not(:first-child) > .navBtn,
 .input-group-btn:not(:first-child) > .logBtn,
+.input-group-btn:not(:first-child) > .portBtn,
+.input-group-btn:not(:first-child) > .fooBtn,
 .input-group-btn:not(:first-child) > .btn-group > .btn,
 .input-group-btn:not(:first-child) > .btn-group > .btnStd,
 .input-group-btn:not(:first-child) > .btn-group > .navBtn,
 .input-group-btn:not(:first-child) > .btn-group > .logBtn,
+.input-group-btn:not(:first-child) > .btn-group > .portBtn,
+.input-group-btn:not(:first-child) > .btn-group > .fooBtn,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child),
 .input-group-btn:not(:last-child) > .btnStd:not(:first-child),
 .input-group-btn:not(:last-child) > .navBtn:not(:first-child),
 .input-group-btn:not(:last-child) > .logBtn:not(:first-child),
+.input-group-btn:not(:last-child) > .portBtn:not(:first-child),
+.input-group-btn:not(:last-child) > .fooBtn:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btnStd,
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .navBtn,
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .logBtn {
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .logBtn,
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .portBtn,
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .fooBtn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2612,25 +2694,25 @@ tbody.collapse.show {
   font-size: 0;
   white-space: nowrap; }
 
-.input-group-btn > .btn, .input-group-btn > .btnStd, .input-group-btn > .navBtn, .input-group-btn > .logBtn {
+.input-group-btn > .btn, .input-group-btn > .btnStd, .input-group-btn > .navBtn, .input-group-btn > .logBtn, .input-group-btn > .portBtn, .input-group-btn > .fooBtn {
   position: relative; }
 
-.input-group-btn > .btn + .btn, .input-group-btn > .btnStd + .btn, .input-group-btn > .navBtn + .btn, .input-group-btn > .logBtn + .btn, .input-group-btn > .btn + .btnStd, .input-group-btn > .btnStd + .btnStd, .input-group-btn > .navBtn + .btnStd, .input-group-btn > .logBtn + .btnStd, .input-group-btn > .btn + .navBtn, .input-group-btn > .btnStd + .navBtn, .input-group-btn > .navBtn + .navBtn, .input-group-btn > .logBtn + .navBtn, .input-group-btn > .btn + .logBtn, .input-group-btn > .btnStd + .logBtn, .input-group-btn > .navBtn + .logBtn, .input-group-btn > .logBtn + .logBtn {
+.input-group-btn > .btn + .btn, .input-group-btn > .btnStd + .btn, .input-group-btn > .navBtn + .btn, .input-group-btn > .logBtn + .btn, .input-group-btn > .portBtn + .btn, .input-group-btn > .fooBtn + .btn, .input-group-btn > .btn + .btnStd, .input-group-btn > .btnStd + .btnStd, .input-group-btn > .navBtn + .btnStd, .input-group-btn > .logBtn + .btnStd, .input-group-btn > .portBtn + .btnStd, .input-group-btn > .fooBtn + .btnStd, .input-group-btn > .btn + .navBtn, .input-group-btn > .btnStd + .navBtn, .input-group-btn > .navBtn + .navBtn, .input-group-btn > .logBtn + .navBtn, .input-group-btn > .portBtn + .navBtn, .input-group-btn > .fooBtn + .navBtn, .input-group-btn > .btn + .logBtn, .input-group-btn > .btnStd + .logBtn, .input-group-btn > .navBtn + .logBtn, .input-group-btn > .logBtn + .logBtn, .input-group-btn > .portBtn + .logBtn, .input-group-btn > .fooBtn + .logBtn, .input-group-btn > .btn + .portBtn, .input-group-btn > .btnStd + .portBtn, .input-group-btn > .navBtn + .portBtn, .input-group-btn > .logBtn + .portBtn, .input-group-btn > .portBtn + .portBtn, .input-group-btn > .fooBtn + .portBtn, .input-group-btn > .btn + .fooBtn, .input-group-btn > .btnStd + .fooBtn, .input-group-btn > .navBtn + .fooBtn, .input-group-btn > .logBtn + .fooBtn, .input-group-btn > .portBtn + .fooBtn, .input-group-btn > .fooBtn + .fooBtn {
   margin-left: -1px; }
 
-.input-group-btn > .btn:focus, .input-group-btn > .btnStd:focus, .input-group-btn > .navBtn:focus, .input-group-btn > .logBtn:focus, .input-group-btn > .btn:active, .input-group-btn > .btnStd:active, .input-group-btn > .navBtn:active, .input-group-btn > .logBtn:active, .input-group-btn > .btn:hover, .input-group-btn > .btnStd:hover, .input-group-btn > .navBtn:hover, .input-group-btn > .logBtn:hover {
+.input-group-btn > .btn:focus, .input-group-btn > .btnStd:focus, .input-group-btn > .navBtn:focus, .input-group-btn > .logBtn:focus, .input-group-btn > .portBtn:focus, .input-group-btn > .fooBtn:focus, .input-group-btn > .btn:active, .input-group-btn > .btnStd:active, .input-group-btn > .navBtn:active, .input-group-btn > .logBtn:active, .input-group-btn > .portBtn:active, .input-group-btn > .fooBtn:active, .input-group-btn > .btn:hover, .input-group-btn > .btnStd:hover, .input-group-btn > .navBtn:hover, .input-group-btn > .logBtn:hover, .input-group-btn > .portBtn:hover, .input-group-btn > .fooBtn:hover {
   z-index: 3; }
 
-.input-group-btn:not(:last-child) > .btn, .input-group-btn:not(:last-child) > .btnStd, .input-group-btn:not(:last-child) > .navBtn, .input-group-btn:not(:last-child) > .logBtn,
+.input-group-btn:not(:last-child) > .btn, .input-group-btn:not(:last-child) > .btnStd, .input-group-btn:not(:last-child) > .navBtn, .input-group-btn:not(:last-child) > .logBtn, .input-group-btn:not(:last-child) > .portBtn, .input-group-btn:not(:last-child) > .fooBtn,
 .input-group-btn:not(:last-child) > .btn-group {
   margin-right: -1px; }
 
-.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btnStd, .input-group-btn:not(:first-child) > .navBtn, .input-group-btn:not(:first-child) > .logBtn,
+.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btnStd, .input-group-btn:not(:first-child) > .navBtn, .input-group-btn:not(:first-child) > .logBtn, .input-group-btn:not(:first-child) > .portBtn, .input-group-btn:not(:first-child) > .fooBtn,
 .input-group-btn:not(:first-child) > .btn-group {
   z-index: 2;
   margin-left: -1px; }
 
-.input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > .btnStd:focus, .input-group-btn:not(:first-child) > .navBtn:focus, .input-group-btn:not(:first-child) > .logBtn:focus, .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > .btnStd:active, .input-group-btn:not(:first-child) > .navBtn:active, .input-group-btn:not(:first-child) > .logBtn:active, .input-group-btn:not(:first-child) > .btn:hover, .input-group-btn:not(:first-child) > .btnStd:hover, .input-group-btn:not(:first-child) > .navBtn:hover, .input-group-btn:not(:first-child) > .logBtn:hover,
+.input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > .btnStd:focus, .input-group-btn:not(:first-child) > .navBtn:focus, .input-group-btn:not(:first-child) > .logBtn:focus, .input-group-btn:not(:first-child) > .portBtn:focus, .input-group-btn:not(:first-child) > .fooBtn:focus, .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > .btnStd:active, .input-group-btn:not(:first-child) > .navBtn:active, .input-group-btn:not(:first-child) > .logBtn:active, .input-group-btn:not(:first-child) > .portBtn:active, .input-group-btn:not(:first-child) > .fooBtn:active, .input-group-btn:not(:first-child) > .btn:hover, .input-group-btn:not(:first-child) > .btnStd:hover, .input-group-btn:not(:first-child) > .navBtn:hover, .input-group-btn:not(:first-child) > .logBtn:hover, .input-group-btn:not(:first-child) > .portBtn:hover, .input-group-btn:not(:first-child) > .fooBtn:hover,
 .input-group-btn:not(:first-child) > .btn-group:focus,
 .input-group-btn:not(:first-child) > .btn-group:active,
 .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -3512,7 +3594,7 @@ tbody.collapse.show {
 .badge:empty {
   display: none; }
 
-.btn .badge, .btnStd .badge, .navBtn .badge, .logBtn .badge {
+.btn .badge, .btnStd .badge, .navBtn .badge, .logBtn .badge, .portBtn .badge, .fooBtn .badge {
   position: relative;
   top: -1px; }
 
@@ -7199,46 +7281,65 @@ a.text-dark:focus, a.text-dark:hover {
 body {
   text-align: center;
   font-family: "Nunito", sans-serif;
+  letter-spacing: 0.12rem;
   color: #00a55e;
-  background: #191919;
+  background: #171817;
   padding-left: 160px;
   padding-right: 160px; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1300px) {
     body {
       padding-left: 5vw;
       padding-right: 5vw; } }
-
-.btnStd, .navBtn, .logBtn {
-  text-transform: uppercase;
-  font-weight: 600; }
-
-.navBtn, .logBtn {
-  background: transparent;
-  color: #777;
-  border: 2px solid transparent;
-  padding: .3rem .8rem;
-  margin: auto .4rem; }
-  .navBtn:hover, .logBtn:hover, .navBtn:focus, .logBtn:focus, .navBtn.active, .active.logBtn {
-    color: #00a55e;
-    border-color: #00a55e; }
   @media screen and (max-width: 991px) {
-    .navBtn, .logBtn {
+    body {
+      padding-left: 0;
+      padding-right: 0; } }
+
+.btnStd, .navBtn, .logBtn, .portBtn, .fooBtn {
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.navBtn, .logBtn, .portBtn {
+  background: transparent;
+  color: #6c6c6c;
+  border: 2px solid transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: .4rem .7rem;
+  margin: auto .4rem; }
+  .navBtn:hover, .logBtn:hover, .portBtn:hover, .navBtn:focus, .logBtn:focus, .portBtn:focus, .navBtn.active, .active.logBtn, .active.portBtn {
+    color: #00a55e;
+    border-color: #00a55e;
+    -webkit-box-shadow: inset 0 -1px 0 0 #d6e9e1;
+    -moz-box-shadow: inset 0 -1px 0 0 #d6e9e1;
+    -ms-box-shadow: inset 0 -1px 0 0 #d6e9e1;
+    -o-box-shadow: inset 0 -1px 0 0 #d6e9e1;
+    box-shadow: inset 0 -1px 0 0 #d6e9e1; }
+  @media screen and (max-width: 991px) {
+    .navBtn, .logBtn, .portBtn {
       margin: .2rem auto; } }
 
 #appNavBar {
   padding: 0;
-  -webkit-box-shadow: 0 2px 1px #777;
-  -moz-box-shadow: 0 2px 1px #777;
-  -ms-box-shadow: 0 2px 1px #777;
-  -o-box-shadow: 0 2px 1px #777;
-  box-shadow: 0 2px 1px #777; }
+  -webkit-box-shadow: 0 2px 1px 0 #777;
+  -moz-box-shadow: 0 2px 1px 0 #777;
+  -ms-box-shadow: 0 2px 1px 0 #777;
+  -o-box-shadow: 0 2px 1px 0 #777;
+  box-shadow: 0 2px 1px 0 #777; }
 
 .logo,
 #navToggler {
-  margin: 1rem 2rem; }
+  margin: 1rem 30px; }
+  @media screen and (max-width: 414px) {
+    .logo,
+    #navToggler {
+      margin: 1rem; } }
 
 .loginContainer {
-  background: #e3e3e3;
+  background: #eee;
   margin: 0;
   padding: 1rem 3.5rem; }
 
@@ -7246,14 +7347,232 @@ body {
   background: #00a55e;
   color: #fff;
   border: 2px solid #00a55e;
-  padding: .3rem .8rem;
-  -webkit-box-shadow: 0 2px 0 #009753;
-  -moz-box-shadow: 0 2px 0 #009753;
-  -ms-box-shadow: 0 2px 0 #009753;
-  -o-box-shadow: 0 2px 0 #009753;
-  box-shadow: 0 2px 0 #009753; }
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  -webkit-box-shadow: inset 0 -1px 0 0 #009753;
+  -moz-box-shadow: inset 0 -1px 0 0 #009753;
+  -ms-box-shadow: inset 0 -1px 0 0 #009753;
+  -o-box-shadow: inset 0 -1px 0 0 #009753;
+  box-shadow: inset 0 -1px 0 0 #009753; }
   .logBtn:hover, .logBtn:focus {
     background: #fff;
     color: #00a55e; }
+
+.appMain {
+  background: #ededed;
+  padding: 17px;
+  margin: 0; }
+  @media screen and (max-width: 991px) {
+    .appMain {
+      padding: 7px; } }
+  .appMain * {
+    padding: 0;
+    margin: 0; }
+  .appMain .appContent {
+    margin-top: 6px;
+    margin-bottom: 6px; }
+
+.titleStd, .colTitle, .cardHead, .cardHeadGreen {
+  text-transform: uppercase;
+  color: #777;
+  font-weight: 800;
+  letter-spacing: 0.02rem;
+  text-align: left; }
+
+.colTitle {
+  font-size: 1.1rem;
+  margin: 13px 13px 17px 39px; }
+
+.flexContainer {
+  display: flex;
+  flex-direction: column; }
+
+.flexContainer > .flexBox {
+  flex: 1;
+  margin-top: 0; }
+
+.cardContainer {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 2px #d6d6d6;
+  -moz-box-shadow: 0 2px 5px 2px #d6d6d6;
+  -ms-box-shadow: 0 2px 5px 2px #d6d6d6;
+  -o-box-shadow: 0 2px 5px 2px #d6d6d6;
+  box-shadow: 0 2px 5px 2px #d6d6d6;
+  padding: 0;
+  margin: 7px 13px; }
+
+.cardHead, .cardHeadGreen {
+  text-transform: capitalize;
+  font-weight: 700;
+  padding: 15px 0 15px 26px; }
+
+.cardHeadGreen {
+  -webkit-box-shadow: inset 3px 0 0 0 #00a55e;
+  -moz-box-shadow: inset 3px 0 0 0 #00a55e;
+  -ms-box-shadow: inset 3px 0 0 0 #00a55e;
+  -o-box-shadow: inset 3px 0 0 0 #00a55e;
+  box-shadow: inset 3px 0 0 0 #00a55e; }
+  .cardHeadGreen .fa {
+    color: #cfcfcf;
+    font-size: .8rem;
+    vertical-align: middle; }
+
+.cardContent {
+  position: relative;
+  padding: 0 21px 21px;
+  text-align: left; }
+
+.inputGroupStd {
+  margin: 0 5px 9px 0; }
+
+.inputStd, .dollarLabel, .inputText, .dropDown, .range-slider {
+  background: transparent;
+  padding: 2px 9px 9px;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
+  font-weight: 900;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0; }
+
+.dollarLabel {
+  padding-left: 4px;
+  padding-right: 4px;
+  font-weight: 700;
+  color: #b2b2b2; }
+
+.inputText {
+  border-bottom: 2px solid #b2b2b2;
+  color: #565353; }
+  .inputText:hover, .inputText:focus, .inputText:active {
+    border-color: transparent;
+    border-bottom: 2px solid #00a55e; }
+
+.dropDownGroup {
+  margin-left: 15px; }
+  .dropDownGroup.show .dropDown {
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #00a55e; }
+
+.dropDown {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #565353;
+  border-bottom: 2px solid #b2b2b2; }
+  .dropDown:hover, .dropDown:focus, .dropDown:active {
+    border-color: transparent;
+    border-bottom: 2px solid #00a55e;
+    background: transparent;
+    color: #00a55e; }
+
+.dropItem {
+  padding: 3px 7px;
+  text-transform: uppercase; }
+  .dropItem:hover, .dropItem:focus {
+    color: #00a55e; }
+
+.cardFlexIcon {
+  position: absolute;
+  bottom: 4px;
+  right: 4px; }
+
+/* Range by Sean Stopnik */
+.range-slider {
+  padding-left: 4px;
+  padding-right: 4px; }
+
+.range-slider {
+  width: 100%; }
+
+.range-slider__range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: #e0dfdf;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  z-index: 2; }
+  .range-slider__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    border: 3px solid #007744;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .range-slider__range::-webkit-slider-thumb:hover, .range-slider__range::-webkit-slider-thumb:active {
+      border-color: #00a55e; }
+  .range-slider__range::-moz-range-thumb {
+    width: 17px;
+    height: 17px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    transition: background .15s ease-in-out; }
+    .range-slider__range::-moz-range-thumb:hover, .range-slider__range::-moz-range-thumb:active {
+      background: #00a55e; }
+
+.range-slider__value {
+  position: relative;
+  top: -42px;
+  left: 245px;
+  width: 60px;
+  color: #a1a1a1;
+  font-size: .8rem;
+  letter-spacing: normal;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: left;
+  border-radius: 16px 4px 0 0;
+  background: #eaeaea;
+  padding: 5px 10px;
+  z-index: 1; }
+
+::-moz-range-track {
+  background: #e0dfdf;
+  border: 0; }
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0; }
+
+/* -- */
+.portBtn {
+  font-weight: 800;
+  border: 2px solid #6c6c6c;
+  padding: 7px 32px; }
+
+.fooBtn {
+  color: #2d2e2d;
+  margin: 1rem 0.3rem; }
+  .fooBtn:hover, .fooBtn:active {
+    color: #00a55e; }
+  @media screen and (max-width: 414px) {
+    .fooBtn {
+      margin-top: .6rem;
+      margin-bottom: -.4rem;
+      padding-top: .5rem;
+      padding-bottom: .5rem; } }
+
+.company {
+  color: #2d2e2d;
+  display: inline-block;
+  font-weight: 700;
+  margin: 1rem 0.3rem; }
+  @media screen and (max-width: 414px) {
+    .company {
+      display: block; } }
 
 /*# sourceMappingURL=style.css.map */
