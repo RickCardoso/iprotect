@@ -1,18 +1,19 @@
 @import 'fonts';
-@import 'bootstrap';
+@import '../../ext_res/bootstrap/css/bootstrap';
 
 // Colors
 $primary: #00a55e;
-$secondary: #009753; // TODO get right color
-$complementary: #777; // TODO get right color
-$background: #191919; // TODO get right color
+$secondary: #009753;
+$complementary: #6c6c6c;
+$background: #171817;
 
 // Fonts
 $nunito: 'Nunito', sans-serif;
 
 // Metrics
+$sm: 414px;
 $md: 991px;
-$iPadPro: 1024px;
+$lg: 1300px;
 
 // Mixins
 @mixin aFade($trans) {
@@ -22,28 +23,42 @@ $iPadPro: 1024px;
   -o-transition: $trans;
   transition: $trans;
 }
-@mixin boxShadow($x, $y, $blur, $color) {
-  -webkit-box-shadow: $x $y $blur $color;
-  -moz-box-shadow: $x $y $blur $color;
-  -ms-box-shadow: $x $y $blur $color;
-  -o-box-shadow: $x $y $blur $color;
-  box-shadow: $x $y $blur $color;
+@mixin boxShadow($x, $y, $blur, $spread, $color) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  -ms-box-shadow: $x $y $blur $spread $color;
+  -o-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+@mixin insetShadow($x, $y, $blur, $spread, $color) {
+  -webkit-box-shadow: inset $x $y $blur $spread $color;
+  -moz-box-shadow: inset $x $y $blur $spread $color;
+  -ms-box-shadow: inset $x $y $blur $spread $color;
+  -o-box-shadow: inset $x $y $blur $spread $color;
+  box-shadow: inset $x $y $blur $spread $color;
 }
 @mixin marginX($x) {
   margin-left: $x;
   margin-right: $x;
 }
 @mixin marginY($y) {
-  margin-left: $y;
-  margin-right: $y;
+  margin-top: $y;
+  margin-bottom: $y;
 }
 @mixin paddingX($x) {
   padding-left: $x;
   padding-right: $x;
 }
 @mixin paddingY($y) {
-  padding-left: $y;
-  padding-right: $y;
+  padding-top: $y;
+  padding-bottom: $y;
+}
+@mixin borderRadius($rad) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  -ms-border-radius: $rad;
+  -o-border-radius: $rad;
+  border-radius: $rad;
 }
 
 // Classes
@@ -51,18 +66,22 @@ body {
   @extend .container-fluid;
   text-align: center;
   font-family: $nunito;
+  letter-spacing: 0.12rem;
   color: $primary;
   background: $background;
   @include paddingX(160px);
-  @media screen and (max-width: $iPadPro) {
+  @media screen and (max-width: $lg) {
     @include paddingX(5vw);
+  }
+  @media screen and (max-width: $md) {
+    @include paddingX(0);
   }
 }
 
 .btnStd {
   @extend .btn;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .navBtn {
@@ -70,13 +89,15 @@ body {
   background: transparent;
   color: $complementary;
   border: 2px solid transparent;
-  padding: .3rem .8rem;
+  @include borderRadius(5px);
+  padding: .4rem .7rem;
   margin: auto .4rem;
   &:hover,
   &:focus,
   &.active {
     color: $primary;
     border-color: $primary;
+    @include insetShadow(0, -1px, 0, 0, #d6e9e1);
   }
   @media screen and (max-width: $md) {
     margin: .2rem auto;
@@ -85,16 +106,19 @@ body {
 
 #appNavBar {
   padding: 0;
-  @include boxShadow(0, 2px, 1px, #777);
+  @include boxShadow(0, 2px, 1px, 0, #777);
 }
 
 .logo,
 #navToggler {
-  margin: 1rem 2rem;
+  margin: 1rem 30px;
+  @media screen and (max-width: $sm) {
+    margin: 1rem;
+  }
 }
 
 .loginContainer {
-  background: #e3e3e3;
+  background: #eee;
   margin: 0;
   padding: 1rem 3.5rem;
 }
@@ -103,11 +127,294 @@ body {
   background: $primary;
   color: #fff;
   border: 2px solid $primary;
-  padding: .3rem .8rem;
-  @include boxShadow(0, 2px, 0, $secondary);
+  @include paddingX(1.2rem);
+  @include insetShadow(0, -1px, 0, 0, $secondary);
   &:hover,
   &:focus {
     background: #fff;
     color: $primary;
+  }
+}
+
+.appMain {
+  background: #ededed;
+  padding: 17px;
+  margin: 0;
+  @media screen and (max-width: $md) {
+    padding: 7px;
+  }
+  & * {
+    padding: 0;
+    margin: 0;
+  }
+  & .appContent {
+    @include marginY(6px);
+  }
+}
+
+.titleStd {
+  text-transform: uppercase;
+  color: #777;
+  font-weight: 800;
+  letter-spacing: 0.02rem;
+  text-align: left;
+}
+
+.colTitle {
+  @extend .titleStd;
+  font-size: 1.1rem;
+  margin: 13px 13px 17px 39px;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexContainer > .flexBox {
+  flex: 1;
+  margin-top: 0;
+}
+
+.cardContainer {
+  background: #fff;
+  @include boxShadow(0, 2px, 5px, 2px, #d6d6d6);
+  padding: 0;
+  margin: 7px 13px;
+}
+
+.cardHead {
+  @extend .titleStd;
+  text-transform: capitalize;
+  font-weight: 700;
+  padding: 15px 0 15px 26px;
+}
+
+.cardHeadGreen {
+  @extend .cardHead;
+  @include insetShadow(3px, 0, 0, 0, $primary);
+  & .fa {
+    color: #cfcfcf;
+    font-size: .8rem;
+    vertical-align: middle;
+  }
+}
+
+.cardContent {
+  position: relative;
+  padding: 0 21px 21px;
+  text-align: left;
+}
+
+.inputGroupStd {
+  margin: 0 5px 9px 0;
+}
+
+.inputStd {
+  background: transparent;
+  padding: 2px 9px 9px;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
+  font-weight: 900;
+  @include borderRadius(0);
+}
+
+.dollarLabel {
+  @extend .inputStd;
+  @include paddingX(4px);
+  font-weight: 700;
+  color: #b2b2b2;
+}
+
+.inputText {
+  @extend .inputStd;
+  border-bottom: 2px solid #b2b2b2;
+  color: #565353;
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.dropDownGroup {
+  margin-left: 15px;
+  &.show .dropDown {
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.dropDown {
+  @extend .inputStd;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #565353;
+  border-bottom: 2px solid #b2b2b2;
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+    border-bottom: 2px solid $primary;
+    background: transparent;
+    color: $primary;
+  }
+}
+
+.dropItem {
+  @extend .dropdown-item;
+  padding: 3px 7px;
+  text-transform: uppercase;
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+}
+
+.cardFlexIcon {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+/* Range by Sean Stopnik */
+  // Base Colors
+  $shade-10: #fff !default;
+  $shade-1: #007744 !default;
+  $shade-0: #fff !default;
+
+  .range-slider {
+    @extend .inputStd;
+    @include paddingX(4px);
+  }
+
+
+  // Range Slider
+  $range-width: 100% !default;
+
+  $range-handle-color: $shade-10 !default;
+  $range-handle-border: $shade-1 !default;
+  $range-handle-color-hover: $primary !default;
+  $range-handle-size: 17px !default;
+
+  $range-track-color: #e0dfdf !default;
+  $range-track-height: 4px !default;
+
+  $range-label: #a1a1a1 !default;
+  $range-label-color: #eaeaea !default;
+  $range-label-width: 60px !default;
+
+  .range-slider {
+    width: $range-width;
+  }
+
+  .range-slider__range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: $range-track-height;
+    border-radius: 5px;
+    background: $range-track-color;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+
+    // Range Handle
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: $range-handle-size;
+      height: $range-handle-size;
+      border: 3px solid $range-handle-border;
+      background: $range-handle-color;
+      border-radius: 50%;
+      cursor: pointer;
+      @include aFade(all .3s);
+
+      &:hover,
+      &:active {
+        border-color: $primary;
+      }
+    }
+
+    &::-moz-range-thumb {
+      width: $range-handle-size;
+      height: $range-handle-size;
+      border: 0;
+      border-radius: 50%;
+      background: $range-handle-color;
+      cursor: pointer;
+      transition: background .15s ease-in-out;
+
+      &:hover,
+      &:active {
+        background: $range-handle-color-hover;
+      }
+    }
+  }
+
+
+  // Range Label
+  .range-slider__value {
+    position: relative;
+    top: -42px;
+    left: 245px; // 5px is most left, 245px is most right
+    width: $range-label-width;
+    color: $range-label;
+    font-size: .8rem;
+    letter-spacing: normal;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: left;
+    border-radius: 16px 4px 0 0;
+    background: $range-label-color;
+    padding: 5px 10px;
+    z-index: 1;
+  }
+
+
+  // Firefox Overrides
+  ::-moz-range-track {
+      background: $range-track-color;
+      border: 0;
+  }
+
+  input::-moz-focus-inner,
+  input::-moz-focus-outer {
+    border: 0;
+  }
+/* -- */
+
+.portBtn {
+  @extend .navBtn;
+  font-weight: 800;
+  border: 2px solid $complementary;
+  padding: 7px 32px;
+}
+
+.fooBtn {
+  @extend .btnStd;
+  color: #2d2e2d;
+  margin: 1rem 0.3rem;
+  &:hover,
+  &:active {
+    color: $primary;
+  }
+  @media screen and (max-width: $sm) {
+    margin-top: .6rem;
+    margin-bottom: -.4rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+}
+.company {
+  color: #2d2e2d;
+  display: inline-block;
+  font-weight: 700;
+  margin: 1rem 0.3rem;
+  @media screen and (max-width: $sm) {
+    display: block;
   }
 }
