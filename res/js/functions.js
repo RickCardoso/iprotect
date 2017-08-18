@@ -5,10 +5,27 @@ $(document).ready(function() {
     $(this).parent().parent().find('.dropDown').html($(this).text());
   });
 
-/* input text - validation and formatting of numeric input */
-	var $input = $(".inputText");
+/* add - check buttons on investment list */
+  $('.addBtn').click(function() {
+    if ($(this).attr('src') == 'client_res/img/icons/plus.png') {
+      $(this).attr('src', 'client_res/img/icons/check.png');
+      $(this).attr('width', '22');
+      $(this).addClass('added');
+      //$(this).parent().parent().parent().addClass('added');
+    } else {
+      $(this).attr('src', 'client_res/img/icons/plus.png');
+      $(this).attr('width', '17');
+      $(this).removeClass('added');
+      //$(this).parent().parent().parent().removeClass('added');
+    }
+  });
 
-	$input.on( "keyup", function( event ) {
+/* input text - validation and formatting of numeric input */
+	var $cont = $(".inputCont");
+  var $alloc = $(".inputAlloc");
+
+  // conditions for contribution amounts
+	$cont.on( "keyup", function( event ) {
 
 		// When user select text in the document, also abort.
 		var selection = window.getSelection().toString();
@@ -34,6 +51,34 @@ $(document).ready(function() {
 				} );
 		} );
 
+  // conditions for allocation amounts
+	$alloc.on( "keyup", function( event ) {
+
+		// When user select text in the document, also abort.
+		var selection = window.getSelection().toString();
+		if ( selection !== '' ) {
+			return;
+		}
+
+		// When the arrow keys are pressed, abort.
+		if ( $.inArray( event.keyCode, [38,40,37,39] ) !== -1 ) {
+			return;
+		}
+
+		var $this = $( this );
+
+		// Get the value.
+		var input = $this.val();
+
+		var input = input.replace(/[\D\s\._\-]+/g, "");
+				input = input ? parseInt( input, 10 ) : 0;
+        input = Math.min(input, 100);
+
+				$this.val( function() {
+					return ( input === "" ) ? "" : input.toLocaleString( "en-US" );
+				} );
+		} );
+
   /* range slider - update label */
     // initiator
     $('.range-slider__range').each(function() {
@@ -52,6 +97,14 @@ $(document).ready(function() {
       $(this).parent().find('.range-slider__value').html(val);
       $(this).parent().find('.range-slider__value').css('left', (5 + pos * (wid - thumb)) + 'px');
       $(this).css('box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
+    });
+
+    $(window).resize(function() {
+      $('.range-slider__range').each(function() {
+        $(this).parent().find('.range-slider__value').html($(this).val());
+        $(this).parent().find('.range-slider__value').css('left', (5 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
+        $(this).css('box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+      });
     });
 
 });

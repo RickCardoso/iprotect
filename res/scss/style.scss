@@ -60,6 +60,14 @@ $lg: 2200px;
   -o-border-radius: $rad;
   border-radius: $rad;
 }
+@mixin grayFilter($gray, $opac: 40%) {
+  -webkit-filter: grayscale($gray) opacity($opac);
+  filter: grayscale($gray) opacity($opac);
+}
+@mixin contFilter($cont, $brig: 30%) {
+  -webkit-filter: contrast(0) brightness($brig);
+  filter: contrast(0) brightness($brig);
+}
 
 // Classes
 body {
@@ -69,9 +77,10 @@ body {
   letter-spacing: 0.12rem;
   color: $primary;
   background: $background;
-  @include paddingX(160px);
+  max-width: 2400px;
+  @include paddingX(auto);
   @media screen and (max-width: $lg) {
-    @include paddingX(5vw);
+    @include paddingX(4vw);
   }
   @media screen and (max-width: $md) {
     @include paddingX(0);
@@ -105,22 +114,38 @@ body {
 }
 
 #appNavBar {
+  min-height: 66px;
   padding: 0;
   @include boxShadow(0, 2px, 1px, 0, #777);
 }
 
+header,
+#navbarNavAltMarkup{
+  min-height: 66px;
+}
+.navbar-nav {
+  min-height: 66px;
+}
+
 .logo,
 #navToggler {
-  margin: 1rem 30px;
+  margin: auto 30px;
+  @media screen and (max-width: $md) {
+    @include marginY(15px);
+  }
   @media screen and (max-width: $sm) {
-    margin: 1rem;
+    @include marginX(15px);
   }
 }
 
 .loginContainer {
   background: #eee;
   margin: 0;
-  padding: 1rem 3.5rem;
+  height: 66px;
+  min-width: 187px;
+  @media screen and (max-width: $md) {
+    width: 100%;
+  }
 }
 .logBtn {
   @extend .navBtn;
@@ -134,6 +159,21 @@ body {
     background: #fff;
     color: $primary;
   }
+  @include marginY(15px);
+  @media screen and (max-width: $md) {
+    @include marginY(12px);
+  }
+}
+
+.userInfo {
+  @include marginY(6px);
+}
+
+.userName {
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  font-weight: 800;
+  color: #747373;
 }
 
 .appMain {
@@ -226,7 +266,7 @@ body {
   color: #b2b2b2;
 }
 
-.inputText {
+.inputCont {
   @extend .inputStd;
   border-bottom: 2px solid #b2b2b2;
   color: #565353;
@@ -249,7 +289,8 @@ body {
 
 .dropDown {
   @extend .inputStd;
-  font-size: 1rem;
+  padding-bottom: 14px;
+  font-size: .8rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #565353;
@@ -391,17 +432,122 @@ body {
 
 .portBtn {
   @extend .navBtn;
+  font-size: 1.2rem;
   font-weight: 800;
   border: 2px solid $complementary;
-  padding: 7px 32px;
+  min-width: 265px;
+  height: 42px;
 }
 
 .investList {
+  max-height: 400px;
+  width: 100%;
   font-size: .9rem;
   color: $complementary;
+  background: #fafafa;
   & tr {
+    & td {
+      @include paddingY(15px);
+    }
+    & td:first-child {
+      text-align: left;
+      padding-left: 26px;
+    }
+    & td:not(:first-child) {
+      text-align: center;
+    }
+    & td:last-child {
+      padding-right: 26px;
+    }
+  }
+}
 
-    text-align: center;
+.tableHead {
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  @include insetShadow(3px, 0, 0, 0, $primary);
+  & td {
+    @extend .titleStd;
+    text-transform: capitalize;
+    font-weight: 700;
+    @include paddingY(15px);
+  }
+  & td:first-child {
+    padding-left: 26px;
+  }
+  & td:last-child {
+    padding-right: 26px;
+  }
+}
+
+.tableRow {
+  margin: 0;
+  padding: 10px;
+}
+
+.downloadBtn {
+  @include grayFilter(100%);
+  &:hover,
+  &:focus,
+  &:active {
+    @include grayFilter(0, 100%);
+  }
+}
+
+.addBtn {
+  &:hover,
+  &:focus,
+  &:active {
+    @include contFilter(0);
+  }
+  &.added {
+    &:hover,
+    &:focus,
+    &:active {
+      @include grayFilter(100%);
+    }
+  }
+}
+
+.assetList {
+  @extend .investList;
+  font-weight: 800;
+  & .inputAlloc {
+    @extend .inputCont;
+    padding-bottom: 0;
+    max-width: 60px;
+  }
+  & .percentLabel {
+    @extend .dollarLabel;
+    padding-bottom: 0;
+  }
+  & tr {
+    &.tableHead td:not(first-child) {
+      text-align: left;
+    }
+    &.totalRow {
+      border-top: 1px solid #eaeaea;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.deleteBtn {
+  @extend .addBtn;
+  padding-bottom: 10px;
+}
+
+.confirmBtn {
+  @extend .portBtn;
+  background: $primary;
+  color: #fff;
+  border: 2px solid $primary;
+  @include insetShadow(0, -1px, 0, 0, $secondary);
+  @include paddingX(67px);
+  &:hover,
+  &:focus {
+    background: #fff;
+    color: $primary;
   }
 }
 
