@@ -12,7 +12,7 @@ $background: #171817;
 $nunito: 'Nunito', sans-serif;
 
 // Metrics
-$nav-height: 50px;
+$nav-height: 66px;
 $sm: 414px;
 $md: 991px;
 $lg: 2200px;
@@ -72,7 +72,7 @@ $lg: 2200px;
 }
 
 // Classes
-body {
+.appContainer {
   @extend .container-fluid;
   text-align: center;
   font-family: $nunito;
@@ -80,17 +80,13 @@ body {
   background: $background;
   font-size: 12px;
   line-height: 1.482;
+  padding: 0;
+  margin: auto;
   max-width: 1600px;
-  @include paddingX(auto);
-  @media screen and (max-width: $lg) {
-    @include paddingX(4vw);
-  }
-  @media screen and (max-width: $md) {
-    @include paddingX(0);
-  }
 }
 
 .appHead {
+  width: 100%;
   min-height: $nav-height;
   @include borderRadius(0 0 4px 4px);
 }
@@ -98,20 +94,19 @@ body {
 .btnStd {
   @extend .btn;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .navBtn {
   @extend .btnStd;
   background: transparent;
   color: $bodyColor;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.1rem;
+  font-size: 12.5px;
+  letter-spacing: 0.15rem;
   border: 2px solid transparent;
   @include borderRadius(4px);
-  padding: 4px 7px;
-  margin: auto 3px;
+  padding: 5px 9px;
+  margin: auto 4px;
   &:hover,
   &:focus,
   &.active {
@@ -133,12 +128,9 @@ body {
 
 .logo,
 #navToggler {
-  margin: auto 22px;
+  margin: auto 30px;
   @media screen and (max-width: $md) {
-    @include marginY(13px);
-  }
-  @media screen and (max-width: $sm) {
-    @include marginX(13px);
+    margin: 13px 20px;
   }
 }
 
@@ -146,7 +138,7 @@ body {
   background: #eee;
   margin-left: 9px;
   height: $nav-height;
-  min-width: 180px;
+  min-width: 187px;
   @media screen and (max-width: $md) {
     margin-left: 0;
     width: 100%;
@@ -163,7 +155,7 @@ body {
   &:hover,
   &:focus,
   &:active {
-    background: #fff;
+    background: transparent;
     color: $primary;
   }
   @include marginY(17px);
@@ -174,16 +166,29 @@ body {
 
 .userInfo {
   @include marginY(6px);
+  text-align: right;
+  @media screen and (max-width: $md) {
+    text-align: center;
+  }
 }
 
 .userName {
-  font-size: 0.9rem;
-  letter-spacing: 0.02rem;
+  font-size: 12px;
+  letter-spacing: 0.015rem;
   font-weight: 800;
-  color: #747373;
+  color: #3d3d3d;
+  margin: auto 6px;
+}
+
+.userAvatar {
+  margin-right: 30px;
+  @media screen and (max-width: $md) {
+    margin-right: 0;
+  }
 }
 
 .appMain {
+  width: 100%;
   background: #ededed;
   padding: 17px;
   margin: 0;
@@ -202,15 +207,16 @@ body {
 .titleStd {
   text-transform: uppercase;
   color: #777;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.02rem;
+  line-height: 1;
   text-align: left;
 }
 
 .colTitle {
   @extend .titleStd;
   font-size: 1.1rem;
-  margin: 13px 13px 17px 39px;
+  margin: 9px 13px 25px 36px;
 }
 
 .flexContainer {
@@ -234,7 +240,7 @@ body {
   @extend .titleStd;
   text-transform: capitalize;
   font-weight: 700;
-  padding: 15px 0 15px 26px;
+  padding: 15px 0 15px 23px;
 }
 
 .cardHeadGreen {
@@ -249,18 +255,16 @@ body {
 
 .cardContent {
   position: relative;
-  padding: 0 21px 21px;
+  padding: 6px 24px 30px;
   text-align: left;
 }
 
-.inputGroupStd {
-  margin: 0 5px 9px 0;
-}
 
 .inputStd {
   background: transparent;
-  padding: 2px 9px 9px;
-  border: 2px solid transparent;
+  margin-top: -2px;
+  padding: 0 4px 4px 7px;
+  border: 1px solid transparent;
   font-size: 1.1rem;
   font-weight: 900;
   @include borderRadius(0);
@@ -268,20 +272,22 @@ body {
 
 .dollarLabel {
   @extend .inputStd;
-  @include paddingX(4px);
+  margin-left: -2px;
+  padding-left: 0;
+  padding-right: 4px;
   font-weight: 700;
   color: #b2b2b2;
 }
 
 .inputCont {
   @extend .inputStd;
-  border-bottom: 2px solid #b2b2b2;
+  border-bottom: 1px solid #b2b2b2;
   color: #565353;
   &:hover,
   &:focus,
   &:active {
     border-color: transparent;
-    border-bottom: 2px solid $primary;
+    border-bottom: 1px solid $primary;
   }
 }
 
@@ -558,10 +564,14 @@ body {
   }
 }
 
+.appFooter {
+  width: 100%;
+}
 .fooBtn {
   @extend .btnStd;
+  font-size: 12.5px;
   color: #2d2e2d;
-  margin: 1rem 0.3rem;
+  padding: 20px 15px;
   &:hover,
   &:focus,
   &:active {
@@ -576,10 +586,5 @@ body {
 }
 .company {
   color: #2d2e2d;
-  display: inline-block;
-  font-weight: 700;
-  margin: 1rem 0.3rem;
-  @media screen and (max-width: $sm) {
-    display: block;
-  }
+  text-transform: none;
 }
