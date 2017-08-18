@@ -7325,10 +7325,11 @@ a.text-dark:focus, a.text-dark:hover {
 body {
   text-align: center;
   font-family: "Nunito", sans-serif;
-  letter-spacing: 0.12rem;
-  color: #00a55e;
+  color: #787676;
   background: #171817;
-  max-width: 2400px;
+  font-size: 12px;
+  line-height: 1.482;
+  max-width: 1600px;
   padding-left: auto;
   padding-right: auto; }
   @media screen and (max-width: 2200px) {
@@ -7340,92 +7341,97 @@ body {
       padding-left: 0;
       padding-right: 0; } }
 
+.appHead {
+  min-height: 50px;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px; }
+
 .btnStd, .navBtn, .logBtn, .portBtn, .confirmBtn, .fooBtn {
   text-transform: uppercase;
   font-weight: 700; }
 
 .navBtn, .logBtn, .portBtn, .confirmBtn {
   background: transparent;
-  color: #6c6c6c;
+  color: #787676;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
   border: 2px solid transparent;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  padding: .4rem .7rem;
-  margin: auto .4rem; }
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 4px 7px;
+  margin: auto 3px; }
   .navBtn:hover, .logBtn:hover, .portBtn:hover, .confirmBtn:hover, .navBtn:focus, .logBtn:focus, .portBtn:focus, .confirmBtn:focus, .navBtn.active, .active.logBtn, .active.portBtn, .active.confirmBtn {
     color: #00a55e;
     border-color: #00a55e;
-    -webkit-box-shadow: inset 0 -1px 0 0 #d6e9e1;
-    -moz-box-shadow: inset 0 -1px 0 0 #d6e9e1;
-    -ms-box-shadow: inset 0 -1px 0 0 #d6e9e1;
-    -o-box-shadow: inset 0 -1px 0 0 #d6e9e1;
-    box-shadow: inset 0 -1px 0 0 #d6e9e1; }
+    -webkit-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
+    -moz-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
+    -ms-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
+    -o-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
+    box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16); }
   @media screen and (max-width: 991px) {
     .navBtn, .logBtn, .portBtn, .confirmBtn {
       margin: .2rem auto; } }
 
 #appNavBar {
-  min-height: 66px;
+  min-height: 50px;
   padding: 0;
-  -webkit-box-shadow: 0 2px 1px 0 #777;
-  -moz-box-shadow: 0 2px 1px 0 #777;
-  -ms-box-shadow: 0 2px 1px 0 #777;
-  -o-box-shadow: 0 2px 1px 0 #777;
-  box-shadow: 0 2px 1px 0 #777; }
-
-header,
-#navbarNavAltMarkup {
-  min-height: 66px; }
-
-.navbar-nav {
-  min-height: 66px; }
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  -ms-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19); }
 
 .logo,
 #navToggler {
-  margin: auto 30px; }
+  margin: auto 22px; }
   @media screen and (max-width: 991px) {
     .logo,
     #navToggler {
-      margin-top: 15px;
-      margin-bottom: 15px; } }
+      margin-top: 13px;
+      margin-bottom: 13px; } }
   @media screen and (max-width: 414px) {
     .logo,
     #navToggler {
-      margin-left: 15px;
-      margin-right: 15px; } }
+      margin-left: 13px;
+      margin-right: 13px; } }
 
 .loginContainer {
   background: #eee;
-  margin: 0;
-  height: 66px;
-  min-width: 187px; }
+  margin-left: 9px;
+  height: 50px;
+  min-width: 180px; }
   @media screen and (max-width: 991px) {
     .loginContainer {
+      margin-left: 0;
       width: 100%; } }
 
 .logBtn {
   background: #00a55e;
   color: #fff;
   border: 2px solid #00a55e;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  -webkit-box-shadow: inset 0 -1px 0 0 #009753;
-  -moz-box-shadow: inset 0 -1px 0 0 #009753;
-  -ms-box-shadow: inset 0 -1px 0 0 #009753;
-  -o-box-shadow: inset 0 -1px 0 0 #009753;
-  box-shadow: inset 0 -1px 0 0 #009753;
-  margin-top: 15px;
-  margin-bottom: 15px; }
-  .logBtn:hover, .logBtn:focus {
+  padding-left: 17px;
+  padding-right: 17px;
+  -webkit-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
+  -moz-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
+  -ms-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
+  -o-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
+  box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
+  margin-top: 17px;
+  margin-bottom: 17px; }
+  .logBtn:hover, .logBtn:focus, .logBtn:active {
     background: #fff;
     color: #00a55e; }
   @media screen and (max-width: 991px) {
     .logBtn {
-      margin-top: 12px;
-      margin-bottom: 12px; } }
+      margin-top: 17px;
+      margin-bottom: 17px; } }
 
 .userInfo {
   margin-top: 6px;
@@ -7731,8 +7737,8 @@ input::-moz-focus-outer {
 .fooBtn {
   color: #2d2e2d;
   margin: 1rem 0.3rem; }
-  .fooBtn:hover, .fooBtn:active {
-    color: #00a55e; }
+  .fooBtn:hover, .fooBtn:focus, .fooBtn:active {
+    color: #fff; }
   @media screen and (max-width: 414px) {
     .fooBtn {
       margin-top: .6rem;

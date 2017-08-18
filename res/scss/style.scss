@@ -4,6 +4,7 @@
 // Colors
 $primary: #00a55e;
 $secondary: #009753;
+$bodyColor: #787676;
 $complementary: #6c6c6c;
 $background: #171817;
 
@@ -11,6 +12,7 @@ $background: #171817;
 $nunito: 'Nunito', sans-serif;
 
 // Metrics
+$nav-height: 50px;
 $sm: 414px;
 $md: 991px;
 $lg: 2200px;
@@ -74,10 +76,11 @@ body {
   @extend .container-fluid;
   text-align: center;
   font-family: $nunito;
-  letter-spacing: 0.12rem;
-  color: $primary;
+  color: $bodyColor;
   background: $background;
-  max-width: 2400px;
+  font-size: 12px;
+  line-height: 1.482;
+  max-width: 1600px;
   @include paddingX(auto);
   @media screen and (max-width: $lg) {
     @include paddingX(4vw);
@@ -85,6 +88,11 @@ body {
   @media screen and (max-width: $md) {
     @include paddingX(0);
   }
+}
+
+.appHead {
+  min-height: $nav-height;
+  @include borderRadius(0 0 4px 4px);
 }
 
 .btnStd {
@@ -96,17 +104,20 @@ body {
 .navBtn {
   @extend .btnStd;
   background: transparent;
-  color: $complementary;
+  color: $bodyColor;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
   border: 2px solid transparent;
-  @include borderRadius(5px);
-  padding: .4rem .7rem;
-  margin: auto .4rem;
+  @include borderRadius(4px);
+  padding: 4px 7px;
+  margin: auto 3px;
   &:hover,
   &:focus,
   &.active {
     color: $primary;
     border-color: $primary;
-    @include insetShadow(0, -1px, 0, 0, #d6e9e1);
+    @include insetShadow(0, -2px, 0, 0, rgba(0, 119, 68, 0.16));
   }
   @media screen and (max-width: $md) {
     margin: .2rem auto;
@@ -114,54 +125,50 @@ body {
 }
 
 #appNavBar {
-  min-height: 66px;
+  min-height: $nav-height;
   padding: 0;
-  @include boxShadow(0, 2px, 1px, 0, #777);
+  @include boxShadow(0, 1px, 2px, 0, rgba(0, 0, 0, 0.19));
 }
 
-header,
-#navbarNavAltMarkup{
-  min-height: 66px;
-}
-.navbar-nav {
-  min-height: 66px;
-}
 
 .logo,
 #navToggler {
-  margin: auto 30px;
+  margin: auto 22px;
   @media screen and (max-width: $md) {
-    @include marginY(15px);
+    @include marginY(13px);
   }
   @media screen and (max-width: $sm) {
-    @include marginX(15px);
+    @include marginX(13px);
   }
 }
 
 .loginContainer {
   background: #eee;
-  margin: 0;
-  height: 66px;
-  min-width: 187px;
+  margin-left: 9px;
+  height: $nav-height;
+  min-width: 180px;
   @media screen and (max-width: $md) {
+    margin-left: 0;
     width: 100%;
   }
 }
+
 .logBtn {
   @extend .navBtn;
   background: $primary;
   color: #fff;
   border: 2px solid $primary;
-  @include paddingX(1.2rem);
-  @include insetShadow(0, -1px, 0, 0, $secondary);
+  @include paddingX(17px);
+  @include insetShadow(0, -2px, 0, 0, rgba(0, 119, 68, 0.16));
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     background: #fff;
     color: $primary;
   }
-  @include marginY(15px);
+  @include marginY(17px);
   @media screen and (max-width: $md) {
-    @include marginY(12px);
+    @include marginY(17px);
   }
 }
 
@@ -556,8 +563,9 @@ header,
   color: #2d2e2d;
   margin: 1rem 0.3rem;
   &:hover,
+  &:focus,
   &:active {
-    color: $primary;
+    color: #fff;
   }
   @media screen and (max-width: $sm) {
     margin-top: .6rem;
