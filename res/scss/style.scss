@@ -290,6 +290,8 @@ body {
   .range-slider {
     @extend .inputStd;
     @include paddingX(4px);
+    @include paddingY(0);
+    margin-bottom: -25px;
   }
 
   // Range Slider
@@ -320,7 +322,6 @@ body {
     outline: none;
     padding: 0;
     margin: 0;
-    z-index: 1;
 
     // Range Handle
     &::-webkit-slider-thumb {
@@ -333,7 +334,6 @@ body {
       border-radius: 50%;
       cursor: pointer;
       @include aFade(all .3s);
-      z-index: 99;
 
       &:hover,
       &:active {
@@ -370,7 +370,6 @@ body {
     border-radius: 16px 4px 0 0;
     background: $range-label-color;
     padding: 5px 10px;
-    z-index: 1;
   }
 
   // Firefox Overrides
@@ -379,17 +378,10 @@ body {
       border: 0;
   }
 
-  // Color filling
-  .rangeFill {
-    position: relative;
-    width: 50px;
-    height: $range-track-height;
-    border-radius: 5px;
-    background: $shade-1;
-    outline: none;
-    padding: 0;
-    margin: 0;
-    z-index: 99;
+  // Range Scale
+  .rangeScale {
+    font-size: .7rem;
+    color: $complementary;
   }
 
   input::-moz-focus-inner,
@@ -402,6 +394,15 @@ body {
   font-weight: 800;
   border: 2px solid $complementary;
   padding: 7px 32px;
+}
+
+.investList {
+  font-size: .9rem;
+  color: $complementary;
+  & tr {
+
+    text-align: center;
+  }
 }
 
 .fooBtn {
