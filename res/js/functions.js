@@ -35,24 +35,21 @@ $(document).ready(function() {
 		} );
 
   /* range slider - update label */
-    var rangeSlider = function(){
-      var slider = $('.range-slider'),
-          range = $('.range-slider__range'),
-          value = $('.range-slider__value');
-
-      slider.each(function(){
-
-        value.each(function(){
-          var value = $(this).prev().attr('value');
-          $(this).html(value);
-        });
-
-        range.on('input', function(){
-          $(this).next(value).html(this.value);
-        });
-      });
-    };
-
-    rangeSlider();
+    updateRangeBubble();
+    $('.range-slider__range').on('input', function() {
+      updateRangeBubble();
+    });
 
 });
+
+function updateRangeBubble() {
+  var range = $('.range-slider__range');
+  var val = range.val();
+  var max = range.attr('max');
+  var min = range.attr('min');
+  var wid = $('.range-slider__range').width()
+  var thumb = 17;
+  var pos = (val - min) / (max - min);
+  $('.range-slider__value').html('$ ' + val + ',000');
+  $('.range-slider__value').css('left', (5 + pos * (wid - thumb)) + 'px');
+}

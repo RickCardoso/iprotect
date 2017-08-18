@@ -13,7 +13,7 @@ $nunito: 'Nunito', sans-serif;
 // Metrics
 $sm: 414px;
 $md: 991px;
-$lg: 1300px;
+$lg: 2200px;
 
 // Mixins
 @mixin aFade($trans) {
@@ -280,7 +280,8 @@ body {
   right: 4px;
 }
 
-/* Range by Sean Stopnik */
+/* Range Slider */
+
   // Base Colors
   $shade-10: #fff !default;
   $shade-1: #007744 !default;
@@ -290,7 +291,6 @@ body {
     @extend .inputStd;
     @include paddingX(4px);
   }
-
 
   // Range Slider
   $range-width: 100% !default;
@@ -305,13 +305,13 @@ body {
 
   $range-label: #a1a1a1 !default;
   $range-label-color: #eaeaea !default;
-  $range-label-width: 60px !default;
 
   .range-slider {
     width: $range-width;
   }
 
   .range-slider__range {
+    position: relative;
     -webkit-appearance: none;
     width: 100%;
     height: $range-track-height;
@@ -320,10 +320,11 @@ body {
     outline: none;
     padding: 0;
     margin: 0;
-    z-index: 2;
+    z-index: 1;
 
     // Range Handle
     &::-webkit-slider-thumb {
+      position: relative;
       -webkit-appearance: none;
       width: $range-handle-size;
       height: $range-handle-size;
@@ -332,6 +333,7 @@ body {
       border-radius: 50%;
       cursor: pointer;
       @include aFade(all .3s);
+      z-index: 99;
 
       &:hover,
       &:active {
@@ -342,26 +344,23 @@ body {
     &::-moz-range-thumb {
       width: $range-handle-size;
       height: $range-handle-size;
-      border: 0;
+      border: 3px solid $range-handle-border;
       border-radius: 50%;
       background: $range-handle-color;
       cursor: pointer;
-      transition: background .15s ease-in-out;
+      @include aFade(all .3s);
 
       &:hover,
       &:active {
-        background: $range-handle-color-hover;
+        border-color: $primary;
       }
     }
   }
-
 
   // Range Label
   .range-slider__value {
     position: relative;
     top: -42px;
-    left: 245px; // 5px is most left, 245px is most right
-    width: $range-label-width;
     color: $range-label;
     font-size: .8rem;
     letter-spacing: normal;
@@ -374,18 +373,29 @@ body {
     z-index: 1;
   }
 
-
   // Firefox Overrides
   ::-moz-range-track {
       background: $range-track-color;
       border: 0;
   }
 
+  // Color filling
+  .rangeFill {
+    position: relative;
+    width: 50px;
+    height: $range-track-height;
+    border-radius: 5px;
+    background: $shade-1;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    z-index: 99;
+  }
+
   input::-moz-focus-inner,
   input::-moz-focus-outer {
     border: 0;
   }
-/* -- */
 
 .portBtn {
   @extend .navBtn;
