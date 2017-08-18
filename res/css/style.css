@@ -7286,7 +7286,7 @@ body {
   background: #171817;
   padding-left: 160px;
   padding-right: 160px; }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 2200px) {
     body {
       padding-left: 5vw;
       padding-right: 5vw; } }
@@ -7480,7 +7480,7 @@ body {
   bottom: 4px;
   right: 4px; }
 
-/* Range by Sean Stopnik */
+/* Range Slider */
 .range-slider {
   padding-left: 4px;
   padding-right: 4px; }
@@ -7489,6 +7489,7 @@ body {
   width: 100%; }
 
 .range-slider__range {
+  position: relative;
   -webkit-appearance: none;
   width: 100%;
   height: 4px;
@@ -7497,8 +7498,9 @@ body {
   outline: none;
   padding: 0;
   margin: 0;
-  z-index: 2; }
+  z-index: 1; }
   .range-slider__range::-webkit-slider-thumb {
+    position: relative;
     -webkit-appearance: none;
     width: 17px;
     height: 17px;
@@ -7510,25 +7512,28 @@ body {
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    z-index: 99; }
     .range-slider__range::-webkit-slider-thumb:hover, .range-slider__range::-webkit-slider-thumb:active {
       border-color: #00a55e; }
   .range-slider__range::-moz-range-thumb {
     width: 17px;
     height: 17px;
-    border: 0;
+    border: 3px solid #007744;
     border-radius: 50%;
     background: #fff;
     cursor: pointer;
-    transition: background .15s ease-in-out; }
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
     .range-slider__range::-moz-range-thumb:hover, .range-slider__range::-moz-range-thumb:active {
-      background: #00a55e; }
+      border-color: #00a55e; }
 
 .range-slider__value {
   position: relative;
   top: -42px;
-  left: 245px;
-  width: 60px;
   color: #a1a1a1;
   font-size: .8rem;
   letter-spacing: normal;
@@ -7544,11 +7549,21 @@ body {
   background: #e0dfdf;
   border: 0; }
 
+.rangeFill {
+  position: relative;
+  width: 50px;
+  height: 4px;
+  border-radius: 5px;
+  background: #007744;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  z-index: 99; }
+
 input::-moz-focus-inner,
 input::-moz-focus-outer {
   border: 0; }
 
-/* -- */
 .portBtn {
   font-weight: 800;
   border: 2px solid #6c6c6c;
