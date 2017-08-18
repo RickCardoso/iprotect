@@ -35,21 +35,23 @@ $(document).ready(function() {
 		} );
 
   /* range slider - update label */
-    updateRangeBubble();
+    // initiator
+    $('.range-slider__range').each(function() {
+      $(this).parent().find('.range-slider__value').html($(this).val());
+      $(this).parent().find('.range-slider__value').css('left', (5 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
+      $(this).css('box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+    });
+
     $('.range-slider__range').on('input', function() {
-      updateRangeBubble();
+      var val = $(this).val();
+      var max = $(this).attr('max');
+      var min = $(this).attr('min');
+      var wid = $(this).width()
+      var thumb = 17;
+      var pos = (val - min) / (max - min);
+      $(this).parent().find('.range-slider__value').html(val);
+      $(this).parent().find('.range-slider__value').css('left', (5 + pos * (wid - thumb)) + 'px');
+      $(this).css('box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
     });
 
 });
-
-function updateRangeBubble() {
-  var range = $('.range-slider__range');
-  var val = range.val();
-  var max = range.attr('max');
-  var min = range.attr('min');
-  var wid = $('.range-slider__range').width()
-  var thumb = 17;
-  var pos = (val - min) / (max - min);
-  $('.range-slider__value').html('$ ' + val + ',000');
-  $('.range-slider__value').css('left', (5 + pos * (wid - thumb)) + 'px');
-}

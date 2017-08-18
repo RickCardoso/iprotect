@@ -77,8 +77,10 @@
             <div class="cardContent">
               <div class="range-slider">
                 <input class="range-slider__range" type="range" value="80" min="70" max="90" step="1">
-                <span class="rangeFill"></span>
                 <span class="range-slider__value">0</span>
+              </div>
+              <div class="row justify-content-between rangeScale">
+                <div class="col text-left">$70k</div><div class="col text-center">$80k</div><div class="col text-right">$90k</div>
               </div>
               <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
             </div>
@@ -88,7 +90,13 @@
               Performance Lock-Ins <img src="client_res/img/icons/info.png" width="12" alt="">
             </div>
             <div class="cardContent">
-              Lorem
+              <div class="range-slider">
+                <input class="range-slider__range" type="range" value="50" min="0" max="100" step="1">
+                <span class="range-slider__value">0</span>
+              </div>
+              <div class="row justify-content-between rangeScale">
+                <div class="col text-left">0%</div><div class="col text-center">50%</div><div class="col text-right">100%</div>
+              </div>
               <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
             </div>
           </div>
@@ -102,16 +110,30 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flexContainer">
+        <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 flexContainer">
           <div class="colTitle">
             Investment List
           </div>
           <div class="cardContainer flexBox">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
-reprehenderit in voluptate velit esse cillum
+            <table class="investList">
+              <tr>
+                <th>Name</th>
+                <th>Asset Class</th>
+                <th>Fee</th>
+                <th>Factsheet</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 flexContainer">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 flexContainer">
           <div class="colTitle">
             My Portfolio
           </div>
