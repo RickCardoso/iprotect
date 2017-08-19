@@ -6,3 +6,22 @@ The project is a front-end HTML5/CSS3 structure ready to receive database inform
 
 ## About the Version
 Although already on final stage, this is a new version using SASS for better code structure. The idea is to make a web app layout with a new generation software feel.
+
+## Index and Checklist
+- [ ] [Home](https://rickcardoso.github.io/iProtect/01_001_Homepage.html)
+- [ ] [Learn](https://rickcardoso.github.io/iProtect/02_002_Learn.html)
+- [ ] [Simulation](https://rickcardoso.github.io/iProtect/03_001_Simulation.html)
+- [ ] Learn
+  - [ ] [Understanding the Product](https://rickcardoso.github.io/iProtect/03_002_UnderstandingProd.html)
+  - [ ] [Using the Platform](https://rickcardoso.github.io/iProtect/04_003_UsingPlatform.html)
+- [ ] Plans
+  - [ ] [Simulation](https://rickcardoso.github.io/iProtect/05_002_Simulation.html)
+  - [ ] [Backtest](https://rickcardoso.github.io/iProtect/06_001_Backtest.html)
+- [ ] Accounts
+  - [ ] [Accounts](https://rickcardoso.github.io/iProtect/07_002_Accounts.html)
+  - [ ] [Alerts](https://rickcardoso.github.io/iProtect/08_002_Alerts.html)
+- [ ] [Account Summary](https://rickcardoso.github.io/iProtect/09_003_AccountSummary.html)
+- [ ] [Plan Page](https://rickcardoso.github.io/iProtect/10_003_PlanPage.html)
+  - [ ] [Confirmation](https://rickcardoso.github.io/iProtect/11_002_ConfirmChanges.html) // modal
+  
+  Rick Cardoso
