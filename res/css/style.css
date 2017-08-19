@@ -519,7 +519,7 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px; } }
-.container-fluid, body {
+.container-fluid, .appContainer {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -3017,7 +3017,7 @@ tbody.collapse.show {
 
 .navbar > .container,
 .navbar > .container-fluid,
-.navbar > body {
+.navbar > .appContainer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -3090,7 +3090,7 @@ tbody.collapse.show {
 @media (max-width: 575px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid,
-  .navbar-expand-sm > body {
+  .navbar-expand-sm > .appContainer {
     padding-right: 0;
     padding-left: 0; } }
 @media (min-width: 576px) {
@@ -3119,7 +3119,7 @@ tbody.collapse.show {
 
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid,
-  .navbar-expand-sm > body {
+  .navbar-expand-sm > .appContainer {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
 
@@ -3132,7 +3132,7 @@ tbody.collapse.show {
 @media (max-width: 767px) {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid,
-  .navbar-expand-md > body {
+  .navbar-expand-md > .appContainer {
     padding-right: 0;
     padding-left: 0; } }
 @media (min-width: 768px) {
@@ -3161,7 +3161,7 @@ tbody.collapse.show {
 
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid,
-  .navbar-expand-md > body {
+  .navbar-expand-md > .appContainer {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
 
@@ -3174,7 +3174,7 @@ tbody.collapse.show {
 @media (max-width: 991px) {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid,
-  .navbar-expand-lg > body {
+  .navbar-expand-lg > .appContainer {
     padding-right: 0;
     padding-left: 0; } }
 @media (min-width: 992px) {
@@ -3203,7 +3203,7 @@ tbody.collapse.show {
 
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid,
-  .navbar-expand-lg > body {
+  .navbar-expand-lg > .appContainer {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
 
@@ -3216,7 +3216,7 @@ tbody.collapse.show {
 @media (max-width: 1199px) {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid,
-  .navbar-expand-xl > body {
+  .navbar-expand-xl > .appContainer {
     padding-right: 0;
     padding-left: 0; } }
 @media (min-width: 1200px) {
@@ -3245,7 +3245,7 @@ tbody.collapse.show {
 
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid,
-  .navbar-expand-xl > body {
+  .navbar-expand-xl > .appContainer {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
 
@@ -3265,7 +3265,7 @@ tbody.collapse.show {
 
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
-.navbar-expand > body {
+.navbar-expand > .appContainer {
   padding-right: 0;
   padding-left: 0; }
 
@@ -3286,7 +3286,7 @@ tbody.collapse.show {
 
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
-.navbar-expand > body {
+.navbar-expand > .appContainer {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
 
@@ -7322,27 +7322,20 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important; }
 
 /*# sourceMappingURL=bootstrap.css.map */
-body {
+.appContainer {
   text-align: center;
   font-family: "Nunito", sans-serif;
   color: #787676;
   background: #171817;
   font-size: 12px;
   line-height: 1.482;
-  max-width: 1600px;
-  padding-left: auto;
-  padding-right: auto; }
-  @media screen and (max-width: 2200px) {
-    body {
-      padding-left: 4vw;
-      padding-right: 4vw; } }
-  @media screen and (max-width: 991px) {
-    body {
-      padding-left: 0;
-      padding-right: 0; } }
+  padding: 0;
+  margin: auto;
+  max-width: 1600px; }
 
 .appHead {
-  min-height: 50px;
+  width: 100%;
+  min-height: 66px;
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   -ms-border-radius: 0 0 4px 4px;
@@ -7351,22 +7344,21 @@ body {
 
 .btnStd, .navBtn, .logBtn, .portBtn, .confirmBtn, .fooBtn {
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 800; }
 
 .navBtn, .logBtn, .portBtn, .confirmBtn {
   background: transparent;
   color: #787676;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.1rem;
+  font-size: 12.5px;
+  letter-spacing: 0.15rem;
   border: 2px solid transparent;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  padding: 4px 7px;
-  margin: auto 3px; }
+  padding: 5px 9px;
+  margin: auto 4px; }
   .navBtn:hover, .logBtn:hover, .portBtn:hover, .confirmBtn:hover, .navBtn:focus, .logBtn:focus, .portBtn:focus, .confirmBtn:focus, .navBtn.active, .active.logBtn, .active.portBtn, .active.confirmBtn {
     color: #00a55e;
     border-color: #00a55e;
@@ -7380,7 +7372,7 @@ body {
       margin: .2rem auto; } }
 
 #appNavBar {
-  min-height: 50px;
+  min-height: 66px;
   padding: 0;
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19);
@@ -7390,23 +7382,17 @@ body {
 
 .logo,
 #navToggler {
-  margin: auto 22px; }
+  margin: auto 30px; }
   @media screen and (max-width: 991px) {
     .logo,
     #navToggler {
-      margin-top: 13px;
-      margin-bottom: 13px; } }
-  @media screen and (max-width: 414px) {
-    .logo,
-    #navToggler {
-      margin-left: 13px;
-      margin-right: 13px; } }
+      margin: 13px 20px; } }
 
 .loginContainer {
   background: #eee;
   margin-left: 9px;
-  height: 50px;
-  min-width: 180px; }
+  height: 66px;
+  min-width: 187px; }
   @media screen and (max-width: 991px) {
     .loginContainer {
       margin-left: 0;
@@ -7426,7 +7412,7 @@ body {
   margin-top: 17px;
   margin-bottom: 17px; }
   .logBtn:hover, .logBtn:focus, .logBtn:active {
-    background: #fff;
+    background: transparent;
     color: #00a55e; }
   @media screen and (max-width: 991px) {
     .logBtn {
@@ -7435,15 +7421,27 @@ body {
 
 .userInfo {
   margin-top: 6px;
-  margin-bottom: 6px; }
+  margin-bottom: 6px;
+  text-align: right; }
+  @media screen and (max-width: 991px) {
+    .userInfo {
+      text-align: center; } }
 
 .userName {
-  font-size: 0.9rem;
-  letter-spacing: 0.02rem;
+  font-size: 12px;
+  letter-spacing: 0.015rem;
   font-weight: 800;
-  color: #747373; }
+  color: #3d3d3d;
+  margin: auto 6px; }
+
+.userAvatar {
+  margin-right: 30px; }
+  @media screen and (max-width: 991px) {
+    .userAvatar {
+      margin-right: 0; } }
 
 .appMain {
+  width: 100%;
   background: #ededed;
   padding: 17px;
   margin: 0; }
@@ -7460,13 +7458,14 @@ body {
 .titleStd, .colTitle, .cardHead, .cardHeadGreen, .tableHead td {
   text-transform: uppercase;
   color: #777;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.02rem;
+  line-height: 1;
   text-align: left; }
 
 .colTitle {
   font-size: 1.1rem;
-  margin: 13px 13px 17px 39px; }
+  margin: 9px 13px 25px 36px; }
 
 .flexContainer {
   display: flex;
@@ -7489,7 +7488,7 @@ body {
 .cardHead, .cardHeadGreen {
   text-transform: capitalize;
   font-weight: 700;
-  padding: 15px 0 15px 26px; }
+  padding: 15px 0 15px 23px; }
 
 .cardHeadGreen {
   -webkit-box-shadow: inset 3px 0 0 0 #00a55e;
@@ -7504,16 +7503,14 @@ body {
 
 .cardContent {
   position: relative;
-  padding: 0 21px 21px;
+  padding: 6px 24px 30px;
   text-align: left; }
-
-.inputGroupStd {
-  margin: 0 5px 9px 0; }
 
 .inputStd, .dollarLabel, .assetList .percentLabel, .inputCont, .assetList .inputAlloc, .dropDown, .range-slider {
   background: transparent;
-  padding: 2px 9px 9px;
-  border: 2px solid transparent;
+  margin-top: -2px;
+  padding: 0 4px 4px 7px;
+  border: 1px solid transparent;
   font-size: 1.1rem;
   font-weight: 900;
   -webkit-border-radius: 0;
@@ -7523,17 +7520,18 @@ body {
   border-radius: 0; }
 
 .dollarLabel, .assetList .percentLabel {
-  padding-left: 4px;
+  margin-left: -2px;
+  padding-left: 0;
   padding-right: 4px;
   font-weight: 700;
   color: #b2b2b2; }
 
 .inputCont, .assetList .inputAlloc {
-  border-bottom: 2px solid #b2b2b2;
+  border-bottom: 1px solid #b2b2b2;
   color: #565353; }
   .inputCont:hover, .assetList .inputAlloc:hover, .inputCont:focus, .assetList .inputAlloc:focus, .inputCont:active, .assetList .inputAlloc:active {
     border-color: transparent;
-    border-bottom: 2px solid #00a55e; }
+    border-bottom: 1px solid #00a55e; }
 
 .dropDownGroup {
   margin-left: 15px; }
@@ -7734,9 +7732,13 @@ input::-moz-focus-outer {
     background: #fff;
     color: #00a55e; }
 
+.appFooter {
+  width: 100%; }
+
 .fooBtn {
+  font-size: 12.5px;
   color: #2d2e2d;
-  margin: 1rem 0.3rem; }
+  padding: 20px 15px; }
   .fooBtn:hover, .fooBtn:focus, .fooBtn:active {
     color: #fff; }
   @media screen and (max-width: 414px) {
@@ -7748,11 +7750,6 @@ input::-moz-focus-outer {
 
 .company {
   color: #2d2e2d;
-  display: inline-block;
-  font-weight: 700;
-  margin: 1rem 0.3rem; }
-  @media screen and (max-width: 414px) {
-    .company {
-      display: block; } }
+  text-transform: none; }
 
 /*# sourceMappingURL=style.css.map */
