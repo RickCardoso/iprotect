@@ -1,5 +1,5 @@
 # iProtect | QuantHub
-This is a financial application for asset protecting and investment strategy.
+This is a financial application for asset protection and investment strategy.
 
 ## About the Project
 The project is a front-end HTML5/CSS3 structure ready to receive database information and present responsive navigation.
