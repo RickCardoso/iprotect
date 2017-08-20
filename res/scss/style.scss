@@ -13,6 +13,7 @@ $nunito: 'Nunito', sans-serif;
 
 // Metrics
 $nav-height: 66px;
+$min-app-height: 0px; // TODO: get the right maximum value
 $sm: 414px;
 $md: 991px;
 $lg: 2200px;
@@ -232,6 +233,7 @@ $lg: 2200px;
 .cardContainer {
   background: #fff;
   @include boxShadow(0, 2px, 5px, 2px, #d6d6d6);
+  @include borderRadius(2px);
   padding: 0;
   margin: 7px 13px;
 }
@@ -376,6 +378,7 @@ $lg: 2200px;
     outline: none;
     padding: 0;
     margin: 0;
+    top: -22px;
 
     // Range Handle
     &::-webkit-slider-thumb {
@@ -414,7 +417,7 @@ $lg: 2200px;
   // Range Label
   .range-slider__value {
     position: relative;
-    top: -42px;
+    top: -11px;
     color: $range-label;
     font-size: .8rem;
     letter-spacing: normal;
@@ -442,6 +445,7 @@ $lg: 2200px;
   input::-moz-focus-outer {
     border: 0;
   }
+/* ----- */
 
 .portBtn {
   @extend .navBtn;
@@ -453,49 +457,60 @@ $lg: 2200px;
 }
 
 .investList {
+  table-layout: fixed;
   max-height: 400px;
   width: 100%;
   font-size: .9rem;
   color: $complementary;
   background: #fafafa;
-  & tr {
+  & thead {
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    @include insetShadow(3px, 0, 0, 0, $primary);
+    & tr {
+      display: block;
+      position: relative;
+    }
     & td {
+      @extend .titleStd;
+      text-transform: capitalize;
+      font-weight: 700;
       @include paddingY(15px);
     }
     & td:first-child {
-      text-align: left;
       padding-left: 26px;
-    }
-    & td:not(:first-child) {
-      text-align: center;
     }
     & td:last-child {
       padding-right: 26px;
     }
   }
-}
+  & tbody {
+    display: block;
+    overflow: auto;
+    max-height: 554px;
+    width: 100%;
+  }
 
-.tableHead {
-  background: #fff;
-  border-bottom: 1px solid #e8e8e8;
-  @include insetShadow(3px, 0, 0, 0, $primary);
-  & td {
-    @extend .titleStd;
-    text-transform: capitalize;
-    font-weight: 700;
+  td:nth-child(1), th:nth-child(1) { min-width: 240px; width: auto; }
+  td:nth-child(2), th:nth-child(2) { min-width: 90px; }
+  td:nth-child(3), th:nth-child(3) { min-width: 45px; }
+  td:nth-child(4), th:nth-child(4) { width: 90px; }
+  td:nth-child(5), th:nth-child(5) { width: 20px;}
+
+  & td,
+  & th {
     @include paddingY(15px);
+    &:first-child {
+      text-align: left;
+      padding-left: 26px;
+    }
+    &:not(:first-child) {
+      text-align: center;
+    }
+    &:last-child {
+      padding-right: 26px;
+    }
   }
-  & td:first-child {
-    padding-left: 26px;
-  }
-  & td:last-child {
-    padding-right: 26px;
-  }
-}
-
-.tableRow {
-  margin: 0;
-  padding: 10px;
 }
 
 .downloadBtn {
@@ -525,10 +540,16 @@ $lg: 2200px;
 .assetList {
   @extend .investList;
   font-weight: 800;
+
+  td:nth-child(1), th:nth-child(1) { min-width: 300px; width: auto; }
+  td:nth-child(2), th:nth-child(2) { min-width: 60px; }
+  td:nth-child(3), th:nth-child(3) { width: 20px; }
+
   & .inputAlloc {
     @extend .inputCont;
+    text-align: right;
     padding-bottom: 0;
-    max-width: 60px;
+    max-width: 50px;
   }
   & .percentLabel {
     @extend .dollarLabel;
@@ -562,6 +583,67 @@ $lg: 2200px;
     background: #fff;
     color: $primary;
   }
+}
+
+.dashCard {
+  @include boxShadow(0, 4px, 0, 0, $primary);
+}
+
+.dashImg {
+  height: 160px;
+  display: flex;
+  vertical-align: bottom;
+  justify-content: center;
+  & img {
+    margin-top: auto;
+  }
+}
+
+.dashTitle {
+  @extend .titleStd;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.dashBtn {
+  @extend .portBtn;
+}
+
+.activityTitle {
+  @extend .titleStd;
+  @extend .col-12;
+  padding-left: 13px;
+  font-size: 18px;
+}
+
+.learnTitle {
+  @extend .cardHeadGreen;
+  font-size: 26px;
+}
+
+.learnBtn {
+  @extend .portBtn;
+}
+
+.chapterHead {
+  @extend .cardHeadGreen;
+}
+
+.lessonTitle {
+  @extend .titleStd;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+
+.lessonSubtitle {
+  @extend .titleStd;
+  text-transform: capitalize;
+  color: #777;
+}
+
+.lessonBtn {
+  @extend .btnStd;
 }
 
 .appFooter {
