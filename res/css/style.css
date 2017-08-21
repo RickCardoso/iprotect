@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -544,7 +545,7 @@ pre code {
   padding-right: 0;
   padding-left: 0; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .activityTitle, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
@@ -624,7 +625,7 @@ pre code {
   flex: 0 0 91.666667%;
   max-width: 91.666667%; }
 
-.col-12 {
+.col-12, .activityTitle {
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%; }
@@ -1435,6 +1436,11 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-btn > .form-control-plaintext.logBtn,
 .input-group-sm > .input-group-btn > .form-control-plaintext.portBtn,
 .input-group-sm > .input-group-btn > .form-control-plaintext.confirmBtn,
+.input-group-sm > .input-group-btn > .form-control-plaintext.dashBtn,
+.input-group-sm > .input-group-btn > .form-control-plaintext.learnBtn,
+.input-group-sm > .input-group-btn > .form-control-plaintext.backBtn,
+.input-group-sm > .input-group-btn > .form-control-plaintext.planBtn,
+.tabMenu .input-group-sm > .input-group-btn > .form-control-plaintext.continueBtn,
 .input-group-sm > .input-group-btn > .form-control-plaintext.fooBtn, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control,
 .input-group-lg > .form-control-plaintext.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-plaintext.btn,
@@ -1443,6 +1449,11 @@ select.form-control:focus::-ms-value {
 .input-group-lg > .input-group-btn > .form-control-plaintext.logBtn,
 .input-group-lg > .input-group-btn > .form-control-plaintext.portBtn,
 .input-group-lg > .input-group-btn > .form-control-plaintext.confirmBtn,
+.input-group-lg > .input-group-btn > .form-control-plaintext.dashBtn,
+.input-group-lg > .input-group-btn > .form-control-plaintext.learnBtn,
+.input-group-lg > .input-group-btn > .form-control-plaintext.backBtn,
+.input-group-lg > .input-group-btn > .form-control-plaintext.planBtn,
+.tabMenu .input-group-lg > .input-group-btn > .form-control-plaintext.continueBtn,
 .input-group-lg > .input-group-btn > .form-control-plaintext.fooBtn {
   padding-right: 0;
   padding-left: 0; }
@@ -1455,6 +1466,11 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-btn > .logBtn,
 .input-group-sm > .input-group-btn > .portBtn,
 .input-group-sm > .input-group-btn > .confirmBtn,
+.input-group-sm > .input-group-btn > .dashBtn,
+.input-group-sm > .input-group-btn > .learnBtn,
+.input-group-sm > .input-group-btn > .backBtn,
+.input-group-sm > .input-group-btn > .planBtn,
+.tabMenu .input-group-sm > .input-group-btn > .continueBtn,
 .input-group-sm > .input-group-btn > .fooBtn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -1469,6 +1485,11 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-sm > .input-group-btn > select.logBtn:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.portBtn:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.confirmBtn:not([size]):not([multiple]),
+.input-group-sm > .input-group-btn > select.dashBtn:not([size]):not([multiple]),
+.input-group-sm > .input-group-btn > select.learnBtn:not([size]):not([multiple]),
+.input-group-sm > .input-group-btn > select.backBtn:not([size]):not([multiple]),
+.input-group-sm > .input-group-btn > select.planBtn:not([size]):not([multiple]),
+.tabMenu .input-group-sm > .input-group-btn > select.continueBtn:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.fooBtn:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px); }
 
@@ -1480,6 +1501,11 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-btn > .logBtn,
 .input-group-lg > .input-group-btn > .portBtn,
 .input-group-lg > .input-group-btn > .confirmBtn,
+.input-group-lg > .input-group-btn > .dashBtn,
+.input-group-lg > .input-group-btn > .learnBtn,
+.input-group-lg > .input-group-btn > .backBtn,
+.input-group-lg > .input-group-btn > .planBtn,
+.tabMenu .input-group-lg > .input-group-btn > .continueBtn,
 .input-group-lg > .input-group-btn > .fooBtn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -1494,6 +1520,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .input-group-lg > .input-group-btn > select.logBtn:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.portBtn:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.confirmBtn:not([size]):not([multiple]),
+.input-group-lg > .input-group-btn > select.dashBtn:not([size]):not([multiple]),
+.input-group-lg > .input-group-btn > select.learnBtn:not([size]):not([multiple]),
+.input-group-lg > .input-group-btn > select.backBtn:not([size]):not([multiple]),
+.input-group-lg > .input-group-btn > select.planBtn:not([size]):not([multiple]),
+.tabMenu .input-group-lg > .input-group-btn > select.continueBtn:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.fooBtn:not([size]):not([multiple]) {
   height: calc(2.3125rem + 2px); }
 
@@ -1726,7 +1757,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
   .form-inline .has-feedback .form-control-feedback {
     top: 0; } }
-.btn, .btnStd, .navBtn, .logBtn, .portBtn, .confirmBtn, .fooBtn {
+.btn, .btnStd, .navBtn, .logBtn, .portBtn, .confirmBtn, .dashBtn, .learnBtn, .backBtn, .planBtn, .tabMenu .continueBtn, .fooBtn {
   display: inline-block;
   font-weight: normal;
   text-align: center;
@@ -1743,26 +1774,32 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-radius: 0.25rem;
   transition: all 0.15s ease-in-out; }
 
-.btn:focus, .btnStd:focus, .navBtn:focus, .logBtn:focus, .portBtn:focus, .confirmBtn:focus, .fooBtn:focus, .btn:hover, .btnStd:hover, .navBtn:hover, .logBtn:hover, .portBtn:hover, .confirmBtn:hover, .fooBtn:hover {
+.btn:focus, .btnStd:focus, .navBtn:focus, .logBtn:focus, .portBtn:focus, .confirmBtn:focus, .dashBtn:focus, .learnBtn:focus, .backBtn:focus, .planBtn:focus, .tabMenu .continueBtn:focus, .fooBtn:focus, .btn:hover, .btnStd:hover, .navBtn:hover, .logBtn:hover, .portBtn:hover, .confirmBtn:hover, .dashBtn:hover, .learnBtn:hover, .backBtn:hover, .planBtn:hover, .tabMenu .continueBtn:hover, .fooBtn:hover {
   text-decoration: none; }
 
-.btn:focus, .btnStd:focus, .navBtn:focus, .logBtn:focus, .portBtn:focus, .confirmBtn:focus, .fooBtn:focus, .btn.focus, .focus.btnStd, .focus.navBtn, .focus.logBtn, .focus.portBtn, .focus.confirmBtn, .focus.fooBtn {
+.btn:focus, .btnStd:focus, .navBtn:focus, .logBtn:focus, .portBtn:focus, .confirmBtn:focus, .dashBtn:focus, .learnBtn:focus, .backBtn:focus, .planBtn:focus, .tabMenu .continueBtn:focus, .fooBtn:focus, .btn.focus, .focus.btnStd, .focus.navBtn, .focus.logBtn, .focus.portBtn, .focus.confirmBtn, .focus.dashBtn, .focus.learnBtn, .focus.backBtn, .focus.planBtn, .tabMenu .focus.continueBtn, .focus.fooBtn {
   outline: 0;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); }
 
-.btn.disabled, .disabled.btnStd, .disabled.navBtn, .disabled.logBtn, .disabled.portBtn, .disabled.confirmBtn, .disabled.fooBtn, .btn:disabled, .btnStd:disabled, .navBtn:disabled, .logBtn:disabled, .portBtn:disabled, .confirmBtn:disabled, .fooBtn:disabled {
+.btn.disabled, .disabled.btnStd, .disabled.navBtn, .disabled.logBtn, .disabled.portBtn, .disabled.confirmBtn, .disabled.dashBtn, .disabled.learnBtn, .disabled.backBtn, .disabled.planBtn, .tabMenu .disabled.continueBtn, .disabled.fooBtn, .btn:disabled, .btnStd:disabled, .navBtn:disabled, .logBtn:disabled, .portBtn:disabled, .confirmBtn:disabled, .dashBtn:disabled, .learnBtn:disabled, .backBtn:disabled, .planBtn:disabled, .tabMenu .continueBtn:disabled, .fooBtn:disabled {
   opacity: .65; }
 
-.btn:active, .btnStd:active, .navBtn:active, .logBtn:active, .portBtn:active, .confirmBtn:active, .fooBtn:active, .btn.active, .active.btnStd, .active.navBtn, .active.logBtn, .active.portBtn, .active.confirmBtn, .active.fooBtn {
+.btn:active, .btnStd:active, .navBtn:active, .logBtn:active, .portBtn:active, .confirmBtn:active, .dashBtn:active, .learnBtn:active, .backBtn:active, .planBtn:active, .tabMenu .continueBtn:active, .fooBtn:active, .btn.active, .active.btnStd, .active.navBtn, .active.logBtn, .active.portBtn, .active.confirmBtn, .active.dashBtn, .active.learnBtn, .active.backBtn, .active.planBtn, .tabMenu .active.continueBtn, .active.fooBtn {
   background-image: none; }
 
-a.btn.disabled, a.disabled.btnStd, a.disabled.navBtn, a.disabled.logBtn, a.disabled.portBtn, a.disabled.confirmBtn, a.disabled.fooBtn,
+a.btn.disabled, a.disabled.btnStd, a.disabled.navBtn, a.disabled.logBtn, a.disabled.portBtn, a.disabled.confirmBtn, a.disabled.dashBtn, a.disabled.learnBtn, a.disabled.backBtn, a.disabled.planBtn, .tabMenu a.disabled.continueBtn, a.disabled.fooBtn,
 fieldset[disabled] a.btn,
 fieldset[disabled] a.btnStd,
 fieldset[disabled] a.navBtn,
 fieldset[disabled] a.logBtn,
 fieldset[disabled] a.portBtn,
 fieldset[disabled] a.confirmBtn,
+fieldset[disabled] a.dashBtn,
+fieldset[disabled] a.learnBtn,
+fieldset[disabled] a.backBtn,
+fieldset[disabled] a.planBtn,
+fieldset[disabled] .tabMenu a.continueBtn,
+.tabMenu fieldset[disabled] a.continueBtn,
 fieldset[disabled] a.fooBtn {
   pointer-events: none; }
 
@@ -2168,13 +2205,13 @@ fieldset[disabled] a.fooBtn {
 .btn-link:disabled:focus, .btn-link:disabled:hover {
   text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btnStd, .btn-group-lg > .navBtn, .btn-group-lg > .logBtn, .btn-group-lg > .portBtn, .btn-group-lg > .confirmBtn, .btn-group-lg > .fooBtn {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btnStd, .btn-group-lg > .navBtn, .btn-group-lg > .logBtn, .btn-group-lg > .portBtn, .btn-group-lg > .confirmBtn, .btn-group-lg > .dashBtn, .btn-group-lg > .learnBtn, .btn-group-lg > .backBtn, .btn-group-lg > .planBtn, .tabMenu .btn-group-lg > .continueBtn, .btn-group-lg > .fooBtn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btnStd, .btn-group-sm > .navBtn, .btn-group-sm > .logBtn, .btn-group-sm > .portBtn, .btn-group-sm > .confirmBtn, .btn-group-sm > .fooBtn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btnStd, .btn-group-sm > .navBtn, .btn-group-sm > .logBtn, .btn-group-sm > .portBtn, .btn-group-sm > .confirmBtn, .btn-group-sm > .dashBtn, .btn-group-sm > .learnBtn, .btn-group-sm > .backBtn, .btn-group-sm > .planBtn, .tabMenu .btn-group-sm > .continueBtn, .btn-group-sm > .fooBtn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2315,36 +2352,51 @@ tbody.collapse.show {
   display: inline-flex;
   vertical-align: middle; }
 
-.btn-group > .btn, .btn-group > .btnStd, .btn-group > .navBtn, .btn-group > .logBtn, .btn-group > .portBtn, .btn-group > .confirmBtn, .btn-group > .fooBtn,
+.btn-group > .btn, .btn-group > .btnStd, .btn-group > .navBtn, .btn-group > .logBtn, .btn-group > .portBtn, .btn-group > .confirmBtn, .btn-group > .dashBtn, .btn-group > .learnBtn, .btn-group > .backBtn, .btn-group > .planBtn, .tabMenu .btn-group > .continueBtn, .btn-group > .fooBtn,
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btnStd,
 .btn-group-vertical > .navBtn,
 .btn-group-vertical > .logBtn,
 .btn-group-vertical > .portBtn,
 .btn-group-vertical > .confirmBtn,
+.btn-group-vertical > .dashBtn,
+.btn-group-vertical > .learnBtn,
+.btn-group-vertical > .backBtn,
+.btn-group-vertical > .planBtn,
+.tabMenu .btn-group-vertical > .continueBtn,
 .btn-group-vertical > .fooBtn {
   position: relative;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   margin-bottom: 0; }
 
-.btn-group > .btn:hover, .btn-group > .btnStd:hover, .btn-group > .navBtn:hover, .btn-group > .logBtn:hover, .btn-group > .portBtn:hover, .btn-group > .confirmBtn:hover, .btn-group > .fooBtn:hover,
+.btn-group > .btn:hover, .btn-group > .btnStd:hover, .btn-group > .navBtn:hover, .btn-group > .logBtn:hover, .btn-group > .portBtn:hover, .btn-group > .confirmBtn:hover, .btn-group > .dashBtn:hover, .btn-group > .learnBtn:hover, .btn-group > .backBtn:hover, .btn-group > .planBtn:hover, .tabMenu .btn-group > .continueBtn:hover, .btn-group > .fooBtn:hover,
 .btn-group-vertical > .btn:hover,
 .btn-group-vertical > .btnStd:hover,
 .btn-group-vertical > .navBtn:hover,
 .btn-group-vertical > .logBtn:hover,
 .btn-group-vertical > .portBtn:hover,
 .btn-group-vertical > .confirmBtn:hover,
+.btn-group-vertical > .dashBtn:hover,
+.btn-group-vertical > .learnBtn:hover,
+.btn-group-vertical > .backBtn:hover,
+.btn-group-vertical > .planBtn:hover,
+.tabMenu .btn-group-vertical > .continueBtn:hover,
 .btn-group-vertical > .fooBtn:hover {
   z-index: 2; }
 
-.btn-group > .btn:focus, .btn-group > .btnStd:focus, .btn-group > .navBtn:focus, .btn-group > .logBtn:focus, .btn-group > .portBtn:focus, .btn-group > .confirmBtn:focus, .btn-group > .fooBtn:focus, .btn-group > .btn:active, .btn-group > .btnStd:active, .btn-group > .navBtn:active, .btn-group > .logBtn:active, .btn-group > .portBtn:active, .btn-group > .confirmBtn:active, .btn-group > .fooBtn:active, .btn-group > .btn.active, .btn-group > .active.btnStd, .btn-group > .active.navBtn, .btn-group > .active.logBtn, .btn-group > .active.portBtn, .btn-group > .active.confirmBtn, .btn-group > .active.fooBtn,
+.btn-group > .btn:focus, .btn-group > .btnStd:focus, .btn-group > .navBtn:focus, .btn-group > .logBtn:focus, .btn-group > .portBtn:focus, .btn-group > .confirmBtn:focus, .btn-group > .dashBtn:focus, .btn-group > .learnBtn:focus, .btn-group > .backBtn:focus, .btn-group > .planBtn:focus, .tabMenu .btn-group > .continueBtn:focus, .btn-group > .fooBtn:focus, .btn-group > .btn:active, .btn-group > .btnStd:active, .btn-group > .navBtn:active, .btn-group > .logBtn:active, .btn-group > .portBtn:active, .btn-group > .confirmBtn:active, .btn-group > .dashBtn:active, .btn-group > .learnBtn:active, .btn-group > .backBtn:active, .btn-group > .planBtn:active, .tabMenu .btn-group > .continueBtn:active, .btn-group > .fooBtn:active, .btn-group > .btn.active, .btn-group > .active.btnStd, .btn-group > .active.navBtn, .btn-group > .active.logBtn, .btn-group > .active.portBtn, .btn-group > .active.confirmBtn, .btn-group > .active.dashBtn, .btn-group > .active.learnBtn, .btn-group > .active.backBtn, .btn-group > .active.planBtn, .tabMenu .btn-group > .active.continueBtn, .btn-group > .active.fooBtn,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .btnStd:focus,
 .btn-group-vertical > .navBtn:focus,
 .btn-group-vertical > .logBtn:focus,
 .btn-group-vertical > .portBtn:focus,
 .btn-group-vertical > .confirmBtn:focus,
+.btn-group-vertical > .dashBtn:focus,
+.btn-group-vertical > .learnBtn:focus,
+.btn-group-vertical > .backBtn:focus,
+.btn-group-vertical > .planBtn:focus,
+.tabMenu .btn-group-vertical > .continueBtn:focus,
 .btn-group-vertical > .fooBtn:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .btnStd:active,
@@ -2352,6 +2404,11 @@ tbody.collapse.show {
 .btn-group-vertical > .logBtn:active,
 .btn-group-vertical > .portBtn:active,
 .btn-group-vertical > .confirmBtn:active,
+.btn-group-vertical > .dashBtn:active,
+.btn-group-vertical > .learnBtn:active,
+.btn-group-vertical > .backBtn:active,
+.btn-group-vertical > .planBtn:active,
+.tabMenu .btn-group-vertical > .continueBtn:active,
 .btn-group-vertical > .fooBtn:active,
 .btn-group-vertical > .btn.active,
 .btn-group-vertical > .active.btnStd,
@@ -2359,16 +2416,27 @@ tbody.collapse.show {
 .btn-group-vertical > .active.logBtn,
 .btn-group-vertical > .active.portBtn,
 .btn-group-vertical > .active.confirmBtn,
+.btn-group-vertical > .active.dashBtn,
+.btn-group-vertical > .active.learnBtn,
+.btn-group-vertical > .active.backBtn,
+.btn-group-vertical > .active.planBtn,
+.tabMenu .btn-group-vertical > .active.continueBtn,
 .btn-group-vertical > .active.fooBtn {
   z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group .btnStd + .btn, .btn-group .navBtn + .btn, .btn-group .logBtn + .btn, .btn-group .portBtn + .btn, .btn-group .confirmBtn + .btn, .btn-group .fooBtn + .btn, .btn-group .btn + .btnStd, .btn-group .btnStd + .btnStd, .btn-group .navBtn + .btnStd, .btn-group .logBtn + .btnStd, .btn-group .portBtn + .btnStd, .btn-group .confirmBtn + .btnStd, .btn-group .fooBtn + .btnStd, .btn-group .btn + .navBtn, .btn-group .btnStd + .navBtn, .btn-group .navBtn + .navBtn, .btn-group .logBtn + .navBtn, .btn-group .portBtn + .navBtn, .btn-group .confirmBtn + .navBtn, .btn-group .fooBtn + .navBtn, .btn-group .btn + .logBtn, .btn-group .btnStd + .logBtn, .btn-group .navBtn + .logBtn, .btn-group .logBtn + .logBtn, .btn-group .portBtn + .logBtn, .btn-group .confirmBtn + .logBtn, .btn-group .fooBtn + .logBtn, .btn-group .btn + .portBtn, .btn-group .btnStd + .portBtn, .btn-group .navBtn + .portBtn, .btn-group .logBtn + .portBtn, .btn-group .portBtn + .portBtn, .btn-group .confirmBtn + .portBtn, .btn-group .fooBtn + .portBtn, .btn-group .btn + .confirmBtn, .btn-group .btnStd + .confirmBtn, .btn-group .navBtn + .confirmBtn, .btn-group .logBtn + .confirmBtn, .btn-group .portBtn + .confirmBtn, .btn-group .confirmBtn + .confirmBtn, .btn-group .fooBtn + .confirmBtn, .btn-group .btn + .fooBtn, .btn-group .btnStd + .fooBtn, .btn-group .navBtn + .fooBtn, .btn-group .logBtn + .fooBtn, .btn-group .portBtn + .fooBtn, .btn-group .confirmBtn + .fooBtn, .btn-group .fooBtn + .fooBtn,
+.btn-group .btn + .btn, .btn-group .btnStd + .btn, .btn-group .navBtn + .btn, .btn-group .logBtn + .btn, .btn-group .portBtn + .btn, .btn-group .confirmBtn + .btn, .btn-group .dashBtn + .btn, .btn-group .learnBtn + .btn, .btn-group .backBtn + .btn, .btn-group .planBtn + .btn, .btn-group .tabMenu .continueBtn + .btn, .tabMenu .btn-group .continueBtn + .btn, .btn-group .fooBtn + .btn, .btn-group .btn + .btnStd, .btn-group .btnStd + .btnStd, .btn-group .navBtn + .btnStd, .btn-group .logBtn + .btnStd, .btn-group .portBtn + .btnStd, .btn-group .confirmBtn + .btnStd, .btn-group .dashBtn + .btnStd, .btn-group .learnBtn + .btnStd, .btn-group .backBtn + .btnStd, .btn-group .planBtn + .btnStd, .btn-group .tabMenu .continueBtn + .btnStd, .tabMenu .btn-group .continueBtn + .btnStd, .btn-group .fooBtn + .btnStd, .btn-group .btn + .navBtn, .btn-group .btnStd + .navBtn, .btn-group .navBtn + .navBtn, .btn-group .logBtn + .navBtn, .btn-group .portBtn + .navBtn, .btn-group .confirmBtn + .navBtn, .btn-group .dashBtn + .navBtn, .btn-group .learnBtn + .navBtn, .btn-group .backBtn + .navBtn, .btn-group .planBtn + .navBtn, .btn-group .tabMenu .continueBtn + .navBtn, .tabMenu .btn-group .continueBtn + .navBtn, .btn-group .fooBtn + .navBtn, .btn-group .btn + .logBtn, .btn-group .btnStd + .logBtn, .btn-group .navBtn + .logBtn, .btn-group .logBtn + .logBtn, .btn-group .portBtn + .logBtn, .btn-group .confirmBtn + .logBtn, .btn-group .dashBtn + .logBtn, .btn-group .learnBtn + .logBtn, .btn-group .backBtn + .logBtn, .btn-group .planBtn + .logBtn, .btn-group .tabMenu .continueBtn + .logBtn, .tabMenu .btn-group .continueBtn + .logBtn, .btn-group .fooBtn + .logBtn, .btn-group .btn + .portBtn, .btn-group .btnStd + .portBtn, .btn-group .navBtn + .portBtn, .btn-group .logBtn + .portBtn, .btn-group .portBtn + .portBtn, .btn-group .confirmBtn + .portBtn, .btn-group .dashBtn + .portBtn, .btn-group .learnBtn + .portBtn, .btn-group .backBtn + .portBtn, .btn-group .planBtn + .portBtn, .btn-group .tabMenu .continueBtn + .portBtn, .tabMenu .btn-group .continueBtn + .portBtn, .btn-group .fooBtn + .portBtn, .btn-group .btn + .confirmBtn, .btn-group .btnStd + .confirmBtn, .btn-group .navBtn + .confirmBtn, .btn-group .logBtn + .confirmBtn, .btn-group .portBtn + .confirmBtn, .btn-group .confirmBtn + .confirmBtn, .btn-group .dashBtn + .confirmBtn, .btn-group .learnBtn + .confirmBtn, .btn-group .backBtn + .confirmBtn, .btn-group .planBtn + .confirmBtn, .btn-group .tabMenu .continueBtn + .confirmBtn, .tabMenu .btn-group .continueBtn + .confirmBtn, .btn-group .fooBtn + .confirmBtn, .btn-group .btn + .dashBtn, .btn-group .btnStd + .dashBtn, .btn-group .navBtn + .dashBtn, .btn-group .logBtn + .dashBtn, .btn-group .portBtn + .dashBtn, .btn-group .confirmBtn + .dashBtn, .btn-group .dashBtn + .dashBtn, .btn-group .learnBtn + .dashBtn, .btn-group .backBtn + .dashBtn, .btn-group .planBtn + .dashBtn, .btn-group .tabMenu .continueBtn + .dashBtn, .tabMenu .btn-group .continueBtn + .dashBtn, .btn-group .fooBtn + .dashBtn, .btn-group .btn + .learnBtn, .btn-group .btnStd + .learnBtn, .btn-group .navBtn + .learnBtn, .btn-group .logBtn + .learnBtn, .btn-group .portBtn + .learnBtn, .btn-group .confirmBtn + .learnBtn, .btn-group .dashBtn + .learnBtn, .btn-group .learnBtn + .learnBtn, .btn-group .backBtn + .learnBtn, .btn-group .planBtn + .learnBtn, .btn-group .tabMenu .continueBtn + .learnBtn, .tabMenu .btn-group .continueBtn + .learnBtn, .btn-group .fooBtn + .learnBtn, .btn-group .btn + .backBtn, .btn-group .btnStd + .backBtn, .btn-group .navBtn + .backBtn, .btn-group .logBtn + .backBtn, .btn-group .portBtn + .backBtn, .btn-group .confirmBtn + .backBtn, .btn-group .dashBtn + .backBtn, .btn-group .learnBtn + .backBtn, .btn-group .backBtn + .backBtn, .btn-group .planBtn + .backBtn, .btn-group .tabMenu .continueBtn + .backBtn, .tabMenu .btn-group .continueBtn + .backBtn, .btn-group .fooBtn + .backBtn, .btn-group .btn + .planBtn, .btn-group .btnStd + .planBtn, .btn-group .navBtn + .planBtn, .btn-group .logBtn + .planBtn, .btn-group .portBtn + .planBtn, .btn-group .confirmBtn + .planBtn, .btn-group .dashBtn + .planBtn, .btn-group .learnBtn + .planBtn, .btn-group .backBtn + .planBtn, .btn-group .planBtn + .planBtn, .btn-group .tabMenu .continueBtn + .planBtn, .tabMenu .btn-group .continueBtn + .planBtn, .btn-group .fooBtn + .planBtn, .btn-group .tabMenu .btn + .continueBtn, .tabMenu .btn-group .btn + .continueBtn, .btn-group .tabMenu .btnStd + .continueBtn, .tabMenu .btn-group .btnStd + .continueBtn, .btn-group .tabMenu .navBtn + .continueBtn, .tabMenu .btn-group .navBtn + .continueBtn, .btn-group .tabMenu .logBtn + .continueBtn, .tabMenu .btn-group .logBtn + .continueBtn, .btn-group .tabMenu .portBtn + .continueBtn, .tabMenu .btn-group .portBtn + .continueBtn, .btn-group .tabMenu .confirmBtn + .continueBtn, .tabMenu .btn-group .confirmBtn + .continueBtn, .btn-group .tabMenu .dashBtn + .continueBtn, .tabMenu .btn-group .dashBtn + .continueBtn, .btn-group .tabMenu .learnBtn + .continueBtn, .tabMenu .btn-group .learnBtn + .continueBtn, .btn-group .tabMenu .backBtn + .continueBtn, .tabMenu .btn-group .backBtn + .continueBtn, .btn-group .tabMenu .planBtn + .continueBtn, .tabMenu .btn-group .planBtn + .continueBtn, .btn-group .tabMenu .continueBtn + .continueBtn, .tabMenu .btn-group .continueBtn + .continueBtn, .btn-group .tabMenu .fooBtn + .continueBtn, .tabMenu .btn-group .fooBtn + .continueBtn, .btn-group .btn + .fooBtn, .btn-group .btnStd + .fooBtn, .btn-group .navBtn + .fooBtn, .btn-group .logBtn + .fooBtn, .btn-group .portBtn + .fooBtn, .btn-group .confirmBtn + .fooBtn, .btn-group .dashBtn + .fooBtn, .btn-group .learnBtn + .fooBtn, .btn-group .backBtn + .fooBtn, .btn-group .planBtn + .fooBtn, .btn-group .tabMenu .continueBtn + .fooBtn, .tabMenu .btn-group .continueBtn + .fooBtn, .btn-group .fooBtn + .fooBtn,
 .btn-group .btn + .btn-group,
 .btn-group .btnStd + .btn-group,
 .btn-group .navBtn + .btn-group,
 .btn-group .logBtn + .btn-group,
 .btn-group .portBtn + .btn-group,
 .btn-group .confirmBtn + .btn-group,
+.btn-group .dashBtn + .btn-group,
+.btn-group .learnBtn + .btn-group,
+.btn-group .backBtn + .btn-group,
+.btn-group .planBtn + .btn-group,
+.btn-group .tabMenu .continueBtn + .btn-group,
+.tabMenu .btn-group .continueBtn + .btn-group,
 .btn-group .fooBtn + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .btnStd,
@@ -2376,6 +2444,12 @@ tbody.collapse.show {
 .btn-group .btn-group + .logBtn,
 .btn-group .btn-group + .portBtn,
 .btn-group .btn-group + .confirmBtn,
+.btn-group .btn-group + .dashBtn,
+.btn-group .btn-group + .learnBtn,
+.btn-group .btn-group + .backBtn,
+.btn-group .btn-group + .planBtn,
+.btn-group .tabMenu .btn-group + .continueBtn,
+.tabMenu .btn-group .btn-group + .continueBtn,
 .btn-group .btn-group + .fooBtn,
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
@@ -2384,6 +2458,12 @@ tbody.collapse.show {
 .btn-group-vertical .logBtn + .btn,
 .btn-group-vertical .portBtn + .btn,
 .btn-group-vertical .confirmBtn + .btn,
+.btn-group-vertical .dashBtn + .btn,
+.btn-group-vertical .learnBtn + .btn,
+.btn-group-vertical .backBtn + .btn,
+.btn-group-vertical .planBtn + .btn,
+.btn-group-vertical .tabMenu .continueBtn + .btn,
+.tabMenu .btn-group-vertical .continueBtn + .btn,
 .btn-group-vertical .fooBtn + .btn,
 .btn-group-vertical .btn + .btnStd,
 .btn-group-vertical .btnStd + .btnStd,
@@ -2391,6 +2471,12 @@ tbody.collapse.show {
 .btn-group-vertical .logBtn + .btnStd,
 .btn-group-vertical .portBtn + .btnStd,
 .btn-group-vertical .confirmBtn + .btnStd,
+.btn-group-vertical .dashBtn + .btnStd,
+.btn-group-vertical .learnBtn + .btnStd,
+.btn-group-vertical .backBtn + .btnStd,
+.btn-group-vertical .planBtn + .btnStd,
+.btn-group-vertical .tabMenu .continueBtn + .btnStd,
+.tabMenu .btn-group-vertical .continueBtn + .btnStd,
 .btn-group-vertical .fooBtn + .btnStd,
 .btn-group-vertical .btn + .navBtn,
 .btn-group-vertical .btnStd + .navBtn,
@@ -2398,6 +2484,12 @@ tbody.collapse.show {
 .btn-group-vertical .logBtn + .navBtn,
 .btn-group-vertical .portBtn + .navBtn,
 .btn-group-vertical .confirmBtn + .navBtn,
+.btn-group-vertical .dashBtn + .navBtn,
+.btn-group-vertical .learnBtn + .navBtn,
+.btn-group-vertical .backBtn + .navBtn,
+.btn-group-vertical .planBtn + .navBtn,
+.btn-group-vertical .tabMenu .continueBtn + .navBtn,
+.tabMenu .btn-group-vertical .continueBtn + .navBtn,
 .btn-group-vertical .fooBtn + .navBtn,
 .btn-group-vertical .btn + .logBtn,
 .btn-group-vertical .btnStd + .logBtn,
@@ -2405,6 +2497,12 @@ tbody.collapse.show {
 .btn-group-vertical .logBtn + .logBtn,
 .btn-group-vertical .portBtn + .logBtn,
 .btn-group-vertical .confirmBtn + .logBtn,
+.btn-group-vertical .dashBtn + .logBtn,
+.btn-group-vertical .learnBtn + .logBtn,
+.btn-group-vertical .backBtn + .logBtn,
+.btn-group-vertical .planBtn + .logBtn,
+.btn-group-vertical .tabMenu .continueBtn + .logBtn,
+.tabMenu .btn-group-vertical .continueBtn + .logBtn,
 .btn-group-vertical .fooBtn + .logBtn,
 .btn-group-vertical .btn + .portBtn,
 .btn-group-vertical .btnStd + .portBtn,
@@ -2412,6 +2510,12 @@ tbody.collapse.show {
 .btn-group-vertical .logBtn + .portBtn,
 .btn-group-vertical .portBtn + .portBtn,
 .btn-group-vertical .confirmBtn + .portBtn,
+.btn-group-vertical .dashBtn + .portBtn,
+.btn-group-vertical .learnBtn + .portBtn,
+.btn-group-vertical .backBtn + .portBtn,
+.btn-group-vertical .planBtn + .portBtn,
+.btn-group-vertical .tabMenu .continueBtn + .portBtn,
+.tabMenu .btn-group-vertical .continueBtn + .portBtn,
 .btn-group-vertical .fooBtn + .portBtn,
 .btn-group-vertical .btn + .confirmBtn,
 .btn-group-vertical .btnStd + .confirmBtn,
@@ -2419,13 +2523,101 @@ tbody.collapse.show {
 .btn-group-vertical .logBtn + .confirmBtn,
 .btn-group-vertical .portBtn + .confirmBtn,
 .btn-group-vertical .confirmBtn + .confirmBtn,
+.btn-group-vertical .dashBtn + .confirmBtn,
+.btn-group-vertical .learnBtn + .confirmBtn,
+.btn-group-vertical .backBtn + .confirmBtn,
+.btn-group-vertical .planBtn + .confirmBtn,
+.btn-group-vertical .tabMenu .continueBtn + .confirmBtn,
+.tabMenu .btn-group-vertical .continueBtn + .confirmBtn,
 .btn-group-vertical .fooBtn + .confirmBtn,
+.btn-group-vertical .btn + .dashBtn,
+.btn-group-vertical .btnStd + .dashBtn,
+.btn-group-vertical .navBtn + .dashBtn,
+.btn-group-vertical .logBtn + .dashBtn,
+.btn-group-vertical .portBtn + .dashBtn,
+.btn-group-vertical .confirmBtn + .dashBtn,
+.btn-group-vertical .dashBtn + .dashBtn,
+.btn-group-vertical .learnBtn + .dashBtn,
+.btn-group-vertical .backBtn + .dashBtn,
+.btn-group-vertical .planBtn + .dashBtn,
+.btn-group-vertical .tabMenu .continueBtn + .dashBtn,
+.tabMenu .btn-group-vertical .continueBtn + .dashBtn,
+.btn-group-vertical .fooBtn + .dashBtn,
+.btn-group-vertical .btn + .learnBtn,
+.btn-group-vertical .btnStd + .learnBtn,
+.btn-group-vertical .navBtn + .learnBtn,
+.btn-group-vertical .logBtn + .learnBtn,
+.btn-group-vertical .portBtn + .learnBtn,
+.btn-group-vertical .confirmBtn + .learnBtn,
+.btn-group-vertical .dashBtn + .learnBtn,
+.btn-group-vertical .learnBtn + .learnBtn,
+.btn-group-vertical .backBtn + .learnBtn,
+.btn-group-vertical .planBtn + .learnBtn,
+.btn-group-vertical .tabMenu .continueBtn + .learnBtn,
+.tabMenu .btn-group-vertical .continueBtn + .learnBtn,
+.btn-group-vertical .fooBtn + .learnBtn,
+.btn-group-vertical .btn + .backBtn,
+.btn-group-vertical .btnStd + .backBtn,
+.btn-group-vertical .navBtn + .backBtn,
+.btn-group-vertical .logBtn + .backBtn,
+.btn-group-vertical .portBtn + .backBtn,
+.btn-group-vertical .confirmBtn + .backBtn,
+.btn-group-vertical .dashBtn + .backBtn,
+.btn-group-vertical .learnBtn + .backBtn,
+.btn-group-vertical .backBtn + .backBtn,
+.btn-group-vertical .planBtn + .backBtn,
+.btn-group-vertical .tabMenu .continueBtn + .backBtn,
+.tabMenu .btn-group-vertical .continueBtn + .backBtn,
+.btn-group-vertical .fooBtn + .backBtn,
+.btn-group-vertical .btn + .planBtn,
+.btn-group-vertical .btnStd + .planBtn,
+.btn-group-vertical .navBtn + .planBtn,
+.btn-group-vertical .logBtn + .planBtn,
+.btn-group-vertical .portBtn + .planBtn,
+.btn-group-vertical .confirmBtn + .planBtn,
+.btn-group-vertical .dashBtn + .planBtn,
+.btn-group-vertical .learnBtn + .planBtn,
+.btn-group-vertical .backBtn + .planBtn,
+.btn-group-vertical .planBtn + .planBtn,
+.btn-group-vertical .tabMenu .continueBtn + .planBtn,
+.tabMenu .btn-group-vertical .continueBtn + .planBtn,
+.btn-group-vertical .fooBtn + .planBtn,
+.btn-group-vertical .tabMenu .btn + .continueBtn,
+.tabMenu .btn-group-vertical .btn + .continueBtn,
+.btn-group-vertical .tabMenu .btnStd + .continueBtn,
+.tabMenu .btn-group-vertical .btnStd + .continueBtn,
+.btn-group-vertical .tabMenu .navBtn + .continueBtn,
+.tabMenu .btn-group-vertical .navBtn + .continueBtn,
+.btn-group-vertical .tabMenu .logBtn + .continueBtn,
+.tabMenu .btn-group-vertical .logBtn + .continueBtn,
+.btn-group-vertical .tabMenu .portBtn + .continueBtn,
+.tabMenu .btn-group-vertical .portBtn + .continueBtn,
+.btn-group-vertical .tabMenu .confirmBtn + .continueBtn,
+.tabMenu .btn-group-vertical .confirmBtn + .continueBtn,
+.btn-group-vertical .tabMenu .dashBtn + .continueBtn,
+.tabMenu .btn-group-vertical .dashBtn + .continueBtn,
+.btn-group-vertical .tabMenu .learnBtn + .continueBtn,
+.tabMenu .btn-group-vertical .learnBtn + .continueBtn,
+.btn-group-vertical .tabMenu .backBtn + .continueBtn,
+.tabMenu .btn-group-vertical .backBtn + .continueBtn,
+.btn-group-vertical .tabMenu .planBtn + .continueBtn,
+.tabMenu .btn-group-vertical .planBtn + .continueBtn,
+.btn-group-vertical .tabMenu .continueBtn + .continueBtn,
+.tabMenu .btn-group-vertical .continueBtn + .continueBtn,
+.btn-group-vertical .tabMenu .fooBtn + .continueBtn,
+.tabMenu .btn-group-vertical .fooBtn + .continueBtn,
 .btn-group-vertical .btn + .fooBtn,
 .btn-group-vertical .btnStd + .fooBtn,
 .btn-group-vertical .navBtn + .fooBtn,
 .btn-group-vertical .logBtn + .fooBtn,
 .btn-group-vertical .portBtn + .fooBtn,
 .btn-group-vertical .confirmBtn + .fooBtn,
+.btn-group-vertical .dashBtn + .fooBtn,
+.btn-group-vertical .learnBtn + .fooBtn,
+.btn-group-vertical .backBtn + .fooBtn,
+.btn-group-vertical .planBtn + .fooBtn,
+.btn-group-vertical .tabMenu .continueBtn + .fooBtn,
+.tabMenu .btn-group-vertical .continueBtn + .fooBtn,
 .btn-group-vertical .fooBtn + .fooBtn,
 .btn-group-vertical .btn + .btn-group,
 .btn-group-vertical .btnStd + .btn-group,
@@ -2433,6 +2625,12 @@ tbody.collapse.show {
 .btn-group-vertical .logBtn + .btn-group,
 .btn-group-vertical .portBtn + .btn-group,
 .btn-group-vertical .confirmBtn + .btn-group,
+.btn-group-vertical .dashBtn + .btn-group,
+.btn-group-vertical .learnBtn + .btn-group,
+.btn-group-vertical .backBtn + .btn-group,
+.btn-group-vertical .planBtn + .btn-group,
+.btn-group-vertical .tabMenu .continueBtn + .btn-group,
+.tabMenu .btn-group-vertical .continueBtn + .btn-group,
 .btn-group-vertical .fooBtn + .btn-group,
 .btn-group-vertical .btn-group + .btn,
 .btn-group-vertical .btn-group + .btnStd,
@@ -2440,6 +2638,12 @@ tbody.collapse.show {
 .btn-group-vertical .btn-group + .logBtn,
 .btn-group-vertical .btn-group + .portBtn,
 .btn-group-vertical .btn-group + .confirmBtn,
+.btn-group-vertical .btn-group + .dashBtn,
+.btn-group-vertical .btn-group + .learnBtn,
+.btn-group-vertical .btn-group + .backBtn,
+.btn-group-vertical .btn-group + .planBtn,
+.btn-group-vertical .tabMenu .btn-group + .continueBtn,
+.tabMenu .btn-group-vertical .btn-group + .continueBtn,
 .btn-group-vertical .btn-group + .fooBtn,
 .btn-group-vertical .btn-group + .btn-group {
   margin-left: -1px; }
@@ -2455,17 +2659,17 @@ tbody.collapse.show {
 .btn-toolbar .input-group {
   width: auto; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btnStd:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .navBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .logBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .portBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .confirmBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .fooBtn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btnStd:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .navBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .logBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .portBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .confirmBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .dashBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .learnBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .backBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .planBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .tabMenu .btn-group > .continueBtn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .fooBtn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .btn-group > .btnStd:first-child, .btn-group > .navBtn:first-child, .btn-group > .logBtn:first-child, .btn-group > .portBtn:first-child, .btn-group > .confirmBtn:first-child, .btn-group > .fooBtn:first-child {
+.btn-group > .btn:first-child, .btn-group > .btnStd:first-child, .btn-group > .navBtn:first-child, .btn-group > .logBtn:first-child, .btn-group > .portBtn:first-child, .btn-group > .confirmBtn:first-child, .btn-group > .dashBtn:first-child, .btn-group > .learnBtn:first-child, .btn-group > .backBtn:first-child, .btn-group > .planBtn:first-child, .tabMenu .btn-group > .continueBtn:first-child, .btn-group > .fooBtn:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btnStd:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .navBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .logBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .portBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .confirmBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .fooBtn:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btnStd:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .navBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .logBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .portBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .confirmBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .dashBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .learnBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .backBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .planBtn:first-child:not(:last-child):not(.dropdown-toggle), .tabMenu .btn-group > .continueBtn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .fooBtn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > .btnStd:last-child:not(:first-child), .btn-group > .navBtn:last-child:not(:first-child), .btn-group > .logBtn:last-child:not(:first-child), .btn-group > .portBtn:last-child:not(:first-child), .btn-group > .confirmBtn:last-child:not(:first-child), .btn-group > .fooBtn:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .btnStd:last-child:not(:first-child), .btn-group > .navBtn:last-child:not(:first-child), .btn-group > .logBtn:last-child:not(:first-child), .btn-group > .portBtn:last-child:not(:first-child), .btn-group > .confirmBtn:last-child:not(:first-child), .btn-group > .dashBtn:last-child:not(:first-child), .btn-group > .learnBtn:last-child:not(:first-child), .btn-group > .backBtn:last-child:not(:first-child), .btn-group > .planBtn:last-child:not(:first-child), .tabMenu .btn-group > .continueBtn:last-child:not(:first-child), .btn-group > .fooBtn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -2473,30 +2677,30 @@ tbody.collapse.show {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btnStd, .btn-group > .btn-group:not(:first-child):not(:last-child) > .navBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .logBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .portBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .confirmBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .fooBtn {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btnStd, .btn-group > .btn-group:not(:first-child):not(:last-child) > .navBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .logBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .portBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .confirmBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .dashBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .learnBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .backBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .planBtn, .tabMenu .btn-group > .btn-group:not(:first-child):not(:last-child) > .continueBtn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .fooBtn {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btnStd:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .navBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .logBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .portBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .confirmBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .fooBtn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btnStd:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .navBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .logBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .portBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .confirmBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .dashBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .learnBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .backBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .planBtn:last-child, .tabMenu .btn-group > .btn-group:first-child:not(:last-child) > .continueBtn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .fooBtn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btnStd:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .navBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .logBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .portBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .confirmBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .fooBtn:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btnStd:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .navBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .logBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .portBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .confirmBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .dashBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .learnBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .backBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .planBtn:first-child, .tabMenu .btn-group > .btn-group:last-child:not(:first-child) > .continueBtn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .fooBtn:first-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn + .dropdown-toggle-split, .btnStd + .dropdown-toggle-split, .navBtn + .dropdown-toggle-split, .logBtn + .dropdown-toggle-split, .portBtn + .dropdown-toggle-split, .confirmBtn + .dropdown-toggle-split, .fooBtn + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .btnStd + .dropdown-toggle-split, .navBtn + .dropdown-toggle-split, .logBtn + .dropdown-toggle-split, .portBtn + .dropdown-toggle-split, .confirmBtn + .dropdown-toggle-split, .dashBtn + .dropdown-toggle-split, .learnBtn + .dropdown-toggle-split, .backBtn + .dropdown-toggle-split, .planBtn + .dropdown-toggle-split, .tabMenu .continueBtn + .dropdown-toggle-split, .fooBtn + .dropdown-toggle-split {
   padding-right: 0.5625rem;
   padding-left: 0.5625rem; }
 
-.btn + .dropdown-toggle-split::after, .btnStd + .dropdown-toggle-split::after, .navBtn + .dropdown-toggle-split::after, .logBtn + .dropdown-toggle-split::after, .portBtn + .dropdown-toggle-split::after, .confirmBtn + .dropdown-toggle-split::after, .fooBtn + .dropdown-toggle-split::after {
+.btn + .dropdown-toggle-split::after, .btnStd + .dropdown-toggle-split::after, .navBtn + .dropdown-toggle-split::after, .logBtn + .dropdown-toggle-split::after, .portBtn + .dropdown-toggle-split::after, .confirmBtn + .dropdown-toggle-split::after, .dashBtn + .dropdown-toggle-split::after, .learnBtn + .dropdown-toggle-split::after, .backBtn + .dropdown-toggle-split::after, .planBtn + .dropdown-toggle-split::after, .tabMenu .continueBtn + .dropdown-toggle-split::after, .fooBtn + .dropdown-toggle-split::after {
   margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .btnStd + .dropdown-toggle-split, .btn-group-sm > .navBtn + .dropdown-toggle-split, .btn-group-sm > .logBtn + .dropdown-toggle-split, .btn-group-sm > .portBtn + .dropdown-toggle-split, .btn-group-sm > .confirmBtn + .dropdown-toggle-split, .btn-group-sm > .fooBtn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .btnStd + .dropdown-toggle-split, .btn-group-sm > .navBtn + .dropdown-toggle-split, .btn-group-sm > .logBtn + .dropdown-toggle-split, .btn-group-sm > .portBtn + .dropdown-toggle-split, .btn-group-sm > .confirmBtn + .dropdown-toggle-split, .btn-group-sm > .dashBtn + .dropdown-toggle-split, .btn-group-sm > .learnBtn + .dropdown-toggle-split, .btn-group-sm > .backBtn + .dropdown-toggle-split, .btn-group-sm > .planBtn + .dropdown-toggle-split, .tabMenu .btn-group-sm > .continueBtn + .dropdown-toggle-split, .btn-group-sm > .fooBtn + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .btnStd + .dropdown-toggle-split, .btn-group-lg > .navBtn + .dropdown-toggle-split, .btn-group-lg > .logBtn + .dropdown-toggle-split, .btn-group-lg > .portBtn + .dropdown-toggle-split, .btn-group-lg > .confirmBtn + .dropdown-toggle-split, .btn-group-lg > .fooBtn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .btnStd + .dropdown-toggle-split, .btn-group-lg > .navBtn + .dropdown-toggle-split, .btn-group-lg > .logBtn + .dropdown-toggle-split, .btn-group-lg > .portBtn + .dropdown-toggle-split, .btn-group-lg > .confirmBtn + .dropdown-toggle-split, .btn-group-lg > .dashBtn + .dropdown-toggle-split, .btn-group-lg > .learnBtn + .dropdown-toggle-split, .btn-group-lg > .backBtn + .dropdown-toggle-split, .btn-group-lg > .planBtn + .dropdown-toggle-split, .tabMenu .btn-group-lg > .continueBtn + .dropdown-toggle-split, .btn-group-lg > .fooBtn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2510,17 +2714,22 @@ tbody.collapse.show {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.btn-group-vertical .btn, .btn-group-vertical .btnStd, .btn-group-vertical .navBtn, .btn-group-vertical .logBtn, .btn-group-vertical .portBtn, .btn-group-vertical .confirmBtn, .btn-group-vertical .fooBtn,
+.btn-group-vertical .btn, .btn-group-vertical .btnStd, .btn-group-vertical .navBtn, .btn-group-vertical .logBtn, .btn-group-vertical .portBtn, .btn-group-vertical .confirmBtn, .btn-group-vertical .dashBtn, .btn-group-vertical .learnBtn, .btn-group-vertical .backBtn, .btn-group-vertical .planBtn, .btn-group-vertical .tabMenu .continueBtn, .tabMenu .btn-group-vertical .continueBtn, .btn-group-vertical .fooBtn,
 .btn-group-vertical .btn-group {
   width: 100%; }
 
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btnStd + .btn, .btn-group-vertical > .navBtn + .btn, .btn-group-vertical > .logBtn + .btn, .btn-group-vertical > .portBtn + .btn, .btn-group-vertical > .confirmBtn + .btn, .btn-group-vertical > .fooBtn + .btn, .btn-group-vertical > .btn + .btnStd, .btn-group-vertical > .btnStd + .btnStd, .btn-group-vertical > .navBtn + .btnStd, .btn-group-vertical > .logBtn + .btnStd, .btn-group-vertical > .portBtn + .btnStd, .btn-group-vertical > .confirmBtn + .btnStd, .btn-group-vertical > .fooBtn + .btnStd, .btn-group-vertical > .btn + .navBtn, .btn-group-vertical > .btnStd + .navBtn, .btn-group-vertical > .navBtn + .navBtn, .btn-group-vertical > .logBtn + .navBtn, .btn-group-vertical > .portBtn + .navBtn, .btn-group-vertical > .confirmBtn + .navBtn, .btn-group-vertical > .fooBtn + .navBtn, .btn-group-vertical > .btn + .logBtn, .btn-group-vertical > .btnStd + .logBtn, .btn-group-vertical > .navBtn + .logBtn, .btn-group-vertical > .logBtn + .logBtn, .btn-group-vertical > .portBtn + .logBtn, .btn-group-vertical > .confirmBtn + .logBtn, .btn-group-vertical > .fooBtn + .logBtn, .btn-group-vertical > .btn + .portBtn, .btn-group-vertical > .btnStd + .portBtn, .btn-group-vertical > .navBtn + .portBtn, .btn-group-vertical > .logBtn + .portBtn, .btn-group-vertical > .portBtn + .portBtn, .btn-group-vertical > .confirmBtn + .portBtn, .btn-group-vertical > .fooBtn + .portBtn, .btn-group-vertical > .btn + .confirmBtn, .btn-group-vertical > .btnStd + .confirmBtn, .btn-group-vertical > .navBtn + .confirmBtn, .btn-group-vertical > .logBtn + .confirmBtn, .btn-group-vertical > .portBtn + .confirmBtn, .btn-group-vertical > .confirmBtn + .confirmBtn, .btn-group-vertical > .fooBtn + .confirmBtn, .btn-group-vertical > .btn + .fooBtn, .btn-group-vertical > .btnStd + .fooBtn, .btn-group-vertical > .navBtn + .fooBtn, .btn-group-vertical > .logBtn + .fooBtn, .btn-group-vertical > .portBtn + .fooBtn, .btn-group-vertical > .confirmBtn + .fooBtn, .btn-group-vertical > .fooBtn + .fooBtn,
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btnStd + .btn, .btn-group-vertical > .navBtn + .btn, .btn-group-vertical > .logBtn + .btn, .btn-group-vertical > .portBtn + .btn, .btn-group-vertical > .confirmBtn + .btn, .btn-group-vertical > .dashBtn + .btn, .btn-group-vertical > .learnBtn + .btn, .btn-group-vertical > .backBtn + .btn, .btn-group-vertical > .planBtn + .btn, .tabMenu .btn-group-vertical > .continueBtn + .btn, .btn-group-vertical > .fooBtn + .btn, .btn-group-vertical > .btn + .btnStd, .btn-group-vertical > .btnStd + .btnStd, .btn-group-vertical > .navBtn + .btnStd, .btn-group-vertical > .logBtn + .btnStd, .btn-group-vertical > .portBtn + .btnStd, .btn-group-vertical > .confirmBtn + .btnStd, .btn-group-vertical > .dashBtn + .btnStd, .btn-group-vertical > .learnBtn + .btnStd, .btn-group-vertical > .backBtn + .btnStd, .btn-group-vertical > .planBtn + .btnStd, .tabMenu .btn-group-vertical > .continueBtn + .btnStd, .btn-group-vertical > .fooBtn + .btnStd, .btn-group-vertical > .btn + .navBtn, .btn-group-vertical > .btnStd + .navBtn, .btn-group-vertical > .navBtn + .navBtn, .btn-group-vertical > .logBtn + .navBtn, .btn-group-vertical > .portBtn + .navBtn, .btn-group-vertical > .confirmBtn + .navBtn, .btn-group-vertical > .dashBtn + .navBtn, .btn-group-vertical > .learnBtn + .navBtn, .btn-group-vertical > .backBtn + .navBtn, .btn-group-vertical > .planBtn + .navBtn, .tabMenu .btn-group-vertical > .continueBtn + .navBtn, .btn-group-vertical > .fooBtn + .navBtn, .btn-group-vertical > .btn + .logBtn, .btn-group-vertical > .btnStd + .logBtn, .btn-group-vertical > .navBtn + .logBtn, .btn-group-vertical > .logBtn + .logBtn, .btn-group-vertical > .portBtn + .logBtn, .btn-group-vertical > .confirmBtn + .logBtn, .btn-group-vertical > .dashBtn + .logBtn, .btn-group-vertical > .learnBtn + .logBtn, .btn-group-vertical > .backBtn + .logBtn, .btn-group-vertical > .planBtn + .logBtn, .tabMenu .btn-group-vertical > .continueBtn + .logBtn, .btn-group-vertical > .fooBtn + .logBtn, .btn-group-vertical > .btn + .portBtn, .btn-group-vertical > .btnStd + .portBtn, .btn-group-vertical > .navBtn + .portBtn, .btn-group-vertical > .logBtn + .portBtn, .btn-group-vertical > .portBtn + .portBtn, .btn-group-vertical > .confirmBtn + .portBtn, .btn-group-vertical > .dashBtn + .portBtn, .btn-group-vertical > .learnBtn + .portBtn, .btn-group-vertical > .backBtn + .portBtn, .btn-group-vertical > .planBtn + .portBtn, .tabMenu .btn-group-vertical > .continueBtn + .portBtn, .btn-group-vertical > .fooBtn + .portBtn, .btn-group-vertical > .btn + .confirmBtn, .btn-group-vertical > .btnStd + .confirmBtn, .btn-group-vertical > .navBtn + .confirmBtn, .btn-group-vertical > .logBtn + .confirmBtn, .btn-group-vertical > .portBtn + .confirmBtn, .btn-group-vertical > .confirmBtn + .confirmBtn, .btn-group-vertical > .dashBtn + .confirmBtn, .btn-group-vertical > .learnBtn + .confirmBtn, .btn-group-vertical > .backBtn + .confirmBtn, .btn-group-vertical > .planBtn + .confirmBtn, .tabMenu .btn-group-vertical > .continueBtn + .confirmBtn, .btn-group-vertical > .fooBtn + .confirmBtn, .btn-group-vertical > .btn + .dashBtn, .btn-group-vertical > .btnStd + .dashBtn, .btn-group-vertical > .navBtn + .dashBtn, .btn-group-vertical > .logBtn + .dashBtn, .btn-group-vertical > .portBtn + .dashBtn, .btn-group-vertical > .confirmBtn + .dashBtn, .btn-group-vertical > .dashBtn + .dashBtn, .btn-group-vertical > .learnBtn + .dashBtn, .btn-group-vertical > .backBtn + .dashBtn, .btn-group-vertical > .planBtn + .dashBtn, .tabMenu .btn-group-vertical > .continueBtn + .dashBtn, .btn-group-vertical > .fooBtn + .dashBtn, .btn-group-vertical > .btn + .learnBtn, .btn-group-vertical > .btnStd + .learnBtn, .btn-group-vertical > .navBtn + .learnBtn, .btn-group-vertical > .logBtn + .learnBtn, .btn-group-vertical > .portBtn + .learnBtn, .btn-group-vertical > .confirmBtn + .learnBtn, .btn-group-vertical > .dashBtn + .learnBtn, .btn-group-vertical > .learnBtn + .learnBtn, .btn-group-vertical > .backBtn + .learnBtn, .btn-group-vertical > .planBtn + .learnBtn, .tabMenu .btn-group-vertical > .continueBtn + .learnBtn, .btn-group-vertical > .fooBtn + .learnBtn, .btn-group-vertical > .btn + .backBtn, .btn-group-vertical > .btnStd + .backBtn, .btn-group-vertical > .navBtn + .backBtn, .btn-group-vertical > .logBtn + .backBtn, .btn-group-vertical > .portBtn + .backBtn, .btn-group-vertical > .confirmBtn + .backBtn, .btn-group-vertical > .dashBtn + .backBtn, .btn-group-vertical > .learnBtn + .backBtn, .btn-group-vertical > .backBtn + .backBtn, .btn-group-vertical > .planBtn + .backBtn, .tabMenu .btn-group-vertical > .continueBtn + .backBtn, .btn-group-vertical > .fooBtn + .backBtn, .btn-group-vertical > .btn + .planBtn, .btn-group-vertical > .btnStd + .planBtn, .btn-group-vertical > .navBtn + .planBtn, .btn-group-vertical > .logBtn + .planBtn, .btn-group-vertical > .portBtn + .planBtn, .btn-group-vertical > .confirmBtn + .planBtn, .btn-group-vertical > .dashBtn + .planBtn, .btn-group-vertical > .learnBtn + .planBtn, .btn-group-vertical > .backBtn + .planBtn, .btn-group-vertical > .planBtn + .planBtn, .tabMenu .btn-group-vertical > .continueBtn + .planBtn, .btn-group-vertical > .fooBtn + .planBtn, .tabMenu .btn-group-vertical > .btn + .continueBtn, .tabMenu .btn-group-vertical > .btnStd + .continueBtn, .tabMenu .btn-group-vertical > .navBtn + .continueBtn, .tabMenu .btn-group-vertical > .logBtn + .continueBtn, .tabMenu .btn-group-vertical > .portBtn + .continueBtn, .tabMenu .btn-group-vertical > .confirmBtn + .continueBtn, .tabMenu .btn-group-vertical > .dashBtn + .continueBtn, .tabMenu .btn-group-vertical > .learnBtn + .continueBtn, .tabMenu .btn-group-vertical > .backBtn + .continueBtn, .tabMenu .btn-group-vertical > .planBtn + .continueBtn, .tabMenu .btn-group-vertical > .continueBtn + .continueBtn, .tabMenu .btn-group-vertical > .fooBtn + .continueBtn, .btn-group-vertical > .btn + .fooBtn, .btn-group-vertical > .btnStd + .fooBtn, .btn-group-vertical > .navBtn + .fooBtn, .btn-group-vertical > .logBtn + .fooBtn, .btn-group-vertical > .portBtn + .fooBtn, .btn-group-vertical > .confirmBtn + .fooBtn, .btn-group-vertical > .dashBtn + .fooBtn, .btn-group-vertical > .learnBtn + .fooBtn, .btn-group-vertical > .backBtn + .fooBtn, .btn-group-vertical > .planBtn + .fooBtn, .tabMenu .btn-group-vertical > .continueBtn + .fooBtn, .btn-group-vertical > .fooBtn + .fooBtn,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .btnStd + .btn-group,
 .btn-group-vertical > .navBtn + .btn-group,
 .btn-group-vertical > .logBtn + .btn-group,
 .btn-group-vertical > .portBtn + .btn-group,
 .btn-group-vertical > .confirmBtn + .btn-group,
+.btn-group-vertical > .dashBtn + .btn-group,
+.btn-group-vertical > .learnBtn + .btn-group,
+.btn-group-vertical > .backBtn + .btn-group,
+.btn-group-vertical > .planBtn + .btn-group,
+.tabMenu .btn-group-vertical > .continueBtn + .btn-group,
 .btn-group-vertical > .fooBtn + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .btnStd,
@@ -2528,41 +2737,51 @@ tbody.collapse.show {
 .btn-group-vertical > .btn-group + .logBtn,
 .btn-group-vertical > .btn-group + .portBtn,
 .btn-group-vertical > .btn-group + .confirmBtn,
+.btn-group-vertical > .btn-group + .dashBtn,
+.btn-group-vertical > .btn-group + .learnBtn,
+.btn-group-vertical > .btn-group + .backBtn,
+.btn-group-vertical > .btn-group + .planBtn,
+.tabMenu .btn-group-vertical > .btn-group + .continueBtn,
 .btn-group-vertical > .btn-group + .fooBtn,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btnStd:not(:first-child):not(:last-child), .btn-group-vertical > .navBtn:not(:first-child):not(:last-child), .btn-group-vertical > .logBtn:not(:first-child):not(:last-child), .btn-group-vertical > .portBtn:not(:first-child):not(:last-child), .btn-group-vertical > .confirmBtn:not(:first-child):not(:last-child), .btn-group-vertical > .fooBtn:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btnStd:not(:first-child):not(:last-child), .btn-group-vertical > .navBtn:not(:first-child):not(:last-child), .btn-group-vertical > .logBtn:not(:first-child):not(:last-child), .btn-group-vertical > .portBtn:not(:first-child):not(:last-child), .btn-group-vertical > .confirmBtn:not(:first-child):not(:last-child), .btn-group-vertical > .dashBtn:not(:first-child):not(:last-child), .btn-group-vertical > .learnBtn:not(:first-child):not(:last-child), .btn-group-vertical > .backBtn:not(:first-child):not(:last-child), .btn-group-vertical > .planBtn:not(:first-child):not(:last-child), .tabMenu .btn-group-vertical > .continueBtn:not(:first-child):not(:last-child), .btn-group-vertical > .fooBtn:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btnStd:first-child:not(:last-child), .btn-group-vertical > .navBtn:first-child:not(:last-child), .btn-group-vertical > .logBtn:first-child:not(:last-child), .btn-group-vertical > .portBtn:first-child:not(:last-child), .btn-group-vertical > .confirmBtn:first-child:not(:last-child), .btn-group-vertical > .fooBtn:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btnStd:first-child:not(:last-child), .btn-group-vertical > .navBtn:first-child:not(:last-child), .btn-group-vertical > .logBtn:first-child:not(:last-child), .btn-group-vertical > .portBtn:first-child:not(:last-child), .btn-group-vertical > .confirmBtn:first-child:not(:last-child), .btn-group-vertical > .dashBtn:first-child:not(:last-child), .btn-group-vertical > .learnBtn:first-child:not(:last-child), .btn-group-vertical > .backBtn:first-child:not(:last-child), .btn-group-vertical > .planBtn:first-child:not(:last-child), .tabMenu .btn-group-vertical > .continueBtn:first-child:not(:last-child), .btn-group-vertical > .fooBtn:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btnStd:last-child:not(:first-child), .btn-group-vertical > .navBtn:last-child:not(:first-child), .btn-group-vertical > .logBtn:last-child:not(:first-child), .btn-group-vertical > .portBtn:last-child:not(:first-child), .btn-group-vertical > .confirmBtn:last-child:not(:first-child), .btn-group-vertical > .fooBtn:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btnStd:last-child:not(:first-child), .btn-group-vertical > .navBtn:last-child:not(:first-child), .btn-group-vertical > .logBtn:last-child:not(:first-child), .btn-group-vertical > .portBtn:last-child:not(:first-child), .btn-group-vertical > .confirmBtn:last-child:not(:first-child), .btn-group-vertical > .dashBtn:last-child:not(:first-child), .btn-group-vertical > .learnBtn:last-child:not(:first-child), .btn-group-vertical > .backBtn:last-child:not(:first-child), .btn-group-vertical > .planBtn:last-child:not(:first-child), .tabMenu .btn-group-vertical > .continueBtn:last-child:not(:first-child), .btn-group-vertical > .fooBtn:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btnStd, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .navBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .logBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .portBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .confirmBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .fooBtn {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btnStd, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .navBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .logBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .portBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .confirmBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .dashBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .learnBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .backBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .planBtn, .tabMenu .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .continueBtn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .fooBtn {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btnStd:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .navBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .logBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .portBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .confirmBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .fooBtn:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btnStd:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .navBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .logBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .portBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .confirmBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dashBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .learnBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .backBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .planBtn:last-child, .tabMenu .btn-group-vertical > .btn-group:first-child:not(:last-child) > .continueBtn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .fooBtn:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btnStd:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .navBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .logBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .portBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .confirmBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .fooBtn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btnStd:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .navBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .logBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .portBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .confirmBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .dashBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .learnBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .backBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .planBtn:first-child, .tabMenu .btn-group-vertical > .btn-group:last-child:not(:first-child) > .continueBtn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .fooBtn:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btnStd input[type="radio"], [data-toggle="buttons"] > .navBtn input[type="radio"], [data-toggle="buttons"] > .logBtn input[type="radio"], [data-toggle="buttons"] > .portBtn input[type="radio"], [data-toggle="buttons"] > .confirmBtn input[type="radio"], [data-toggle="buttons"] > .fooBtn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btnStd input[type="radio"], [data-toggle="buttons"] > .navBtn input[type="radio"], [data-toggle="buttons"] > .logBtn input[type="radio"], [data-toggle="buttons"] > .portBtn input[type="radio"], [data-toggle="buttons"] > .confirmBtn input[type="radio"], [data-toggle="buttons"] > .dashBtn input[type="radio"], [data-toggle="buttons"] > .learnBtn input[type="radio"], [data-toggle="buttons"] > .backBtn input[type="radio"], [data-toggle="buttons"] > .planBtn input[type="radio"], .tabMenu [data-toggle="buttons"] > .continueBtn input[type="radio"], [data-toggle="buttons"] > .fooBtn input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btnStd input[type="checkbox"],
 [data-toggle="buttons"] > .navBtn input[type="checkbox"],
 [data-toggle="buttons"] > .logBtn input[type="checkbox"],
 [data-toggle="buttons"] > .portBtn input[type="checkbox"],
 [data-toggle="buttons"] > .confirmBtn input[type="checkbox"],
+[data-toggle="buttons"] > .dashBtn input[type="checkbox"],
+[data-toggle="buttons"] > .learnBtn input[type="checkbox"],
+[data-toggle="buttons"] > .backBtn input[type="checkbox"],
+[data-toggle="buttons"] > .planBtn input[type="checkbox"],
+.tabMenu [data-toggle="buttons"] > .continueBtn input[type="checkbox"],
 [data-toggle="buttons"] > .fooBtn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btnStd input[type="radio"],
@@ -2570,6 +2789,11 @@ tbody.collapse.show {
 [data-toggle="buttons"] > .btn-group > .logBtn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .portBtn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .confirmBtn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .dashBtn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .learnBtn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .backBtn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .planBtn input[type="radio"],
+.tabMenu [data-toggle="buttons"] > .btn-group > .continueBtn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .fooBtn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btnStd input[type="checkbox"],
@@ -2577,6 +2801,11 @@ tbody.collapse.show {
 [data-toggle="buttons"] > .btn-group > .logBtn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .portBtn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .confirmBtn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .dashBtn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .learnBtn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .backBtn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .planBtn input[type="checkbox"],
+.tabMenu [data-toggle="buttons"] > .btn-group > .continueBtn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .fooBtn input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -2637,6 +2866,11 @@ tbody.collapse.show {
 .input-group-sm > .input-group-btn > .input-group-addon.logBtn,
 .input-group-sm > .input-group-btn > .input-group-addon.portBtn,
 .input-group-sm > .input-group-btn > .input-group-addon.confirmBtn,
+.input-group-sm > .input-group-btn > .input-group-addon.dashBtn,
+.input-group-sm > .input-group-btn > .input-group-addon.learnBtn,
+.input-group-sm > .input-group-btn > .input-group-addon.backBtn,
+.input-group-sm > .input-group-btn > .input-group-addon.planBtn,
+.tabMenu .input-group-sm > .input-group-btn > .input-group-addon.continueBtn,
 .input-group-sm > .input-group-btn > .input-group-addon.fooBtn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -2650,6 +2884,11 @@ tbody.collapse.show {
 .input-group-lg > .input-group-btn > .input-group-addon.logBtn,
 .input-group-lg > .input-group-btn > .input-group-addon.portBtn,
 .input-group-lg > .input-group-btn > .input-group-addon.confirmBtn,
+.input-group-lg > .input-group-btn > .input-group-addon.dashBtn,
+.input-group-lg > .input-group-btn > .input-group-addon.learnBtn,
+.input-group-lg > .input-group-btn > .input-group-addon.backBtn,
+.input-group-lg > .input-group-btn > .input-group-addon.planBtn,
+.tabMenu .input-group-lg > .input-group-btn > .input-group-addon.continueBtn,
 .input-group-lg > .input-group-btn > .input-group-addon.fooBtn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -2667,6 +2906,11 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > .logBtn,
 .input-group-btn:not(:last-child) > .portBtn,
 .input-group-btn:not(:last-child) > .confirmBtn,
+.input-group-btn:not(:last-child) > .dashBtn,
+.input-group-btn:not(:last-child) > .learnBtn,
+.input-group-btn:not(:last-child) > .backBtn,
+.input-group-btn:not(:last-child) > .planBtn,
+.tabMenu .input-group-btn:not(:last-child) > .continueBtn,
 .input-group-btn:not(:last-child) > .fooBtn,
 .input-group-btn:not(:last-child) > .btn-group > .btn,
 .input-group-btn:not(:last-child) > .btn-group > .btnStd,
@@ -2674,6 +2918,11 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > .btn-group > .logBtn,
 .input-group-btn:not(:last-child) > .btn-group > .portBtn,
 .input-group-btn:not(:last-child) > .btn-group > .confirmBtn,
+.input-group-btn:not(:last-child) > .btn-group > .dashBtn,
+.input-group-btn:not(:last-child) > .btn-group > .learnBtn,
+.input-group-btn:not(:last-child) > .btn-group > .backBtn,
+.input-group-btn:not(:last-child) > .btn-group > .planBtn,
+.tabMenu .input-group-btn:not(:last-child) > .btn-group > .continueBtn,
 .input-group-btn:not(:last-child) > .btn-group > .fooBtn,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
@@ -2682,6 +2931,11 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > .logBtn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .portBtn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .confirmBtn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .dashBtn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .learnBtn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .backBtn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .planBtn:not(:last-child):not(.dropdown-toggle),
+.tabMenu .input-group-btn:not(:first-child) > .continueBtn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .fooBtn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btnStd,
@@ -2689,6 +2943,11 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .logBtn,
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .portBtn,
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .confirmBtn,
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .dashBtn,
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .learnBtn,
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .backBtn,
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .planBtn,
+.tabMenu .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .continueBtn,
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .fooBtn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
@@ -2704,6 +2963,11 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > .logBtn,
 .input-group-btn:not(:first-child) > .portBtn,
 .input-group-btn:not(:first-child) > .confirmBtn,
+.input-group-btn:not(:first-child) > .dashBtn,
+.input-group-btn:not(:first-child) > .learnBtn,
+.input-group-btn:not(:first-child) > .backBtn,
+.input-group-btn:not(:first-child) > .planBtn,
+.tabMenu .input-group-btn:not(:first-child) > .continueBtn,
 .input-group-btn:not(:first-child) > .fooBtn,
 .input-group-btn:not(:first-child) > .btn-group > .btn,
 .input-group-btn:not(:first-child) > .btn-group > .btnStd,
@@ -2711,6 +2975,11 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > .btn-group > .logBtn,
 .input-group-btn:not(:first-child) > .btn-group > .portBtn,
 .input-group-btn:not(:first-child) > .btn-group > .confirmBtn,
+.input-group-btn:not(:first-child) > .btn-group > .dashBtn,
+.input-group-btn:not(:first-child) > .btn-group > .learnBtn,
+.input-group-btn:not(:first-child) > .btn-group > .backBtn,
+.input-group-btn:not(:first-child) > .btn-group > .planBtn,
+.tabMenu .input-group-btn:not(:first-child) > .btn-group > .continueBtn,
 .input-group-btn:not(:first-child) > .btn-group > .fooBtn,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child),
@@ -2719,6 +2988,11 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > .logBtn:not(:first-child),
 .input-group-btn:not(:last-child) > .portBtn:not(:first-child),
 .input-group-btn:not(:last-child) > .confirmBtn:not(:first-child),
+.input-group-btn:not(:last-child) > .dashBtn:not(:first-child),
+.input-group-btn:not(:last-child) > .learnBtn:not(:first-child),
+.input-group-btn:not(:last-child) > .backBtn:not(:first-child),
+.input-group-btn:not(:last-child) > .planBtn:not(:first-child),
+.tabMenu .input-group-btn:not(:last-child) > .continueBtn:not(:first-child),
 .input-group-btn:not(:last-child) > .fooBtn:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btnStd,
@@ -2726,6 +3000,11 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .logBtn,
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .portBtn,
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .confirmBtn,
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .dashBtn,
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .learnBtn,
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .backBtn,
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .planBtn,
+.tabMenu .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .continueBtn,
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .fooBtn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -2738,25 +3017,25 @@ tbody.collapse.show {
   font-size: 0;
   white-space: nowrap; }
 
-.input-group-btn > .btn, .input-group-btn > .btnStd, .input-group-btn > .navBtn, .input-group-btn > .logBtn, .input-group-btn > .portBtn, .input-group-btn > .confirmBtn, .input-group-btn > .fooBtn {
+.input-group-btn > .btn, .input-group-btn > .btnStd, .input-group-btn > .navBtn, .input-group-btn > .logBtn, .input-group-btn > .portBtn, .input-group-btn > .confirmBtn, .input-group-btn > .dashBtn, .input-group-btn > .learnBtn, .input-group-btn > .backBtn, .input-group-btn > .planBtn, .tabMenu .input-group-btn > .continueBtn, .input-group-btn > .fooBtn {
   position: relative; }
 
-.input-group-btn > .btn + .btn, .input-group-btn > .btnStd + .btn, .input-group-btn > .navBtn + .btn, .input-group-btn > .logBtn + .btn, .input-group-btn > .portBtn + .btn, .input-group-btn > .confirmBtn + .btn, .input-group-btn > .fooBtn + .btn, .input-group-btn > .btn + .btnStd, .input-group-btn > .btnStd + .btnStd, .input-group-btn > .navBtn + .btnStd, .input-group-btn > .logBtn + .btnStd, .input-group-btn > .portBtn + .btnStd, .input-group-btn > .confirmBtn + .btnStd, .input-group-btn > .fooBtn + .btnStd, .input-group-btn > .btn + .navBtn, .input-group-btn > .btnStd + .navBtn, .input-group-btn > .navBtn + .navBtn, .input-group-btn > .logBtn + .navBtn, .input-group-btn > .portBtn + .navBtn, .input-group-btn > .confirmBtn + .navBtn, .input-group-btn > .fooBtn + .navBtn, .input-group-btn > .btn + .logBtn, .input-group-btn > .btnStd + .logBtn, .input-group-btn > .navBtn + .logBtn, .input-group-btn > .logBtn + .logBtn, .input-group-btn > .portBtn + .logBtn, .input-group-btn > .confirmBtn + .logBtn, .input-group-btn > .fooBtn + .logBtn, .input-group-btn > .btn + .portBtn, .input-group-btn > .btnStd + .portBtn, .input-group-btn > .navBtn + .portBtn, .input-group-btn > .logBtn + .portBtn, .input-group-btn > .portBtn + .portBtn, .input-group-btn > .confirmBtn + .portBtn, .input-group-btn > .fooBtn + .portBtn, .input-group-btn > .btn + .confirmBtn, .input-group-btn > .btnStd + .confirmBtn, .input-group-btn > .navBtn + .confirmBtn, .input-group-btn > .logBtn + .confirmBtn, .input-group-btn > .portBtn + .confirmBtn, .input-group-btn > .confirmBtn + .confirmBtn, .input-group-btn > .fooBtn + .confirmBtn, .input-group-btn > .btn + .fooBtn, .input-group-btn > .btnStd + .fooBtn, .input-group-btn > .navBtn + .fooBtn, .input-group-btn > .logBtn + .fooBtn, .input-group-btn > .portBtn + .fooBtn, .input-group-btn > .confirmBtn + .fooBtn, .input-group-btn > .fooBtn + .fooBtn {
+.input-group-btn > .btn + .btn, .input-group-btn > .btnStd + .btn, .input-group-btn > .navBtn + .btn, .input-group-btn > .logBtn + .btn, .input-group-btn > .portBtn + .btn, .input-group-btn > .confirmBtn + .btn, .input-group-btn > .dashBtn + .btn, .input-group-btn > .learnBtn + .btn, .input-group-btn > .backBtn + .btn, .input-group-btn > .planBtn + .btn, .tabMenu .input-group-btn > .continueBtn + .btn, .input-group-btn > .fooBtn + .btn, .input-group-btn > .btn + .btnStd, .input-group-btn > .btnStd + .btnStd, .input-group-btn > .navBtn + .btnStd, .input-group-btn > .logBtn + .btnStd, .input-group-btn > .portBtn + .btnStd, .input-group-btn > .confirmBtn + .btnStd, .input-group-btn > .dashBtn + .btnStd, .input-group-btn > .learnBtn + .btnStd, .input-group-btn > .backBtn + .btnStd, .input-group-btn > .planBtn + .btnStd, .tabMenu .input-group-btn > .continueBtn + .btnStd, .input-group-btn > .fooBtn + .btnStd, .input-group-btn > .btn + .navBtn, .input-group-btn > .btnStd + .navBtn, .input-group-btn > .navBtn + .navBtn, .input-group-btn > .logBtn + .navBtn, .input-group-btn > .portBtn + .navBtn, .input-group-btn > .confirmBtn + .navBtn, .input-group-btn > .dashBtn + .navBtn, .input-group-btn > .learnBtn + .navBtn, .input-group-btn > .backBtn + .navBtn, .input-group-btn > .planBtn + .navBtn, .tabMenu .input-group-btn > .continueBtn + .navBtn, .input-group-btn > .fooBtn + .navBtn, .input-group-btn > .btn + .logBtn, .input-group-btn > .btnStd + .logBtn, .input-group-btn > .navBtn + .logBtn, .input-group-btn > .logBtn + .logBtn, .input-group-btn > .portBtn + .logBtn, .input-group-btn > .confirmBtn + .logBtn, .input-group-btn > .dashBtn + .logBtn, .input-group-btn > .learnBtn + .logBtn, .input-group-btn > .backBtn + .logBtn, .input-group-btn > .planBtn + .logBtn, .tabMenu .input-group-btn > .continueBtn + .logBtn, .input-group-btn > .fooBtn + .logBtn, .input-group-btn > .btn + .portBtn, .input-group-btn > .btnStd + .portBtn, .input-group-btn > .navBtn + .portBtn, .input-group-btn > .logBtn + .portBtn, .input-group-btn > .portBtn + .portBtn, .input-group-btn > .confirmBtn + .portBtn, .input-group-btn > .dashBtn + .portBtn, .input-group-btn > .learnBtn + .portBtn, .input-group-btn > .backBtn + .portBtn, .input-group-btn > .planBtn + .portBtn, .tabMenu .input-group-btn > .continueBtn + .portBtn, .input-group-btn > .fooBtn + .portBtn, .input-group-btn > .btn + .confirmBtn, .input-group-btn > .btnStd + .confirmBtn, .input-group-btn > .navBtn + .confirmBtn, .input-group-btn > .logBtn + .confirmBtn, .input-group-btn > .portBtn + .confirmBtn, .input-group-btn > .confirmBtn + .confirmBtn, .input-group-btn > .dashBtn + .confirmBtn, .input-group-btn > .learnBtn + .confirmBtn, .input-group-btn > .backBtn + .confirmBtn, .input-group-btn > .planBtn + .confirmBtn, .tabMenu .input-group-btn > .continueBtn + .confirmBtn, .input-group-btn > .fooBtn + .confirmBtn, .input-group-btn > .btn + .dashBtn, .input-group-btn > .btnStd + .dashBtn, .input-group-btn > .navBtn + .dashBtn, .input-group-btn > .logBtn + .dashBtn, .input-group-btn > .portBtn + .dashBtn, .input-group-btn > .confirmBtn + .dashBtn, .input-group-btn > .dashBtn + .dashBtn, .input-group-btn > .learnBtn + .dashBtn, .input-group-btn > .backBtn + .dashBtn, .input-group-btn > .planBtn + .dashBtn, .tabMenu .input-group-btn > .continueBtn + .dashBtn, .input-group-btn > .fooBtn + .dashBtn, .input-group-btn > .btn + .learnBtn, .input-group-btn > .btnStd + .learnBtn, .input-group-btn > .navBtn + .learnBtn, .input-group-btn > .logBtn + .learnBtn, .input-group-btn > .portBtn + .learnBtn, .input-group-btn > .confirmBtn + .learnBtn, .input-group-btn > .dashBtn + .learnBtn, .input-group-btn > .learnBtn + .learnBtn, .input-group-btn > .backBtn + .learnBtn, .input-group-btn > .planBtn + .learnBtn, .tabMenu .input-group-btn > .continueBtn + .learnBtn, .input-group-btn > .fooBtn + .learnBtn, .input-group-btn > .btn + .backBtn, .input-group-btn > .btnStd + .backBtn, .input-group-btn > .navBtn + .backBtn, .input-group-btn > .logBtn + .backBtn, .input-group-btn > .portBtn + .backBtn, .input-group-btn > .confirmBtn + .backBtn, .input-group-btn > .dashBtn + .backBtn, .input-group-btn > .learnBtn + .backBtn, .input-group-btn > .backBtn + .backBtn, .input-group-btn > .planBtn + .backBtn, .tabMenu .input-group-btn > .continueBtn + .backBtn, .input-group-btn > .fooBtn + .backBtn, .input-group-btn > .btn + .planBtn, .input-group-btn > .btnStd + .planBtn, .input-group-btn > .navBtn + .planBtn, .input-group-btn > .logBtn + .planBtn, .input-group-btn > .portBtn + .planBtn, .input-group-btn > .confirmBtn + .planBtn, .input-group-btn > .dashBtn + .planBtn, .input-group-btn > .learnBtn + .planBtn, .input-group-btn > .backBtn + .planBtn, .input-group-btn > .planBtn + .planBtn, .tabMenu .input-group-btn > .continueBtn + .planBtn, .input-group-btn > .fooBtn + .planBtn, .tabMenu .input-group-btn > .btn + .continueBtn, .tabMenu .input-group-btn > .btnStd + .continueBtn, .tabMenu .input-group-btn > .navBtn + .continueBtn, .tabMenu .input-group-btn > .logBtn + .continueBtn, .tabMenu .input-group-btn > .portBtn + .continueBtn, .tabMenu .input-group-btn > .confirmBtn + .continueBtn, .tabMenu .input-group-btn > .dashBtn + .continueBtn, .tabMenu .input-group-btn > .learnBtn + .continueBtn, .tabMenu .input-group-btn > .backBtn + .continueBtn, .tabMenu .input-group-btn > .planBtn + .continueBtn, .tabMenu .input-group-btn > .continueBtn + .continueBtn, .tabMenu .input-group-btn > .fooBtn + .continueBtn, .input-group-btn > .btn + .fooBtn, .input-group-btn > .btnStd + .fooBtn, .input-group-btn > .navBtn + .fooBtn, .input-group-btn > .logBtn + .fooBtn, .input-group-btn > .portBtn + .fooBtn, .input-group-btn > .confirmBtn + .fooBtn, .input-group-btn > .dashBtn + .fooBtn, .input-group-btn > .learnBtn + .fooBtn, .input-group-btn > .backBtn + .fooBtn, .input-group-btn > .planBtn + .fooBtn, .tabMenu .input-group-btn > .continueBtn + .fooBtn, .input-group-btn > .fooBtn + .fooBtn {
   margin-left: -1px; }
 
-.input-group-btn > .btn:focus, .input-group-btn > .btnStd:focus, .input-group-btn > .navBtn:focus, .input-group-btn > .logBtn:focus, .input-group-btn > .portBtn:focus, .input-group-btn > .confirmBtn:focus, .input-group-btn > .fooBtn:focus, .input-group-btn > .btn:active, .input-group-btn > .btnStd:active, .input-group-btn > .navBtn:active, .input-group-btn > .logBtn:active, .input-group-btn > .portBtn:active, .input-group-btn > .confirmBtn:active, .input-group-btn > .fooBtn:active, .input-group-btn > .btn:hover, .input-group-btn > .btnStd:hover, .input-group-btn > .navBtn:hover, .input-group-btn > .logBtn:hover, .input-group-btn > .portBtn:hover, .input-group-btn > .confirmBtn:hover, .input-group-btn > .fooBtn:hover {
+.input-group-btn > .btn:focus, .input-group-btn > .btnStd:focus, .input-group-btn > .navBtn:focus, .input-group-btn > .logBtn:focus, .input-group-btn > .portBtn:focus, .input-group-btn > .confirmBtn:focus, .input-group-btn > .dashBtn:focus, .input-group-btn > .learnBtn:focus, .input-group-btn > .backBtn:focus, .input-group-btn > .planBtn:focus, .tabMenu .input-group-btn > .continueBtn:focus, .input-group-btn > .fooBtn:focus, .input-group-btn > .btn:active, .input-group-btn > .btnStd:active, .input-group-btn > .navBtn:active, .input-group-btn > .logBtn:active, .input-group-btn > .portBtn:active, .input-group-btn > .confirmBtn:active, .input-group-btn > .dashBtn:active, .input-group-btn > .learnBtn:active, .input-group-btn > .backBtn:active, .input-group-btn > .planBtn:active, .tabMenu .input-group-btn > .continueBtn:active, .input-group-btn > .fooBtn:active, .input-group-btn > .btn:hover, .input-group-btn > .btnStd:hover, .input-group-btn > .navBtn:hover, .input-group-btn > .logBtn:hover, .input-group-btn > .portBtn:hover, .input-group-btn > .confirmBtn:hover, .input-group-btn > .dashBtn:hover, .input-group-btn > .learnBtn:hover, .input-group-btn > .backBtn:hover, .input-group-btn > .planBtn:hover, .tabMenu .input-group-btn > .continueBtn:hover, .input-group-btn > .fooBtn:hover {
   z-index: 3; }
 
-.input-group-btn:not(:last-child) > .btn, .input-group-btn:not(:last-child) > .btnStd, .input-group-btn:not(:last-child) > .navBtn, .input-group-btn:not(:last-child) > .logBtn, .input-group-btn:not(:last-child) > .portBtn, .input-group-btn:not(:last-child) > .confirmBtn, .input-group-btn:not(:last-child) > .fooBtn,
+.input-group-btn:not(:last-child) > .btn, .input-group-btn:not(:last-child) > .btnStd, .input-group-btn:not(:last-child) > .navBtn, .input-group-btn:not(:last-child) > .logBtn, .input-group-btn:not(:last-child) > .portBtn, .input-group-btn:not(:last-child) > .confirmBtn, .input-group-btn:not(:last-child) > .dashBtn, .input-group-btn:not(:last-child) > .learnBtn, .input-group-btn:not(:last-child) > .backBtn, .input-group-btn:not(:last-child) > .planBtn, .tabMenu .input-group-btn:not(:last-child) > .continueBtn, .input-group-btn:not(:last-child) > .fooBtn,
 .input-group-btn:not(:last-child) > .btn-group {
   margin-right: -1px; }
 
-.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btnStd, .input-group-btn:not(:first-child) > .navBtn, .input-group-btn:not(:first-child) > .logBtn, .input-group-btn:not(:first-child) > .portBtn, .input-group-btn:not(:first-child) > .confirmBtn, .input-group-btn:not(:first-child) > .fooBtn,
+.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btnStd, .input-group-btn:not(:first-child) > .navBtn, .input-group-btn:not(:first-child) > .logBtn, .input-group-btn:not(:first-child) > .portBtn, .input-group-btn:not(:first-child) > .confirmBtn, .input-group-btn:not(:first-child) > .dashBtn, .input-group-btn:not(:first-child) > .learnBtn, .input-group-btn:not(:first-child) > .backBtn, .input-group-btn:not(:first-child) > .planBtn, .tabMenu .input-group-btn:not(:first-child) > .continueBtn, .input-group-btn:not(:first-child) > .fooBtn,
 .input-group-btn:not(:first-child) > .btn-group {
   z-index: 2;
   margin-left: -1px; }
 
-.input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > .btnStd:focus, .input-group-btn:not(:first-child) > .navBtn:focus, .input-group-btn:not(:first-child) > .logBtn:focus, .input-group-btn:not(:first-child) > .portBtn:focus, .input-group-btn:not(:first-child) > .confirmBtn:focus, .input-group-btn:not(:first-child) > .fooBtn:focus, .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > .btnStd:active, .input-group-btn:not(:first-child) > .navBtn:active, .input-group-btn:not(:first-child) > .logBtn:active, .input-group-btn:not(:first-child) > .portBtn:active, .input-group-btn:not(:first-child) > .confirmBtn:active, .input-group-btn:not(:first-child) > .fooBtn:active, .input-group-btn:not(:first-child) > .btn:hover, .input-group-btn:not(:first-child) > .btnStd:hover, .input-group-btn:not(:first-child) > .navBtn:hover, .input-group-btn:not(:first-child) > .logBtn:hover, .input-group-btn:not(:first-child) > .portBtn:hover, .input-group-btn:not(:first-child) > .confirmBtn:hover, .input-group-btn:not(:first-child) > .fooBtn:hover,
+.input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > .btnStd:focus, .input-group-btn:not(:first-child) > .navBtn:focus, .input-group-btn:not(:first-child) > .logBtn:focus, .input-group-btn:not(:first-child) > .portBtn:focus, .input-group-btn:not(:first-child) > .confirmBtn:focus, .input-group-btn:not(:first-child) > .dashBtn:focus, .input-group-btn:not(:first-child) > .learnBtn:focus, .input-group-btn:not(:first-child) > .backBtn:focus, .input-group-btn:not(:first-child) > .planBtn:focus, .tabMenu .input-group-btn:not(:first-child) > .continueBtn:focus, .input-group-btn:not(:first-child) > .fooBtn:focus, .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > .btnStd:active, .input-group-btn:not(:first-child) > .navBtn:active, .input-group-btn:not(:first-child) > .logBtn:active, .input-group-btn:not(:first-child) > .portBtn:active, .input-group-btn:not(:first-child) > .confirmBtn:active, .input-group-btn:not(:first-child) > .dashBtn:active, .input-group-btn:not(:first-child) > .learnBtn:active, .input-group-btn:not(:first-child) > .backBtn:active, .input-group-btn:not(:first-child) > .planBtn:active, .tabMenu .input-group-btn:not(:first-child) > .continueBtn:active, .input-group-btn:not(:first-child) > .fooBtn:active, .input-group-btn:not(:first-child) > .btn:hover, .input-group-btn:not(:first-child) > .btnStd:hover, .input-group-btn:not(:first-child) > .navBtn:hover, .input-group-btn:not(:first-child) > .logBtn:hover, .input-group-btn:not(:first-child) > .portBtn:hover, .input-group-btn:not(:first-child) > .confirmBtn:hover, .input-group-btn:not(:first-child) > .dashBtn:hover, .input-group-btn:not(:first-child) > .learnBtn:hover, .input-group-btn:not(:first-child) > .backBtn:hover, .input-group-btn:not(:first-child) > .planBtn:hover, .tabMenu .input-group-btn:not(:first-child) > .continueBtn:hover, .input-group-btn:not(:first-child) > .fooBtn:hover,
 .input-group-btn:not(:first-child) > .btn-group:focus,
 .input-group-btn:not(:first-child) > .btn-group:active,
 .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -3638,7 +3917,7 @@ tbody.collapse.show {
 .badge:empty {
   display: none; }
 
-.btn .badge, .btnStd .badge, .navBtn .badge, .logBtn .badge, .portBtn .badge, .confirmBtn .badge, .fooBtn .badge {
+.btn .badge, .btnStd .badge, .navBtn .badge, .logBtn .badge, .portBtn .badge, .confirmBtn .badge, .dashBtn .badge, .learnBtn .badge, .backBtn .badge, .planBtn .badge, .tabMenu .continueBtn .badge, .fooBtn .badge {
   position: relative;
   top: -1px; }
 
@@ -7342,11 +7621,11 @@ a.text-dark:focus, a.text-dark:hover {
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px; }
 
-.btnStd, .navBtn, .logBtn, .portBtn, .confirmBtn, .fooBtn {
+.btnStd, .navBtn, .logBtn, .portBtn, .confirmBtn, .dashBtn, .learnBtn, .backBtn, .planBtn, .tabMenu .continueBtn, .fooBtn {
   text-transform: uppercase;
   font-weight: 800; }
 
-.navBtn, .logBtn, .portBtn, .confirmBtn {
+.navBtn, .logBtn, .portBtn, .confirmBtn, .dashBtn, .learnBtn {
   background: transparent;
   color: #787676;
   font-size: 12.5px;
@@ -7359,7 +7638,7 @@ a.text-dark:focus, a.text-dark:hover {
   border-radius: 4px;
   padding: 5px 9px;
   margin: auto 4px; }
-  .navBtn:hover, .logBtn:hover, .portBtn:hover, .confirmBtn:hover, .navBtn:focus, .logBtn:focus, .portBtn:focus, .confirmBtn:focus, .navBtn.active, .active.logBtn, .active.portBtn, .active.confirmBtn {
+  .navBtn:hover, .logBtn:hover, .portBtn:hover, .confirmBtn:hover, .dashBtn:hover, .learnBtn:hover, .navBtn:focus, .logBtn:focus, .portBtn:focus, .confirmBtn:focus, .dashBtn:focus, .learnBtn:focus, .navBtn.active, .active.logBtn, .active.portBtn, .active.confirmBtn, .active.dashBtn, .active.learnBtn {
     color: #00a55e;
     border-color: #00a55e;
     -webkit-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
@@ -7368,7 +7647,7 @@ a.text-dark:focus, a.text-dark:hover {
     -o-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
     box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16); }
   @media screen and (max-width: 991px) {
-    .navBtn, .logBtn, .portBtn, .confirmBtn {
+    .navBtn, .logBtn, .portBtn, .confirmBtn, .dashBtn, .learnBtn {
       margin: .2rem auto; } }
 
 #appNavBar {
@@ -7380,13 +7659,14 @@ a.text-dark:focus, a.text-dark:hover {
   -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19); }
 
-.logo,
-#navToggler {
+.logo, #navToggler {
   margin: auto 30px; }
   @media screen and (max-width: 991px) {
-    .logo,
-    #navToggler {
+    .logo, #navToggler {
       margin: 13px 20px; } }
+
+#navToggler {
+  border-color: transparent; }
 
 .loginContainer {
   background: #eee;
@@ -7402,15 +7682,14 @@ a.text-dark:focus, a.text-dark:hover {
   background: #00a55e;
   color: #fff;
   border: 2px solid #00a55e;
+  margin: 17px 0;
   padding-left: 17px;
   padding-right: 17px;
   -webkit-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
   -moz-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
   -ms-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
   -o-box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
-  box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16);
-  margin-top: 17px;
-  margin-bottom: 17px; }
+  box-shadow: inset 0 -2px 0 0 rgba(0, 119, 68, 0.16); }
   .logBtn:hover, .logBtn:focus, .logBtn:active {
     background: transparent;
     color: #00a55e; }
@@ -7455,7 +7734,7 @@ a.text-dark:focus, a.text-dark:hover {
     margin-top: 6px;
     margin-bottom: 6px; }
 
-.titleStd, .colTitle, .cardHead, .cardHeadGreen, .tableHead td {
+.titleStd, .colTitle, .activityTitle, .cardHead, .cardHeadGreen, .learnTitle, .chapterHead, .furtherHead, .investList thead th, .assetList thead th, .dashTitle, .lessonTitle, .lessonSubtitle {
   text-transform: uppercase;
   color: #777;
   font-weight: 700;
@@ -7463,7 +7742,7 @@ a.text-dark:focus, a.text-dark:hover {
   line-height: 1;
   text-align: left; }
 
-.colTitle {
+.colTitle, .activityTitle {
   font-size: 1.1rem;
   margin: 9px 13px 25px 36px; }
 
@@ -7472,8 +7751,7 @@ a.text-dark:focus, a.text-dark:hover {
   flex-direction: column; }
 
 .flexContainer > .flexBox {
-  flex: 1;
-  margin-top: 0; }
+  flex: 1; }
 
 .cardContainer {
   background: #fff;
@@ -7482,26 +7760,27 @@ a.text-dark:focus, a.text-dark:hover {
   -ms-box-shadow: 0 2px 5px 2px #d6d6d6;
   -o-box-shadow: 0 2px 5px 2px #d6d6d6;
   box-shadow: 0 2px 5px 2px #d6d6d6;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
   padding: 0;
   margin: 7px 13px; }
 
-.cardHead, .cardHeadGreen {
+.cardHead, .cardHeadGreen, .learnTitle, .chapterHead, .furtherHead {
   text-transform: capitalize;
   font-weight: 700;
   padding: 15px 0 15px 23px; }
 
-.cardHeadGreen {
+.cardHeadGreen, .learnTitle, .chapterHead, .furtherHead {
   -webkit-box-shadow: inset 3px 0 0 0 #00a55e;
   -moz-box-shadow: inset 3px 0 0 0 #00a55e;
   -ms-box-shadow: inset 3px 0 0 0 #00a55e;
   -o-box-shadow: inset 3px 0 0 0 #00a55e;
   box-shadow: inset 3px 0 0 0 #00a55e; }
-  .cardHeadGreen .fa {
-    color: #cfcfcf;
-    font-size: .8rem;
-    vertical-align: middle; }
 
-.cardContent {
+.cardContent, .learnContent {
   position: relative;
   padding: 6px 24px 30px;
   text-align: left; }
@@ -7511,8 +7790,9 @@ a.text-dark:focus, a.text-dark:hover {
   margin-top: -2px;
   padding: 0 4px 4px 7px;
   border: 1px solid transparent;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
-  font-weight: 900;
+  font-weight: 700;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -7541,7 +7821,8 @@ a.text-dark:focus, a.text-dark:hover {
     border-bottom: 2px solid #00a55e; }
 
 .dropDown {
-  padding-bottom: 14px;
+  padding-top: 6px;
+  padding-bottom: 9px;
   font-size: .8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -7552,6 +7833,19 @@ a.text-dark:focus, a.text-dark:hover {
     border-bottom: 2px solid #00a55e;
     background: transparent;
     color: #00a55e; }
+  .dropDown::before {
+    position: absolute;
+    right: 5px;
+    bottom: 15px;
+    content: "";
+    border-top: 5px solid #fff;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent; }
+  .dropDown::after {
+    vertical-align: 1px;
+    border-top: 5px solid #0d7e4e;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent; }
 
 .dropItem {
   padding: 3px 7px;
@@ -7570,6 +7864,7 @@ a.text-dark:focus, a.text-dark:hover {
   padding-right: 4px;
   padding-top: 0;
   padding-bottom: 0;
+  margin-top: -10px;
   margin-bottom: -25px; }
 
 .range-slider {
@@ -7584,7 +7879,8 @@ a.text-dark:focus, a.text-dark:hover {
   background: #e0dfdf;
   outline: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  top: -22px; }
   .range-slider__range::-webkit-slider-thumb {
     position: relative;
     -webkit-appearance: none;
@@ -7618,74 +7914,105 @@ a.text-dark:focus, a.text-dark:hover {
 
 .range-slider__value {
   position: relative;
-  top: -42px;
+  top: -8px;
   color: #a1a1a1;
-  font-size: .8rem;
+  font-size: 10px;
   letter-spacing: normal;
-  font-weight: 700;
-  line-height: 14px;
+  font-weight: 600;
   text-align: left;
-  border-radius: 16px 4px 0 0;
+  border-radius: 15px 4px 0 0;
   background: #eaeaea;
-  padding: 5px 10px; }
+  padding: 3px 8px 3px 16px; }
 
 ::-moz-range-track {
   background: #e0dfdf;
   border: 0; }
 
 .rangeScale {
-  font-size: .7rem;
-  color: #6c6c6c; }
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  padding-top: 2px;
+  color: #6c6c6c;
+  margin-bottom: -10px; }
 
 input::-moz-focus-inner,
 input::-moz-focus-outer {
   border: 0; }
 
-.portBtn, .confirmBtn {
-  font-size: 1.2rem;
+/* ----- */
+.portBtn, .confirmBtn, .dashBtn, .learnBtn {
+  font-size: 16px;
   font-weight: 800;
+  letter-spacing: 1px;
   border: 2px solid #6c6c6c;
-  min-width: 265px;
-  height: 42px; }
+  padding-top: auto;
+  padding-bottom: auto;
+  padding-left: 36px;
+  padding-right: 36px;
+  height: 38px;
+  margin-bottom: -10px; }
 
 .investList, .assetList {
-  max-height: 400px;
+  table-layout: fixed;
   width: 100%;
-  font-size: .9rem;
   color: #6c6c6c;
-  background: #fafafa; }
-  .investList tr td, .assetList tr td {
-    padding-top: 15px;
-    padding-bottom: 15px; }
-  .investList tr td:first-child, .assetList tr td:first-child {
-    text-align: left;
-    padding-left: 26px; }
-  .investList tr td:not(:first-child), .assetList tr td:not(:first-child) {
+  background: #fafafa;
+  margin-top: -7px; }
+  .investList thead, .assetList thead {
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    -webkit-box-shadow: inset 3px 0 0 0 #00a55e;
+    -moz-box-shadow: inset 3px 0 0 0 #00a55e;
+    -ms-box-shadow: inset 3px 0 0 0 #00a55e;
+    -o-box-shadow: inset 3px 0 0 0 #00a55e;
+    box-shadow: inset 3px 0 0 0 #00a55e; }
+    .investList thead tr, .assetList thead tr {
+      display: block;
+      position: relative;
+      padding: 4px 12px;
+      margin: 12px 29px 12px 12px; }
+    .investList thead th, .assetList thead th {
+      text-transform: capitalize;
+      font-weight: 700; }
+  .investList tbody, .assetList tbody {
+    display: block;
+    overflow: auto;
+    max-height: 468px;
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #e8e8e8; }
+    .investList tbody tr, .assetList tbody tr {
+      display: block;
+      position: relative;
+      padding: 4px 11px;
+      margin: 12px 12px;
+      min-height: 30px;
+      border: 1px solid transparent;
+      border-radius: 4px; }
+      .investList tbody tr.added, .assetList tbody tr.added {
+        border: 1px solid transparent;
+        -webkit-box-shadow: 0 0 2px 3px #e1e1e1;
+        -moz-box-shadow: 0 0 2px 3px #e1e1e1;
+        -ms-box-shadow: 0 0 2px 3px #e1e1e1;
+        -o-box-shadow: 0 0 2px 3px #e1e1e1;
+        box-shadow: 0 0 2px 3px #e1e1e1;
+        font-weight: 800; }
+  .investList td:nth-child(1), .assetList td:nth-child(1), .investList th:nth-child(1), .assetList th:nth-child(1) {
+    max-width: 320px;
+    width: 50%; }
+  .investList td:nth-child(2), .assetList td:nth-child(2), .investList th:nth-child(2), .assetList th:nth-child(2) {
+    min-width: 105px; }
+  .investList td:nth-child(3), .assetList td:nth-child(3), .investList th:nth-child(3), .assetList th:nth-child(3) {
+    min-width: 45px; }
+  .investList td:nth-child(4), .assetList td:nth-child(4), .investList th:nth-child(4), .assetList th:nth-child(4) {
+    width: 90px; }
+  .investList td:nth-child(5), .assetList td:nth-child(5), .investList th:nth-child(5), .assetList th:nth-child(5) {
+    width: 48px; }
+  .investList td:first-child, .assetList td:first-child, .investList th:first-child, .assetList th:first-child {
+    text-align: left; }
+  .investList td:not(:first-child), .assetList td:not(:first-child), .investList th:not(:first-child), .assetList th:not(:first-child) {
     text-align: center; }
-  .investList tr td:last-child, .assetList tr td:last-child {
-    padding-right: 26px; }
-
-.tableHead {
-  background: #fff;
-  border-bottom: 1px solid #e8e8e8;
-  -webkit-box-shadow: inset 3px 0 0 0 #00a55e;
-  -moz-box-shadow: inset 3px 0 0 0 #00a55e;
-  -ms-box-shadow: inset 3px 0 0 0 #00a55e;
-  -o-box-shadow: inset 3px 0 0 0 #00a55e;
-  box-shadow: inset 3px 0 0 0 #00a55e; }
-  .tableHead td {
-    text-transform: capitalize;
-    font-weight: 700;
-    padding-top: 15px;
-    padding-bottom: 15px; }
-  .tableHead td:first-child {
-    padding-left: 26px; }
-  .tableHead td:last-child {
-    padding-right: 26px; }
-
-.tableRow {
-  margin: 0;
-  padding: 10px; }
 
 .downloadBtn {
   -webkit-filter: grayscale(100%) opacity(40%);
@@ -7694,33 +8021,54 @@ input::-moz-focus-outer {
     -webkit-filter: grayscale(0) opacity(100%);
     filter: grayscale(0) opacity(100%); }
 
-.addBtn:hover, .deleteBtn:hover, .addBtn:focus, .deleteBtn:focus, .addBtn:active, .deleteBtn:active {
-  -webkit-filter: contrast(0) brightness(30%);
-  filter: contrast(0) brightness(30%); }
-.addBtn.added:hover, .added.deleteBtn:hover, .addBtn.added:focus, .added.deleteBtn:focus, .addBtn.added:active, .added.deleteBtn:active {
-  -webkit-filter: grayscale(100%) opacity(40%);
-  filter: grayscale(100%) opacity(40%); }
+.addBtn, .deleteBtn {
+  padding-top: 2px;
+  padding-bottom: 2px; }
+  .addBtn:hover, .deleteBtn:hover, .addBtn:focus, .deleteBtn:focus, .addBtn:active, .deleteBtn:active {
+    -webkit-filter: contrast(0) brightness(30%);
+    filter: contrast(0) brightness(30%); }
+  .addBtn.added, .added.deleteBtn {
+    padding-top: 0;
+    padding-bottom: 0; }
+    .addBtn.added:hover, .added.deleteBtn:hover, .addBtn.added:focus, .added.deleteBtn:focus, .addBtn.added:active, .added.deleteBtn:active {
+      -webkit-filter: grayscale(0) opacity(80%);
+      filter: grayscale(0) opacity(80%); }
 
 .assetList {
+  font-size: 14px;
   font-weight: 800; }
+  .assetList td:nth-child(1), .assetList th:nth-child(1) {
+    max-width: 300px;
+    width: 75%; }
+  .assetList td:nth-child(2), .assetList th:nth-child(2) {
+    min-width: 60px; }
+  .assetList td:nth-child(3), .assetList th:nth-child(3) {
+    width: 20px; }
+  .assetList thead td:not(first-child) {
+    text-align: left; }
   .assetList .inputAlloc {
+    text-align: right;
     padding-bottom: 0;
-    max-width: 60px; }
+    max-width: 50px; }
   .assetList .percentLabel {
     padding-bottom: 0; }
-  .assetList tr.tableHead td:not(first-child) {
-    text-align: left; }
-  .assetList tr.totalRow {
-    border-top: 1px solid #eaeaea;
-    font-size: 1.2rem; }
 
 .deleteBtn {
   padding-bottom: 10px; }
+
+.totalRow {
+  font-size: 14px;
+  font-weight: 800;
+  text-align: left; }
+  .totalRow .totalAlloc {
+    font-size: 20px;
+    padding-left: 42px; }
 
 .confirmBtn {
   background: #00a55e;
   color: #fff;
   border: 2px solid #00a55e;
+  bottom: 15px;
   -webkit-box-shadow: inset 0 -1px 0 0 #009753;
   -moz-box-shadow: inset 0 -1px 0 0 #009753;
   -ms-box-shadow: inset 0 -1px 0 0 #009753;
@@ -7731,6 +8079,200 @@ input::-moz-focus-outer {
   .confirmBtn:hover, .confirmBtn:focus {
     background: #fff;
     color: #00a55e; }
+
+.dashCard {
+  -webkit-box-shadow: 0 4px 0 0 #00a55e;
+  -moz-box-shadow: 0 4px 0 0 #00a55e;
+  -ms-box-shadow: 0 4px 0 0 #00a55e;
+  -o-box-shadow: 0 4px 0 0 #00a55e;
+  box-shadow: 0 4px 0 0 #00a55e;
+  margin-top: 12px;
+  padding-top: 30px; }
+
+.dashImg {
+  height: 160px;
+  display: flex;
+  vertical-align: bottom;
+  justify-content: center; }
+  .dashImg img {
+    margin-top: auto; }
+
+.dashTitle {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 30px;
+  color: #323232;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-align: center; }
+
+.dashContent {
+  font-size: 12.5px;
+  padding-left: 65px;
+  padding-right: 65px; }
+
+.dashBtn, .learnBtn {
+  width: 194px;
+  height: 49px;
+  font-size: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  .dashBtn:hover, .learnBtn:hover, .dashBtn:focus, .learnBtn:focus, .dashBtn:active, .learnBtn:active {
+    color: #00a55e; }
+
+.activityTitle {
+  margin-bottom: 18px; }
+  .activityTitle .subtitle {
+    font-weight: 800; }
+
+.learnTitle {
+  -webkit-box-shadow: inset 6px 0 0 0 #00a55e;
+  -moz-box-shadow: inset 6px 0 0 0 #00a55e;
+  -ms-box-shadow: inset 6px 0 0 0 #00a55e;
+  -o-box-shadow: inset 6px 0 0 0 #00a55e;
+  box-shadow: inset 6px 0 0 0 #00a55e;
+  font-size: 26px;
+  padding: 53px 45px 50px;
+  padding-top: 53px;
+  padding-bottom: 50px; }
+
+.learnContent {
+  font-size: 14px;
+  letter-spacing: .8px;
+  margin-top: -13px;
+  padding-left: 45px;
+  padding-right: 65px; }
+
+.learnBtn {
+  color: #a1a1a1;
+  border-color: #a1a1a1;
+  margin-top: 18px;
+  margin-bottom: 60px; }
+
+.chapterHead, .furtherHead {
+  font-size: 16px;
+  border-bottom: 1px solid #d2d2d2; }
+  .chapterHead .infoTitle, .furtherHead .infoTitle {
+    float: right;
+    margin: -3px 15px; }
+
+.chapterBox {
+  display: block;
+  padding: 24px 6px 0; }
+  .chapterBox .chapterTitle {
+    padding: 3px;
+    font-size: 13px;
+    font-weight: 700; }
+  .chapterBox .chapterSubtitle {
+    font-size: 11px;
+    margin-top: -4px;
+    padding: 0 3px; }
+
+.lessonActivity {
+  padding: 42px 39px; }
+  .lessonActivity .cardContent, .lessonActivity .learnContent {
+    font-size: 13px; }
+
+.lessonVideo {
+  padding-right: 9px; }
+
+.lessonTitle {
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 800;
+  padding-left: 24px; }
+
+.lessonSubtitle {
+  text-transform: capitalize;
+  color: #777;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 24px; }
+
+.backBtn {
+  width: 198px;
+  background-color: transparent;
+  font-weight: 700;
+  color: #00a55e;
+  border: 2px solid #00a55e;
+  font-size: 17px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: -10px;
+  margin-bottom: 13px; }
+  .backBtn:hover, .backBtn:focus, .backBtn:active {
+    background-color: #00a55e;
+    color: #fff; }
+
+.planBtn {
+  width: 198px;
+  background-color: #00a55e;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid #00a55e;
+  font-size: 17px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .planBtn:hover, .planBtn:focus, .planBtn:active {
+    background-color: transparent;
+    color: #00a55e; }
+
+.contactTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #00a55e;
+  padding-top: 20px;
+  padding-bottom: 15px; }
+
+.contactInfo {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5; }
+
+.downloadBack {
+  position: absolute;
+  bottom: 20px;
+  right: 24px; }
+
+.tabMenu .tabBtn {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #b2b3b2;
+  padding: 15px 23px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: none;
+  -webkit-box-shadow: inset 3px 0 0 0 #e2e0e0;
+  -moz-box-shadow: inset 3px 0 0 0 #e2e0e0;
+  -ms-box-shadow: inset 3px 0 0 0 #e2e0e0;
+  -o-box-shadow: inset 3px 0 0 0 #e2e0e0;
+  box-shadow: inset 3px 0 0 0 #e2e0e0; }
+  .tabMenu .tabBtn.active {
+    -webkit-box-shadow: inset 3px 0 0 0 #009753;
+    -moz-box-shadow: inset 3px 0 0 0 #009753;
+    -ms-box-shadow: inset 3px 0 0 0 #009753;
+    -o-box-shadow: inset 3px 0 0 0 #009753;
+    box-shadow: inset 3px 0 0 0 #009753;
+    color: #00a55e; }
+.tabMenu .continueBtn {
+  padding: 10px 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 50px;
+  background: #009753;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800; }
 
 .appFooter {
   width: 100%; }

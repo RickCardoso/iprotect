@@ -13,6 +13,7 @@ $nunito: 'Nunito', sans-serif;
 
 // Metrics
 $nav-height: 66px;
+$min-app-height: 0px; // TODO: get the right maximum value
 $sm: 414px;
 $md: 991px;
 $lg: 2200px;
@@ -126,12 +127,16 @@ $lg: 2200px;
 }
 
 
-.logo,
-#navToggler {
+.logo {
   margin: auto 30px;
   @media screen and (max-width: $md) {
     margin: 13px 20px;
   }
+}
+
+#navToggler {
+  @extend .logo;
+  border-color: transparent;
 }
 
 .loginContainer {
@@ -150,6 +155,7 @@ $lg: 2200px;
   background: $primary;
   color: #fff;
   border: 2px solid $primary;
+  margin: 17px 0;
   @include paddingX(17px);
   @include insetShadow(0, -2px, 0, 0, rgba(0, 119, 68, 0.16));
   &:hover,
@@ -158,7 +164,6 @@ $lg: 2200px;
     background: transparent;
     color: $primary;
   }
-  @include marginY(17px);
   @media screen and (max-width: $md) {
     @include marginY(17px);
   }
@@ -226,12 +231,12 @@ $lg: 2200px;
 
 .flexContainer > .flexBox {
   flex: 1;
-  margin-top: 0;
 }
 
 .cardContainer {
   background: #fff;
   @include boxShadow(0, 2px, 5px, 2px, #d6d6d6);
+  @include borderRadius(2px);
   padding: 0;
   margin: 7px 13px;
 }
@@ -246,11 +251,6 @@ $lg: 2200px;
 .cardHeadGreen {
   @extend .cardHead;
   @include insetShadow(3px, 0, 0, 0, $primary);
-  & .fa {
-    color: #cfcfcf;
-    font-size: .8rem;
-    vertical-align: middle;
-  }
 }
 
 .cardContent {
@@ -265,8 +265,9 @@ $lg: 2200px;
   margin-top: -2px;
   padding: 0 4px 4px 7px;
   border: 1px solid transparent;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
-  font-weight: 900;
+  font-weight: 700;
   @include borderRadius(0);
 }
 
@@ -302,7 +303,8 @@ $lg: 2200px;
 
 .dropDown {
   @extend .inputStd;
-  padding-bottom: 14px;
+  padding-top: 6px;
+  padding-bottom: 9px;
   font-size: .8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -315,6 +317,21 @@ $lg: 2200px;
     border-bottom: 2px solid $primary;
     background: transparent;
     color: $primary;
+  }
+  &::before {
+    position: absolute;
+    right: 5px;
+    bottom: 15px;
+    content: "";
+    border-top: 5px solid #fff;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+  &::after {
+    vertical-align: 1px;
+    border-top: 5px solid #0d7e4e;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
   }
 }
 
@@ -345,6 +362,7 @@ $lg: 2200px;
     @extend .inputStd;
     @include paddingX(4px);
     @include paddingY(0);
+    margin-top: -10px;
     margin-bottom: -25px;
   }
 
@@ -376,6 +394,7 @@ $lg: 2200px;
     outline: none;
     padding: 0;
     margin: 0;
+    top: -22px;
 
     // Range Handle
     &::-webkit-slider-thumb {
@@ -414,16 +433,15 @@ $lg: 2200px;
   // Range Label
   .range-slider__value {
     position: relative;
-    top: -42px;
+    top: -8px;
     color: $range-label;
-    font-size: .8rem;
+    font-size: 10px;
     letter-spacing: normal;
-    font-weight: 700;
-    line-height: 14px;
+    font-weight: 600;
     text-align: left;
-    border-radius: 16px 4px 0 0;
+    border-radius: 15px 4px 0 0;
     background: $range-label-color;
-    padding: 5px 10px;
+    padding: 3px 8px 3px 16px;
   }
 
   // Firefox Overrides
@@ -434,68 +452,91 @@ $lg: 2200px;
 
   // Range Scale
   .rangeScale {
-    font-size: .7rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    padding-top: 2px;
     color: $complementary;
+    margin-bottom: -10px;
   }
 
   input::-moz-focus-inner,
   input::-moz-focus-outer {
     border: 0;
   }
+/* ----- */
 
 .portBtn {
   @extend .navBtn;
-  font-size: 1.2rem;
+  font-size: 16px;
   font-weight: 800;
+  letter-spacing: 1px;
   border: 2px solid $complementary;
-  min-width: 265px;
-  height: 42px;
+  @include paddingY(auto);
+  @include paddingX(36px);
+  height: 38px;
+  margin-bottom: -10px;
 }
 
 .investList {
-  max-height: 400px;
+  table-layout: fixed;
   width: 100%;
-  font-size: .9rem;
   color: $complementary;
   background: #fafafa;
-  & tr {
-    & td {
-      @include paddingY(15px);
+  margin-top: -7px;
+  & thead {
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    @include insetShadow(3px, 0, 0, 0, $primary);
+    & tr {
+      display: block;
+      position: relative;
+      padding: 4px 12px;
+      margin: 12px 29px 12px 12px;
     }
-    & td:first-child {
+    & th {
+      @extend .titleStd;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
+  }
+  & tbody {
+    display: block;
+    overflow: auto;
+    max-height: 468px;
+    width: 100%;
+    @include marginY(6px);
+    border-bottom: 1px solid #e8e8e8;
+    & tr {
+      display: block;
+      position: relative;
+      padding: 4px 11px;
+      margin: 12px 12px;
+      min-height: 30px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      &.added {
+        border: 1px solid transparent;
+        @include boxShadow(0, 0, 2px, 3px, #e1e1e1);
+        font-weight: 800;
+      }
+    }
+  }
+
+  td:nth-child(1), th:nth-child(1) { max-width: 320px; width: 50%; }
+  td:nth-child(2), th:nth-child(2) { min-width: 105px; }
+  td:nth-child(3), th:nth-child(3) { min-width: 45px; }
+  td:nth-child(4), th:nth-child(4) { width: 90px; }
+  td:nth-child(5), th:nth-child(5) { width: 48px; }
+
+  & td,
+  & th {
+    &:first-child {
       text-align: left;
-      padding-left: 26px;
     }
-    & td:not(:first-child) {
+    &:not(:first-child) {
       text-align: center;
     }
-    & td:last-child {
-      padding-right: 26px;
-    }
   }
-}
-
-.tableHead {
-  background: #fff;
-  border-bottom: 1px solid #e8e8e8;
-  @include insetShadow(3px, 0, 0, 0, $primary);
-  & td {
-    @extend .titleStd;
-    text-transform: capitalize;
-    font-weight: 700;
-    @include paddingY(15px);
-  }
-  & td:first-child {
-    padding-left: 26px;
-  }
-  & td:last-child {
-    padding-right: 26px;
-  }
-}
-
-.tableRow {
-  margin: 0;
-  padding: 10px;
 }
 
 .downloadBtn {
@@ -508,40 +549,44 @@ $lg: 2200px;
 }
 
 .addBtn {
+  @include paddingY(2px);
   &:hover,
   &:focus,
   &:active {
     @include contFilter(0);
   }
   &.added {
+    @include paddingY(0);
     &:hover,
     &:focus,
     &:active {
-      @include grayFilter(100%);
+      @include grayFilter(0, 80%);
     }
   }
 }
 
 .assetList {
   @extend .investList;
+  font-size: 14px;
   font-weight: 800;
+
+  td:nth-child(1), th:nth-child(1) { max-width: 300px; width: 75%; }
+  td:nth-child(2), th:nth-child(2) { min-width: 60px; }
+  td:nth-child(3), th:nth-child(3) { width: 20px; }
+
+  & thead td:not(first-child) {
+    text-align: left;
+  }
+
   & .inputAlloc {
     @extend .inputCont;
+    text-align: right;
     padding-bottom: 0;
-    max-width: 60px;
+    max-width: 50px;
   }
   & .percentLabel {
     @extend .dollarLabel;
     padding-bottom: 0;
-  }
-  & tr {
-    &.tableHead td:not(first-child) {
-      text-align: left;
-    }
-    &.totalRow {
-      border-top: 1px solid #eaeaea;
-      font-size: 1.2rem;
-    }
   }
 }
 
@@ -550,17 +595,253 @@ $lg: 2200px;
   padding-bottom: 10px;
 }
 
+.totalRow {
+  font-size: 14px;
+  font-weight: 800;
+  text-align: left;
+  & .totalAlloc {
+    font-size: 20px;
+    padding-left: 42px;
+  }
+}
+
 .confirmBtn {
   @extend .portBtn;
   background: $primary;
   color: #fff;
   border: 2px solid $primary;
+  bottom: 15px;
   @include insetShadow(0, -1px, 0, 0, $secondary);
   @include paddingX(67px);
   &:hover,
   &:focus {
     background: #fff;
     color: $primary;
+  }
+}
+
+.dashCard {
+  @include boxShadow(0, 4px, 0, 0, $primary);
+  margin-top: 12px;
+  padding-top: 30px;
+}
+
+.dashImg {
+  height: 160px;
+  display: flex;
+  vertical-align: bottom;
+  justify-content: center;
+  & img {
+    margin-top: auto;
+  }
+}
+
+.dashTitle {
+  @extend .titleStd;
+  display: block;
+  @include paddingY(30px);
+  font-size: 30px;
+  color: #323232;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.dashContent {
+  font-size: 12.5px;
+  @include paddingX(65px);
+}
+
+.dashBtn {
+  @extend .portBtn;
+  width: 194px;
+  height: 49px;
+  font-size: 17px;
+  @include paddingY(12px);
+  @include marginY(40px);
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary;
+  }
+}
+
+.activityTitle {
+  @extend .titleStd;
+  @extend .colTitle;
+  @extend .col-12;
+  margin-bottom: 18px;
+  & .subtitle {
+    font-weight: 800;
+  }
+}
+
+.learnTitle {
+  @extend .cardHeadGreen;
+  @include insetShadow(6px, 0, 0, 0, $primary);
+  font-size: 26px;
+  padding: 53px 45px 50px;
+  padding-top: 53px;
+  padding-bottom: 50px;
+}
+
+.learnContent {
+  @extend .cardContent;
+  font-size: 14px;
+  letter-spacing: .8px;
+  margin-top: -13px;
+  padding-left: 45px;
+  padding-right: 65px;
+}
+
+.learnBtn {
+  @extend .dashBtn;
+  color: #a1a1a1;
+  border-color: #a1a1a1;
+  margin-top: 18px;
+  margin-bottom: 60px;
+}
+
+.chapterHead {
+  @extend .cardHeadGreen;
+  font-size: 16px;
+  border-bottom: 1px solid #d2d2d2;
+  & .infoTitle {
+    float: right;
+    margin: -3px 15px;
+  }
+}
+
+.chapterBox {
+  display: block;
+  padding: 24px 6px 0;
+  & .chapterTitle {
+    padding: 3px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  & .chapterSubtitle {
+    font-size: 11px;
+    margin-top: -4px;
+    padding: 0 3px;
+  }
+}
+
+.lessonActivity {
+  padding: 42px 39px;
+  & .cardContent {
+    font-size: 13px;
+  }
+}
+
+.lessonVideo {
+  padding-right: 9px;
+}
+
+.lessonTitle {
+  @extend .titleStd;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 800;
+  padding-left: 24px;
+}
+
+.lessonSubtitle {
+  @extend .titleStd;
+  text-transform: capitalize;
+  color: #777;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 24px;
+}
+
+
+.backBtn {
+  @extend .btnStd;
+  width: 198px;
+  background-color: transparent;
+  font-weight: 700;
+  color: $primary;
+  border: 2px solid $primary;
+  font-size: 17px;
+  @include paddingY(10px);
+  margin-top: -10px;
+  margin-bottom: 13px;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $primary;
+    color: #fff;
+  }
+}
+.planBtn {
+  @extend .btnStd;
+  width: 198px;
+  background-color: $primary;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid $primary;
+  font-size: 17px;
+  @include paddingY(10px);
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
+.furtherHead {
+  @extend .chapterHead;
+}
+
+.contactTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: $primary;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.contactInfo {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.downloadBack {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+}
+
+.tabMenu {
+  & .tabBtn {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #b2b3b2;
+    padding: 15px 23px;
+    @include borderRadius(2px);
+    border: none;
+    @include insetShadow(3px, 0, 0, 0, #e2e0e0);
+    &.active {
+      @include insetShadow(3px, 0, 0, 0, $secondary);
+      color: $primary;
+    }
+  }
+  & .continueBtn {
+    @extend .btnStd;
+    padding: 10px 40px;
+    @include marginY(auto);
+    margin-left: auto;
+    margin-right: 50px;
+    background: $secondary;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
   }
 }
 
