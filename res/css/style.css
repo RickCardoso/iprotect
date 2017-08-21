@@ -7734,7 +7734,7 @@ a.text-dark:focus, a.text-dark:hover {
     margin-top: 6px;
     margin-bottom: 6px; }
 
-.titleStd, .colTitle, .activityTitle, .cardHead, .cardHeadGreen, .learnTitle, .chapterHead, .furtherHead, .investList thead th, .assetList thead th, .dashTitle, .lessonTitle, .lessonSubtitle {
+.titleStd, .colTitle, .activityTitle, .cardHead, .cardHeadGreen, .learnTitle, .chapterHead, .furtherHead, .cardHeadGray, .cardHeadRed, .investList thead th, .assetList thead th, .dashTitle, .lessonTitle, .lessonSubtitle {
   text-transform: uppercase;
   color: #777;
   font-weight: 700;
@@ -7768,7 +7768,7 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 0;
   margin: 7px 13px; }
 
-.cardHead, .cardHeadGreen, .learnTitle, .chapterHead, .furtherHead {
+.cardHead, .cardHeadGreen, .learnTitle, .chapterHead, .furtherHead, .cardHeadGray, .cardHeadRed {
   text-transform: capitalize;
   font-weight: 700;
   padding: 15px 0 15px 23px; }
@@ -7779,6 +7779,22 @@ a.text-dark:focus, a.text-dark:hover {
   -ms-box-shadow: inset 3px 0 0 0 #00a55e;
   -o-box-shadow: inset 3px 0 0 0 #00a55e;
   box-shadow: inset 3px 0 0 0 #00a55e; }
+
+.cardHeadGray {
+  text-transform: uppercase;
+  -webkit-box-shadow: inset 3px 0 0 0 #989898;
+  -moz-box-shadow: inset 3px 0 0 0 #989898;
+  -ms-box-shadow: inset 3px 0 0 0 #989898;
+  -o-box-shadow: inset 3px 0 0 0 #989898;
+  box-shadow: inset 3px 0 0 0 #989898; }
+
+.cardHeadRed {
+  text-transform: uppercase;
+  -webkit-box-shadow: inset 3px 0 0 0 #e20613;
+  -moz-box-shadow: inset 3px 0 0 0 #e20613;
+  -ms-box-shadow: inset 3px 0 0 0 #e20613;
+  -o-box-shadow: inset 3px 0 0 0 #e20613;
+  box-shadow: inset 3px 0 0 0 #e20613; }
 
 .cardContent, .learnContent {
   position: relative;
@@ -8255,7 +8271,12 @@ input::-moz-focus-outer {
   -moz-box-shadow: inset 3px 0 0 0 #e2e0e0;
   -ms-box-shadow: inset 3px 0 0 0 #e2e0e0;
   -o-box-shadow: inset 3px 0 0 0 #e2e0e0;
-  box-shadow: inset 3px 0 0 0 #e2e0e0; }
+  box-shadow: inset 3px 0 0 0 #e2e0e0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
   .tabMenu .tabBtn.active {
     -webkit-box-shadow: inset 3px 0 0 0 #009753;
     -moz-box-shadow: inset 3px 0 0 0 #009753;
@@ -8263,6 +8284,14 @@ input::-moz-focus-outer {
     -o-box-shadow: inset 3px 0 0 0 #009753;
     box-shadow: inset 3px 0 0 0 #009753;
     color: #00a55e; }
+  .tabMenu .tabBtn:hover, .tabMenu .tabBtn:focus, .tabMenu .tabBtn:active {
+    -webkit-box-shadow: inset 3px 0 0 0 #00a55e;
+    -moz-box-shadow: inset 3px 0 0 0 #00a55e;
+    -ms-box-shadow: inset 3px 0 0 0 #00a55e;
+    -o-box-shadow: inset 3px 0 0 0 #00a55e;
+    box-shadow: inset 3px 0 0 0 #00a55e;
+    background: #f2f3f2;
+    color: #009753; }
 .tabMenu .continueBtn {
   padding: 10px 40px;
   margin-top: auto;
@@ -8273,6 +8302,9 @@ input::-moz-focus-outer {
   color: #fff;
   font-size: 12px;
   font-weight: 800; }
+
+.simulationChart {
+  margin: 36px 48px; }
 
 .appFooter {
   width: 100%; }
