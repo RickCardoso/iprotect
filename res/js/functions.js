@@ -11,12 +11,12 @@ $(document).ready(function() {
       $(this).attr('src', 'client_res/img/icons/check.png');
       $(this).attr('width', '22');
       $(this).addClass('added');
-      //$(this).parent().parent().parent().addClass('added');
+      $(this).parent().parent().addClass('added');
     } else {
       $(this).attr('src', 'client_res/img/icons/plus.png');
-      $(this).attr('width', '17');
+      $(this).attr('width', '18');
       $(this).removeClass('added');
-      //$(this).parent().parent().parent().removeClass('added');
+      $(this).parent().parent().removeClass('added');
     }
   });
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
     // initiator
     $('.range-slider__range').each(function() {
       $(this).parent().find('.range-slider__value').html($(this).val());
-      $(this).parent().find('.range-slider__value').css('left', (5 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
+      $(this).parent().find('.range-slider__value').css('left', (2 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
       $(this).css('box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
     });
 
