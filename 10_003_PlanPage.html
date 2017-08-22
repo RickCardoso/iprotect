@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Simulation - iProtect | QuantHub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Custom CSS from SASS -->
+    <link rel="stylesheet" href="./res/css/style.css" type="text/css" media="all" />
+
+  </head>
+
+  <body class="appContainer">
+
+    <header class="appHead">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="appNavBar">
+        <img class="logo" src="client_res/img/logo.png" alt="" width="174">
+        <button class="navbar-toggler" id="navToggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item navBtn active" href="02_002_Learn.html">Learn</a>
+            <a class="nav-item navBtn" href="03_001_Simulation.html">Plans</a>
+            <a class="nav-item navBtn" href="07_002_Accounts.html">Accounts</a>
+            <div class="loginContainer">
+              <div class="userInfo">
+                <img src="client_res/img/icons/dropDown.png" width="8" alt="">
+                <span class="userName">John Doe</span>
+                <img class="userAvatar" src="client_res/img/thumbnails/avatar.png" width="54" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header> <!-- responsive navigation bar -->
+
+    <main class="appMain">
+      <div class="row appContent">
+        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-xs-12">
+          <div class="colTitle">
+            Investment
+          </div>
+          <div class="cardContainer">
+            <div class="cardHeadGreen">
+              Initial Contribution <img src="client_res/img/icons/info.png" width="12" alt="">
+            </div>
+            <div class="cardContent">
+              <div class="input-group inputGroupStd">
+                <span class="input-group-addon dollarLabel">$</span>
+                <input type="text" class="form-control inputCont" aria-label="Amount (to the nearest dollar)" placeholder="100,000">
+              </div>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+          <div class="cardContainer">
+            <div class="cardHeadGreen">
+              Regular Contribution <img src="client_res/img/icons/info.png" width="12" alt="">
+            </div>
+            <div class="cardContent">
+              <div class="input-group inputGroupdStd">
+                <span class="input-group-addon dollarLabel">$</span>
+                <input type="text" class="form-control inputCont" aria-label="Text input with dropdown button" placeholder="2,000">
+                <div class="input-group-btn dropDownGroup">
+                  <button type="button" class="btn btn-secondary dropdown-toggle dropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="Monthly">Monthly</button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropItem" href="#">Weekly</a>
+                    <a class="dropItem" href="#">Every other week</a>
+                    <a class="dropItem" selected href="#">Monthly</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropItem" href="#">Every...</a>
+                  </div>
+                </div>
+              </div>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+          <div class="cardContainer">
+            <div class="cardHeadGreen">
+              Base Protection <img src="client_res/img/icons/info.png" width="12" alt="">
+            </div>
+            <div class="cardContent">
+              <div class="range-slider">
+                <span class="range-slider__value">0</span>
+                <input class="range-slider__range" type="range" value="80" min="70" max="90" step="1">
+              </div>
+              <div class="row justify-content-between rangeScale">
+                <div class="col text-left">$70k</div><div class="col text-center">$80k</div><div class="col text-right">$90k</div>
+              </div>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+          <div class="cardContainer">
+            <div class="cardHeadGreen">
+              Performance Lock-Ins <img src="client_res/img/icons/info.png" width="12" alt="">
+            </div>
+            <div class="cardContent">
+              <div class="range-slider">
+                <span class="range-slider__value">0</span>
+                <input class="range-slider__range" type="range" value="50" min="0" max="100" step="1">
+              </div>
+              <div class="row justify-content-between rangeScale">
+                <div class="col text-left">0%</div><div class="col text-center">50%</div><div class="col text-right">100%</div>
+              </div>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+          <div class="cardContainer">
+            <div class="cardHeadGreen">
+              Investments <img src="client_res/img/icons/info.png" width="12" alt="">
+            </div>
+            <div class="cardContent">
+              <button class="portBtn">Create Portfolio</button>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-8 col-md-7 col-sm-12 col-xs-12 flexContainer">
+          <div class="colTitle">
+            Investment List
+          </div>
+          <div class="cardContainer flexBox">
+            <table class="investList">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Asset Class</th>
+                  <th>Fee</th>
+                  <th>Factsheet</th>
+                  <th></th>
+                </tr>
+              <thead>
+              <tbody>
+                <tr class="added"r>
+                  <td>Eurizon Global Bond Fund</td>
+                  <td>Balanced</td>
+                  <td>1.25%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn added" src="client_res/img/icons/check.png" width="22" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Pioneer European Equity Fund</td>
+                  <td>Growth</td>
+                  <td>1.75%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn" src="client_res/img/icons/plus.png" width="18" alt=""></td>
+                </tr>
+                <tr class="added">
+                  <td>Franklin Templeton Fund</td>
+                  <td>Multi Managed</td>
+                  <td>2.05%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn added" src="client_res/img/icons/check.png" width="22" alt=""></td>
+                </tr>
+                <tr class="added">
+                  <td>Azimut Global Multi-Asset Fund</td>
+                  <td>Multi Managed</td>
+                  <td>2.15%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn added" src="client_res/img/icons/check.png" width="22" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Amundi Euro Area Opportunities Fund</td>
+                  <td>Growth</td>
+                  <td>1.65%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn" src="client_res/img/icons/plus.png" width="18" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Amundi Euro Area Opportunities Fund</td>
+                  <td>Growth</td>
+                  <td>1.65%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn" src="client_res/img/icons/plus.png" width="18" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Amundi Euro Area Opportunities Fund</td>
+                  <td>Growth</td>
+                  <td>1.65%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn" src="client_res/img/icons/plus.png" width="18" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Amundi Euro Area Opportunities Fund</td>
+                  <td>Growth</td>
+                  <td>1.65%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn" src="client_res/img/icons/plus.png" width="18" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Amundi Euro Area Opportunities Fund</td>
+                  <td>Growth</td>
+                  <td>1.65%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn" src="client_res/img/icons/plus.png" width="18" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Amundi Euro Area Opportunities Fund</td>
+                  <td>Growth</td>
+                  <td>1.65%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn" src="client_res/img/icons/plus.png" width="18" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Amundi Euro Area Opportunities Fund</td>
+                  <td>Growth</td>
+                  <td>1.65%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn" src="client_res/img/icons/plus.png" width="18" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Amundi Euro Area Opportunities Fund</td>
+                  <td>Growth</td>
+                  <td>1.65%</td>
+                  <td><img class="downloadBtn" src="client_res/img/icons/pdfFile.png" width="15" alt=""></td>
+                  <td><img class="addBtn" src="client_res/img/icons/plus.png" width="18" alt=""></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="cardContent">
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 flexContainer">
+          <div class="colTitle">
+            My Portfolio
+          </div>
+          <div class="cardContainer flexBox assetCard">
+            <table class="assetList">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Allocation</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Eurizon Global Bond Fund</td>
+                  <td>
+                    <div class="input-group inputGroupStd">
+                      <input type="text" class="form-control inputAlloc" aria-label="Amount (to the nearest dollar)" value="15">
+                      <span class="input-group-addon percentLabel">%</span>
+                    </div>
+                  </td>
+                  <td><img class="deleteBtn" src="client_res/img/icons/trash.png" width="17" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Franklin Templeton Fund</td>
+                  <td>
+                    <div class="input-group inputGroupStd">
+                      <input type="text" class="form-control inputAlloc" aria-label="Amount (to the nearest dollar)" value="15">
+                      <span class="input-group-addon percentLabel">%</span>
+                    </div>
+                  </td>
+                  <td><img class="deleteBtn" src="client_res/img/icons/trash.png" width="17" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Azimut Global Multi-Asset Fund</td>
+                  <td>
+                    <div class="input-group inputGroupStd">
+                      <input type="text" class="form-control inputAlloc" aria-label="Amount (to the nearest dollar)" value="70">
+                      <span class="input-group-addon percentLabel">%</span>
+                    </div>
+                  </td>
+                  <td><img class="deleteBtn" src="client_res/img/icons/trash.png" width="17" alt=""></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="cardContent">
+              <div class="row totalRow">
+                <div class="col-8">Total Allocation</div>
+                <div class="col-4 totalAlloc">100%</div>
+              </div>
+              <button class="confirmBtn">Confirm</button>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main> <!-- app content -->
+
+    <footer class="appFooter">
+      <a class="fooBtn" href="02_002_Learn.html">Learn</a>
+      <a class="fooBtn" href="03_001_Simulation.html">Plans</a>
+      <a class="fooBtn" href="07_002_Accounts.html">Accounts</a>
+      <a class="fooBtn company" href="#">© QuantHub</span>
+    </footer> <!-- footer -->
+
+  </body> <!-- app container -->
+
+  <!-- jQuery -->
+  <script src="./ext_res/jquery/jquery-3.2.1.js" type="text/javascript"></script>
+  <!-- Popper -->
+  <script src="./ext_res/popper/popper.min.js" type="text/javascript"></script>
+  <!-- Bootstrap -->
+  <script src="./ext_res/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+
+  <!-- Custom jQuery -->
+  <script src="./res/js/functions.js" type="text/javascript"></script>
+
+</html>

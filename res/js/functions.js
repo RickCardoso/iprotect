@@ -23,6 +23,7 @@ $(document).ready(function() {
 /* input text - validation and formatting of numeric input */
 	var $cont = $(".inputCont");
   var $alloc = $(".inputAlloc");
+  var $year = $(".inputYear");
 
   // conditions for contribution amounts
 	$cont.on( "keyup", function( event ) {
@@ -78,6 +79,34 @@ $(document).ready(function() {
 					return ( input === "" ) ? "" : input.toLocaleString( "en-US" );
 				} );
 		} );
+
+    // conditions for years
+  	$year.on( "keyup", function( event ) {
+
+  		// When user select text in the document, also abort.
+  		var selection = window.getSelection().toString();
+  		if ( selection !== '' ) {
+  			return;
+  		}
+
+  		// When the arrow keys are pressed, abort.
+  		if ( $.inArray( event.keyCode, [38,40,37,39] ) !== -1 ) {
+  			return;
+  		}
+
+  		var $this = $( this );
+
+  		// Get the value.
+  		var input = $this.val();
+
+  		var input = input.replace(/[\D\s\._\-]+/g, "");
+  				input = input ? parseInt( input, 10 ) : 0;
+          input = Math.min(input, (new Date()).getFullYear());
+
+  				$this.val( function() {
+  					return ( input === 0) ? "" : input;
+  				} );
+  		} );
 
   /* range slider - update label */
     // initiator

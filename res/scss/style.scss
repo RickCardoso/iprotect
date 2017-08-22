@@ -10,6 +10,7 @@ $background: #171817;
 
 // Fonts
 $nunito: 'Nunito', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
 
 // Metrics
 $nav-height: 66px;
@@ -84,6 +85,7 @@ $lg: 2200px;
   padding: 0;
   margin: auto;
   max-width: 1600px;
+  overflow-x: hidden;
 }
 
 .appHead {
@@ -213,7 +215,7 @@ $lg: 2200px;
   text-transform: uppercase;
   color: #777;
   font-weight: 700;
-  letter-spacing: 0.02rem;
+  letter-spacing: .5px;
   line-height: 1;
   text-align: left;
 }
@@ -253,6 +255,12 @@ $lg: 2200px;
   @include insetShadow(3px, 0, 0, 0, $primary);
 }
 
+.cardHeadGreenUpper {
+  @extend .cardHead;
+  text-transform: uppercase;
+  @include insetShadow(3px, 0, 0, 0, $primary);
+}
+
 .cardHeadGray {
   @extend .cardHead;
   text-transform: uppercase;
@@ -277,7 +285,7 @@ $lg: 2200px;
   margin-top: -2px;
   padding: 0 4px 4px 7px;
   border: 1px solid transparent;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $montserrat;
   font-size: 1.1rem;
   font-weight: 700;
   @include borderRadius(0);
@@ -464,7 +472,7 @@ $lg: 2200px;
 
   // Range Scale
   .rangeScale {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $montserrat;
     font-size: 11px;
     padding-top: 2px;
     color: $complementary;
@@ -767,7 +775,6 @@ $lg: 2200px;
   padding: 10px 24px;
 }
 
-
 .backBtn {
   @extend .btnStd;
   width: 198px;
@@ -867,6 +874,54 @@ $lg: 2200px;
 
 .simulationChart {
   margin: 36px 48px;
+}
+
+.inputYear {
+  @extend .inputCont;
+}
+
+.protectionTable {
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: -27px;
+  & tbody {
+    & tr td {
+      @include paddingY(12px);
+    }
+    & tr:not(:first-child) {
+      border-top: 1px solid #e2e3e2; //TODO get right color
+    }
+    & tr td:nth-child(2) {
+      font-family: $montserrat;
+      text-align: right;
+    }
+  }
+}
+
+.unprotectedTable {
+  color: #e3e2e3;
+}
+
+.inputDate {
+  @extend .inputCont;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: normal;
+  margin-right: 20px;
+}
+
+.tabAccounts {
+  @extend .tabMenu;
+  & .tabBtn {
+    font-size: 18px;
+  }
+}
+
+.accountCard {
+  @extend .cardContainer;
+  margin: 3px;
 }
 
 .appFooter {
