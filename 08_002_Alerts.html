@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
-    <title>Accounts - iProtect | QuantHub</title>
+    <title>Alerts - iProtect | QuantHub</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -41,8 +41,8 @@
         <div class="row accControl">
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <div class="nav nav-tabs tabAccounts">
-              <a class="nav-link tabBtn active" href="#">Accounts</a>
-              <a class="nav-link tabBtn" href="#">Alerts</a>
+              <a class="nav-link tabBtn" href="#">Accounts</a>
+              <a class="nav-link tabBtn active" href="#">Alerts</a>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -82,274 +82,391 @@
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
         </div>
-        <div class="row accountContainer">
+
+        <div class="row filter">
+          <div class="col-6 row">
+            <div class="col-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Strong Performance <img src="client_res/img/icons/info.png" width="12" alt="" >
+              </label>
+            </div>
+            <div class="col-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Weak Performance <img src="client_res/img/icons/info.png" width="12" alt="" >
+              </label>
+            </div>
+            <div class="col-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Low Exposure <img src="client_res/img/icons/info.png" width="12" alt="" >
+              </label>
+            </div>
+            <div class="col-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Payment Inactivity <img src="client_res/img/icons/info.png" width="12" alt="" >
+              </label>
+            </div>
+          </div>
+          <div class="col-6 row">
+            <div class="col-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Indirect Inactivity <img src="client_res/img/icons/info.png" width="12" alt="" >
+              </label>
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row alertContainer">
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 556671</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 67,432</p>
+                Alert Type
+                <p class="safe">Low Exposure</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 48,233</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 456688</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 109,876</p>
+                Alert Type
+                <p class="weak">Weak Performance</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 81,016</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 334458</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 267,444</p>
+                Alert Type
+                <p>Payment Inactivity</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 180,111</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/warningOrange.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 556671</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 67,432</p>
+                Alert Type
+                <p class="safe">Low Exposure</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 48,233</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 334458</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 267,444</p>
+                Alert Type
+                <p>Payment Inactivity</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 180,111</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/warningRed.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 456688</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 109,876</p>
+                Alert Type
+                <p class="weak">Weak Performance</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 81,016</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 334458</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 267,444</p>
+                Alert Type
+                <p>Payment Inactivity</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 180,111</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/warningYellow.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 556671</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 67,432</p>
+                Alert Type
+                <p class="safe">Low Exposure</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 48,233</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 456688</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 109,876</p>
+                Alert Type
+                <p class="weak">Weak Performance</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 81,016</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 334458</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 267,444</p>
+                Alert Type
+                <p>Payment Inactivity</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 180,111</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 556671</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 67,432</p>
+                Alert Type
+                <p class="safe">Low Exposure</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 48,233</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 456688</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 109,876</p>
+                Alert Type
+                <p class="weak">Weak Performance</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 81,016</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 334458</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 267,444</p>
+                Alert Type
+                <p>Payment Inactivity</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 180,111</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 556671</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 67,432</p>
+                Alert Type
+                <p class="safe">Low Exposure</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 48,233</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accountCard">
-            <div class="accountNumber">
-              Account
-              <p># 456688</p>
+            <div class="accountTop">
+              <div class="accountNumber">
+                Account
+                <p># 556671</p>
+              </div>
+              <div class="snooze">
+                Snooze
+                <img class="alertSnooze" src="client_res/img/icons/snooze.png" alt="">
+              </div>
             </div>
             <div class="accountData">
               <div class="accountValue">
-                Value
-                <p>$ 109,876</p>
+                Alert Type
+                <p class="weak">Weak Performance</p>
               </div>
               <div class="protAmount">
-                Prot. Amt.
-                <p>$ 81,016</p>
+                Date Triggered
+                <p>12 Oct, 2016</p>
               </div>
-              <img class="accountStatus" src="client_res/img/icons/safe.png" alt="">
             </div>
             <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
           </div>

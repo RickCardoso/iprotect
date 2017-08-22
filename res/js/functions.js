@@ -136,4 +136,13 @@ $(document).ready(function() {
       });
     });
 
+  /* further information slide up */
+    $('.furtherHead').click(function() {
+      if ($('#furtherContent').is(':hidden')) {
+        $('#furtherContent').slideDown();
+      } else {
+        $('#furtherContent').slideUp();
+      }
+    });
+
 });
