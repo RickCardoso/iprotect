@@ -253,6 +253,18 @@ $lg: 2200px;
   @include insetShadow(3px, 0, 0, 0, $primary);
 }
 
+.cardHeadGray {
+  @extend .cardHead;
+  text-transform: uppercase;
+  @include insetShadow(3px, 0, 0, 0, #989898);
+}
+
+.cardHeadRed {
+  @extend .cardHead;
+  text-transform: uppercase;
+  @include insetShadow(3px, 0, 0, 0, #e20613);
+}
+
 .cardContent {
   position: relative;
   padding: 6px 24px 30px;
@@ -827,9 +839,17 @@ $lg: 2200px;
     @include borderRadius(2px);
     border: none;
     @include insetShadow(3px, 0, 0, 0, #e2e0e0);
+    @include aFade(all .3s);
     &.active {
       @include insetShadow(3px, 0, 0, 0, $secondary);
       color: $primary;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      @include insetShadow(3px, 0, 0, 0, $primary);
+      background: #f2f3f2;
+      color: $secondary;
     }
   }
   & .continueBtn {
@@ -843,6 +863,10 @@ $lg: 2200px;
     font-size: 12px;
     font-weight: 800;
   }
+}
+
+.simulationChart {
+  margin: 36px 48px;
 }
 
 .appFooter {
