@@ -13,6 +13,22 @@
 
   <body class="appContainer">
 
+    <!-- Modal -->
+    <div class="modal modalBox fade" id="modalConfirmation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modalDialog" role="document">
+        <div class="modal-content modalContent">
+          <div class="modal-body modalBody">
+            Are you sure you want to save your changes?
+          </div>
+          <div class="modal-footer modalFooter">
+            <button type="button" class="btn btn-yes yesBtn" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-cancel cancelBtn" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <header class="appHead">
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="appNavBar">
         <img class="logo" src="client_res/img/logo.png" alt="" width="174">
@@ -96,7 +112,7 @@
               Investments <img src="client_res/img/icons/info.png" width="12" alt="">
             </div>
             <div class="cardContent">
-              <button class="portBtn">Create Portfolio</button>
+              <button class="portBtn" data-toggle="modal" data-target="#modalConfirmation">Create Portfolio</button>
               <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
             </div>
           </div>
