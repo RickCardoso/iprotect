@@ -23,6 +23,7 @@ $(document).ready(function() {
 /* input text - validation and formatting of numeric input */
 	var $cont = $(".inputCont");
   var $alloc = $(".inputAlloc");
+  var $year = $(".inputYear");
 
   // conditions for contribution amounts
 	$cont.on( "keyup", function( event ) {
@@ -79,12 +80,44 @@ $(document).ready(function() {
 				} );
 		} );
 
+    // conditions for years
+  	$year.on( "keyup", function( event ) {
+
+  		// When user select text in the document, also abort.
+  		var selection = window.getSelection().toString();
+  		if ( selection !== '' ) {
+  			return;
+  		}
+
+  		// When the arrow keys are pressed, abort.
+  		if ( $.inArray( event.keyCode, [38,40,37,39] ) !== -1 ) {
+  			return;
+  		}
+
+  		var $this = $( this );
+
+  		// Get the value.
+  		var input = $this.val();
+
+  		var input = input.replace(/[\D\s\._\-]+/g, "");
+  				input = input ? parseInt( input, 10 ) : 0;
+          input = Math.min(input, (new Date()).getFullYear());
+
+  				$this.val( function() {
+  					return ( input === 0) ? "" : input;
+  				} );
+  		} );
+
   /* range slider - update label */
     // initiator
     $('.range-slider__range').each(function() {
       $(this).parent().find('.range-slider__value').html($(this).val());
       $(this).parent().find('.range-slider__value').css('left', (2 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
       $(this).css('box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+      $(this).css('-o-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+      $(this).css('-ms-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+      $(this).css('-moz-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+      $(this).css('-webkit-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
     });
 
     $('.range-slider__range').on('input', function() {
@@ -97,6 +130,10 @@ $(document).ready(function() {
       $(this).parent().find('.range-slider__value').html(val);
       $(this).parent().find('.range-slider__value').css('left', (5 + pos * (wid - thumb)) + 'px');
       $(this).css('box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
+      $(this).css('-o-box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
+      $(this).css('-ms-box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
+      $(this).css('-moz-box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
+      $(this).css('-webkit-box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
     });
 
     $(window).resize(function() {
@@ -104,7 +141,20 @@ $(document).ready(function() {
         $(this).parent().find('.range-slider__value').html($(this).val());
         $(this).parent().find('.range-slider__value').css('left', (5 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
         $(this).css('box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+        $(this).css('-o-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+        $(this).css('-ms-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+        $(this).css('-moz-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
+        $(this).css('-webkit-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
       });
+    });
+
+  /* further information slide up */
+    $('.furtherHead').click(function() {
+      if ($('#furtherContent').is(':hidden')) {
+        $('#furtherContent').slideDown();
+      } else {
+        $('#furtherContent').slideUp();
+      }
     });
 
 });

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Confirm Changes - iProtect | QuantHub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Custom CSS from SASS -->
+    <link rel="stylesheet" href="./res/css/style.css" type="text/css" media="all" />
+
+  </head>
+
+  <body class="appContainer">
+
+    <!-- Modal -->
+    <div class="modal modalBox fade" id="modalConfirmation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modalDialog" role="document">
+        <div class="modal-content modalContent">
+          <div class="modal-body modalBody">
+            Are you sure you want to save your changes?
+          </div>
+          <div class="modal-footer modalFooter">
+            <button type="button" class="btn btn-yes yesBtn" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-cancel cancelBtn" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <header class="appHead">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="appNavBar">
+        <img class="logo" src="client_res/img/logo.png" alt="" width="174">
+        <button class="navbar-toggler" id="navToggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item navBtn" href="02_002_Learn.html">Learn</a>
+            <a class="nav-item navBtn active" href="03_001_Simulation.html">Plans</a>
+            <a class="nav-item navBtn" href="07_002_Accounts.html">Accounts</a>
+            <div class="loginContainer">
+              <div class="userInfo">
+                <img src="client_res/img/icons/dropDown.png" width="8" alt="">
+                <span class="userName">John Doe</span>
+                <img class="userAvatar" src="client_res/img/thumbnails/avatar.png" width="54" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header> <!-- responsive navigation bar -->
+
+    <main class="appMain">
+      <div class="row appContent">
+        <div class="activityTitle">
+          Investment
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12">
+          <div class="cardContainer">
+            <div class="cardHeadGreen">
+              New Contribution <img src="client_res/img/icons/info.png" width="12" alt="">
+            </div>
+            <div class="cardContent">
+              <div class="input-group inputGroupStd">
+                <span class="input-group-addon dollarLabel">$</span>
+                <input type="text" class="form-control inputCont" aria-label="Amount (to the nearest dollar)" placeholder="100,000">
+              </div>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+          <div class="cardContainer">
+            <div class="cardHeadGreen">
+              New Withdrawal <img src="client_res/img/icons/info.png" width="12" alt="">
+            </div>
+            <div class="cardContent">
+              <div class="input-group inputGroupdStd">
+                <span class="input-group-addon dollarLabel">$</span>
+                <input type="text" class="form-control inputCont" aria-label="Text input with dropdown button" placeholder="2,000">
+                <div class="input-group-btn dropDownGroup">
+                  <button type="button" class="btn btn-secondary dropdown-toggle dropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="Monthly">Monthly</button>
+                  <div class="dropdown-menu dropdown-menu-right dropMenu">
+                    <a class="dropItem" href="#">Weekly</a>
+                    <a class="dropItem" href="#">Every other week</a>
+                    <a class="dropItem" selected href="#">Monthly</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropItem" href="#">Every...</a>
+                  </div>
+                </div>
+              </div>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+          <div class="cardContainer">
+            <div class="cardHeadGreen">
+              Protection Change <img src="client_res/img/icons/info.png" width="12" alt="">
+            </div>
+            <div class="cardContent">
+              <div class="range-slider">
+                <span class="range-slider__value">0</span>
+                <input class="range-slider__range" type="range" value="80" min="70" max="90" step="1">
+              </div>
+              <div class="row justify-content-between rangeScale">
+                <div class="col text-left">Initial ($ k)</div><div class="col text-center">|</div><div class="col text-right">Current ($ k)</div>
+              </div>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+          <div class="cardContainer">
+            <div class="cardHeadGreen">
+              Investments <img src="client_res/img/icons/info.png" width="12" alt="">
+            </div>
+            <div class="cardContent">
+              <button class="portBtn" data-toggle="modal" data-target="#modalConfirmation">Create Portfolio</button>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
+          <div class="cardContainer">
+            <div class="planMenu">
+              <button class="contPlanBtn">Continue</button>
+            </div>
+            <div class="row stratContainer">
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="strategyCard">
+                  <div class="cardHeadRed">
+                    Current Strategy
+                  </div>
+                  <div class="strategyContent">
+                    <div class="row">
+                      <div class="col-12">
+                        <img class="strategyChart" src="client_res/img/thumbnails/strategyChart.png" alt="" width="100%">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 col-12">
+                        <table class="stratUnprotTable">
+                          <thead>
+                            <tr>
+                              <th>Unprotected</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Small Chance of Being Below</td>
+                              <td>$ 93,082</td>
+                            </tr>
+                            <tr>
+                              <td>Most Likely to be Between</td>
+                              <td>$ 87,180</td>
+                            </tr>
+                            <tr>
+                              <td>Small Chance of Being Above</td>
+                              <td>$ 33,807</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 col-12">
+                        <table class="stratProtTable">
+                          <thead>
+                            <tr>
+                              <th>Protected</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Small Chance of Being Below</td>
+                              <td>$ 84,700</td>
+                            </tr>
+                            <tr>
+                              <td>Most Likely to be Between</td>
+                              <td>$ 239,440</td>
+                            </tr>
+                            <tr>
+                              <td>Small Chance of Being Above</td>
+                              <td>$ 0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 col-12">
+                        <table class="assetTable">
+                          <thead>
+                            <tr>
+                              <th>Asset Allocation</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Growth</td>
+                              <td>88.35 %</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 col-12">
+                        <table class="assetTableProt">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Protection</td>
+                              <td>11.65 %</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <table class="stratInvTable">
+                          <thead>
+                            <tr>
+                              <th>List of Investments</th>
+                              <th>$</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="strategyCard">
+                  <div class="cardHeadGreenUpper">
+                    Revised Strategy
+                  </div>
+                  <div class="strategyContent">
+                    <div class="row">
+                      <div class="col-12">
+                        <img class="strategyChart" src="client_res/img/thumbnails/strategyChart.png" alt="" width="100%">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 col-12">
+                        <table class="stratUnprotTable">
+                          <thead>
+                            <tr>
+                              <th>Unprotected</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Small Chance of Being Below</td>
+                              <td>$ 93,082</td>
+                            </tr>
+                            <tr>
+                              <td>Most Likely to be Between</td>
+                              <td>$ 87,180</td>
+                            </tr>
+                            <tr>
+                              <td>Small Chance of Being Above</td>
+                              <td>$ 33,807</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 col-12">
+                        <table class="stratProtTable">
+                          <thead>
+                            <tr>
+                              <th>Protected</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Small Chance of Being Below</td>
+                              <td>$ 84,700</td>
+                            </tr>
+                            <tr>
+                              <td>Most Likely to be Between</td>
+                              <td>$ 239,440</td>
+                            </tr>
+                            <tr>
+                              <td>Small Chance of Being Above</td>
+                              <td>$ 0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 col-12">
+                        <table class="assetTable">
+                          <thead>
+                            <tr>
+                              <th>Asset Allocation</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Growth</td>
+                              <td>88.35 %</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-6 col-12">
+                        <table class="assetTableProt">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Protection</td>
+                              <td>11.65 %</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <table class="stratInvTable">
+                          <thead>
+                            <tr>
+                              <th>List of Investments</th>
+                              <th>$</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                            <tr>
+                              <td>Lorem ipsum dolor sit amet, consectetur</td>
+                              <td>$ 197,889.47</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img class="cardFlexIcon" src="client_res/img/icons/flex.png" width="8" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main> <!-- app content -->
+
+    <footer class="appFooter">
+      <a class="fooBtn" href="02_002_Learn.html">Learn</a>
+      <a class="fooBtn" href="03_001_Simulation.html">Plans</a>
+      <a class="fooBtn" href="07_002_Accounts.html">Accounts</a>
+      <a class="fooBtn company" href="#">© QuantHub</span>
+    </footer> <!-- footer -->
+
+  </body> <!-- app container -->
+
+  <!-- jQuery -->
+  <script src="./ext_res/jquery/jquery-3.2.1.js" type="text/javascript"></script>
+  <!-- Popper -->
+  <script src="./ext_res/popper/popper.min.js" type="text/javascript"></script>
+  <!-- Bootstrap -->
+  <script src="./ext_res/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+
+  <!-- Custom jQuery -->
+  <script src="./res/js/functions.js" type="text/javascript"></script>
+
+</html>

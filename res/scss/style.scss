@@ -10,13 +10,15 @@ $background: #171817;
 
 // Fonts
 $nunito: 'Nunito', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
 
 // Metrics
 $nav-height: 66px;
 $min-app-height: 0px; // TODO: get the right maximum value
-$sm: 414px;
+$xs: 575px;
+$sm: 767px;
 $md: 991px;
-$lg: 2200px;
+$lg: 1199px;
 
 // Mixins
 @mixin aFade($trans) {
@@ -65,10 +67,16 @@ $lg: 2200px;
 }
 @mixin grayFilter($gray, $opac: 40%) {
   -webkit-filter: grayscale($gray) opacity($opac);
+  -moz-filter: grayscale($gray) opacity($opac);
+  -ms-filter: grayscale($gray) opacity($opac);
+  -o-filter: grayscale($gray) opacity($opac);
   filter: grayscale($gray) opacity($opac);
 }
 @mixin contFilter($cont, $brig: 30%) {
   -webkit-filter: contrast(0) brightness($brig);
+  -moz-filter: contrast(0) brightness($brig);
+  -ms-filter: contrast(0) brightness($brig);
+  -o-filter: contrast(0) brightness($brig);
   filter: contrast(0) brightness($brig);
 }
 
@@ -84,6 +92,7 @@ $lg: 2200px;
   padding: 0;
   margin: auto;
   max-width: 1600px;
+  overflow-x: hidden;
 }
 
 .appHead {
@@ -161,7 +170,7 @@ $lg: 2200px;
   &:hover,
   &:focus,
   &:active {
-    background: transparent;
+    background: #fff;
     color: $primary;
   }
   @media screen and (max-width: $md) {
@@ -194,6 +203,7 @@ $lg: 2200px;
 
 .appMain {
   width: 100%;
+  min-height: 715px;
   background: #ededed;
   padding: 17px;
   margin: 0;
@@ -213,7 +223,7 @@ $lg: 2200px;
   text-transform: uppercase;
   color: #777;
   font-weight: 700;
-  letter-spacing: 0.02rem;
+  letter-spacing: .5px;
   line-height: 1;
   text-align: left;
 }
@@ -253,14 +263,26 @@ $lg: 2200px;
   @include insetShadow(3px, 0, 0, 0, $primary);
 }
 
+.cardHeadGreenUpper {
+  @extend .cardHead;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  @include insetShadow(3px, 0, 0, 0, $primary);
+}
+
 .cardHeadGray {
   @extend .cardHead;
+  font-size: 13px;
+  font-weight: 800;
   text-transform: uppercase;
   @include insetShadow(3px, 0, 0, 0, #989898);
 }
 
 .cardHeadRed {
   @extend .cardHead;
+  font-size: 13px;
+  font-weight: 800;
   text-transform: uppercase;
   @include insetShadow(3px, 0, 0, 0, #e20613);
 }
@@ -277,7 +299,7 @@ $lg: 2200px;
   margin-top: -2px;
   padding: 0 4px 4px 7px;
   border: 1px solid transparent;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $montserrat;
   font-size: 1.1rem;
   font-weight: 700;
   @include borderRadius(0);
@@ -317,7 +339,7 @@ $lg: 2200px;
   @extend .inputStd;
   padding-top: 6px;
   padding-bottom: 9px;
-  font-size: .8rem;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   color: #565353;
@@ -332,7 +354,7 @@ $lg: 2200px;
   }
   &::before {
     position: absolute;
-    right: 5px;
+    right: 4px;
     bottom: 15px;
     content: "";
     border-top: 5px solid #fff;
@@ -347,10 +369,18 @@ $lg: 2200px;
   }
 }
 
+.dropMenu {
+  @include boxShadow(1px, 1px, 2px, 2px, rgba(60, 60, 60, 0.3));
+}
+
 .dropItem {
   @extend .dropdown-item;
+  text-align: right;
   padding: 3px 7px;
   text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #565353;
   &:hover,
   &:focus {
     color: $primary;
@@ -464,7 +494,7 @@ $lg: 2200px;
 
   // Range Scale
   .rangeScale {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $montserrat;
     font-size: 11px;
     padding-top: 2px;
     color: $complementary;
@@ -484,9 +514,10 @@ $lg: 2200px;
   letter-spacing: 1px;
   border: 2px solid $complementary;
   @include paddingY(auto);
-  @include paddingX(36px);
+  @include paddingX(10%);
   height: 38px;
   margin-bottom: -10px;
+  max-width: 100%;
 }
 
 .investList {
@@ -494,7 +525,6 @@ $lg: 2200px;
   width: 100%;
   color: $complementary;
   background: #fafafa;
-  margin-top: -7px;
   & thead {
     background: #fff;
     border-bottom: 1px solid #e8e8e8;
@@ -504,6 +534,9 @@ $lg: 2200px;
       position: relative;
       padding: 4px 12px;
       margin: 12px 29px 12px 12px;
+      @media screen and (max-width: $md) {
+        margin: 12px;
+      }
     }
     & th {
       @extend .titleStd;
@@ -521,24 +554,51 @@ $lg: 2200px;
     & tr {
       display: block;
       position: relative;
-      padding: 4px 11px;
+      padding: 4px 4px 4px 11px;
       margin: 12px 12px;
       min-height: 30px;
       border: 1px solid transparent;
       border-radius: 4px;
       &.added {
         border: 1px solid transparent;
+        background: #fff;
         @include boxShadow(0, 0, 2px, 3px, #e1e1e1);
         font-weight: 800;
       }
     }
+    &::-webkit-scrollbar-track {
+    	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    	border-radius: 10px;
+    	background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+    	width: 12px;
+    	background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+    	border-radius: 10px;
+    	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    	background-color: $primary;
+    }
   }
 
-  td:nth-child(1), th:nth-child(1) { max-width: 320px; width: 50%; }
+  td:nth-child(1), th:nth-child(1) {
+    max-width: 320px; width: 15vw;
+    @media screen and (max-width: $lg) {
+      max-width: 520px;
+      width: 40vw;
+    }
+    @media screen and (max-width: $md) {
+      max-width: 520px;
+      width: 50vw;
+    }
+  }
   td:nth-child(2), th:nth-child(2) { min-width: 105px; }
   td:nth-child(3), th:nth-child(3) { min-width: 45px; }
-  td:nth-child(4), th:nth-child(4) { width: 90px; }
-  td:nth-child(5), th:nth-child(5) { width: 48px; }
+  td:nth-child(4), th:nth-child(4) { width: 85px; }
+  td:nth-child(5), th:nth-child(5) { width: 23px; }
 
   & td,
   & th {
@@ -574,6 +634,13 @@ $lg: 2200px;
     &:active {
       @include grayFilter(0, 80%);
     }
+  }
+}
+
+.assetCard {
+  height: 561px;
+  @media screen and (max-width: $lg) {
+    height: auto;
   }
 }
 
@@ -618,17 +685,20 @@ $lg: 2200px;
 }
 
 .confirmBtn {
-  @extend .portBtn;
+  @extend .btnStd;
+  margin-top: 235px;
   background: $primary;
   color: #fff;
   border: 2px solid $primary;
-  bottom: 15px;
   @include insetShadow(0, -1px, 0, 0, $secondary);
-  @include paddingX(67px);
+  padding: 10px 67px;
   &:hover,
   &:focus {
     background: #fff;
     color: $primary;
+  }
+  @media screen and (max-width: $lg) {
+    margin-top: 30px;
   }
 }
 
@@ -668,6 +738,7 @@ $lg: 2200px;
   @extend .portBtn;
   width: 194px;
   height: 49px;
+  padding: 13px;
   font-size: 17px;
   @include paddingY(12px);
   @include marginY(40px);
@@ -712,6 +783,9 @@ $lg: 2200px;
   border-color: #a1a1a1;
   margin-top: 18px;
   margin-bottom: 60px;
+  height: 50px;
+  width: 196px;
+  padding: 13px;
 }
 
 .chapterHead {
@@ -721,6 +795,14 @@ $lg: 2200px;
   & .infoTitle {
     float: right;
     margin: -3px 15px;
+  }
+}
+
+.chapterIndex {
+  height: 100%;
+  position: relative;
+  & .cardContent {
+    margin-bottom: 20px;
   }
 }
 
@@ -737,36 +819,64 @@ $lg: 2200px;
     margin-top: -4px;
     padding: 0 3px;
   }
+  @media screen and (max-width: $xs) {
+    text-align: center;
+  }
 }
 
 .lessonActivity {
   padding: 42px 39px;
+  height: 100%;
+  @media screen and (max-width: $lg) {
+    height: auto;
+  }
+  @media screen and (max-width: $md) {
+    margin-top: 20px;
+  }
   & .cardContent {
     font-size: 13px;
+    @media screen and (max-width: $xs) {
+      padding: 21px 18px;
+      text-align: center;
+    }
   }
 }
 
 .lessonVideo {
   padding-right: 9px;
+  @media screen and (max-width: $xs) {
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .lessonTitle {
   @extend .titleStd;
   text-transform: capitalize;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   padding-left: 24px;
+  @media screen and (max-width: $lg) {
+    margin-top: 30px;
+  }
+  @media screen and (max-width: $xs) {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 .lessonSubtitle {
   @extend .titleStd;
   text-transform: capitalize;
   color: #777;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   padding: 10px 24px;
+  @media screen and (max-width: $xs) {
+    padding-left: 0;
+    text-align: center;
+  }
 }
-
 
 .backBtn {
   @extend .btnStd;
@@ -784,6 +894,13 @@ $lg: 2200px;
   &:active {
     background-color: $primary;
     color: #fff;
+  }
+  @media screen and (max-width: $lg) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: $xs) {
+    margin: 10px auto 10px;
   }
 }
 .planBtn {
@@ -803,8 +920,21 @@ $lg: 2200px;
   }
 }
 
+.furtherCard {
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  margin: 0;
+  width: 100%;
+}
+
 .furtherHead {
   @extend .chapterHead;
+  border-top: 1px solid #d2d2d2;
+}
+
+#furtherContent {
+  display: none;
 }
 
 .contactTitle {
@@ -835,7 +965,7 @@ $lg: 2200px;
     line-height: 1;
     letter-spacing: 1px;
     color: #b2b3b2;
-    padding: 15px 23px;
+    padding: 15px 23px 14px;
     @include borderRadius(2px);
     border: none;
     @include insetShadow(3px, 0, 0, 0, #e2e0e0);
@@ -851,22 +981,1035 @@ $lg: 2200px;
       background: #f2f3f2;
       color: $secondary;
     }
+    @media screen and (max-width: $md) {
+      font-size: 12.5px;
+      @include paddingX(17px);
+    }
+    @media screen and (max-width: $xs) {
+      font-size: 12px;
+      @include paddingX(15px);
+    }
   }
   & .continueBtn {
     @extend .btnStd;
-    padding: 10px 40px;
+    padding: 4px 40px;
     @include marginY(auto);
+    @include marginY(7px);
     margin-left: auto;
     margin-right: 50px;
+    height: 28px;
     background: $secondary;
     color: #fff;
     font-size: 12px;
     font-weight: 800;
+    @media screen and (max-width: $lg) {
+      margin-right: 13px;
+    }
+    @media screen and (max-width: $xs) {
+      @include paddingX(20px);
+    }
   }
 }
 
 .simulationChart {
+  text-align: left;
   margin: 36px 48px;
+}
+
+.simulationControl {
+  margin-top:25px;
+  margin-left: -37px;
+  & .cardContainer {
+    @include marginY(11px);
+  }
+  @media screen and (max-width: $lg) {
+    margin-left: 0;
+  }
+}
+
+.inputGroupShort {
+  max-width: 144px;
+  width: 90%;
+  @media screen and (max-width: $xs) {
+    & > .inputDate {
+      font-size: 11px;
+    }
+  }
+}
+
+.inputYear {
+  @extend .inputCont;
+  width: 130px;
+  font-weight: 500;
+  margin-top: -13px;
+}
+
+.calendarBtn {
+  position: absolute;
+  left: 90%;
+  top: -8px;
+  @include aFade(all .3s);
+  &:hover,
+  &:focus,
+  &:active {
+    @include contFilter(1);
+  }
+  z-index: 999;
+}
+
+.protectionTable {
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: -27px;
+  & tbody {
+    & tr td {
+      @include paddingY(12px);
+    }
+    & tr td:first-child {
+      width: 12vw;
+      @media screen and (max-width: $lg) {
+        width: 15vw;
+      }
+      @media screen and (max-width: $md) {
+        width: 30vw;
+      }
+      @media screen and (max-width: $sm) {
+        width: 50vw;
+      }
+      @media screen and (max-width: $xs) {
+        width: 45vw;
+      }
+    }
+    & tr:not(:first-child) {
+      border-top: 1px solid #d6d6d6;
+    }
+    & tr td:nth-child(2) {
+      font-family: $montserrat;
+      text-align: right;
+    }
+  }
+}
+
+.unprotectedTable {
+  color: #989898;
+}
+
+.inputDate {
+  @extend .inputCont;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: normal;
+  margin-top: -7px;
+  margin-right: 0;
+}
+
+.accControl {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.tabAccounts {
+  @extend .tabMenu;
+  & .tabBtn {
+    font-size: 16px;
+    @include paddingY(22px);
+    text-align: center;
+    width: 50%;
+    height: 60px;
+  }
+}
+
+.accountSummary {
+  @include marginX(13px);
+  & .counterHead {
+    text-align: left;
+    background: #fff;
+    padding: 10px 0;
+    clear: none;
+    height: 58px;
+    font-weight: 800;
+    margin-top: 1px;
+    color: #565353;
+    @include boxShadow(0, 0, 2px, 1px, #d6d6d6);
+    & .alertHead {
+      display: inline-block;
+      @include insetShadow(3px, 0, 0, 0, #e20613);
+      padding: 10px 14px;
+      width: 35%;
+      text-transform: uppercase;
+      @media screen and (max-width: 1600px) {
+        width: 45%;
+      }
+      @media screen and (max-width: 1300px) {
+        font-size: 11px;
+      }
+      @media screen and (max-width: $sm) {
+        padding-right: 7px;
+        width: 42%;
+      }
+    }
+    & .accountHead {
+      @extend .alertHead;
+      @include insetShadow(3px, 0, 0, 0, $primary);
+    }
+    & .assetHead {
+      @extend .alertHead;
+      @include insetShadow(3px, 0, 0, 0, $primary);
+      @media screen and (max-width: 1600px) {
+        width: 45%;
+      }
+    }
+    & .counterAlert {
+      display: inline-block;
+      text-align: right;
+      font-size: 26px;
+      font-family: $montserrat;
+      font-weight: 300;
+      width: 40%;
+      color: #e20613;
+      vertical-align: middle;
+      @media screen and (max-width: 1600px) {
+        font-size: 20px;
+        width: 30%;
+      }
+      @media screen and (max-width: 1300px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: $sm) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: $xs) {
+        font-size: 20px;
+      }
+    }
+    & .counterAccounts {
+      @extend .counterAlert;
+      color: #565353;
+    }
+    & .counterAssets {
+      @extend .counterAlert;
+      color: $primary;
+      @media screen and (max-width: 1600px) {
+        width: 37%;
+      }
+    }
+    & .counterIcon {
+      position: absolute;
+      right: 34px;
+      bottom: 13px;
+      @media screen and (max-width: 1600px) {
+        right: 20px;
+      }
+      @media screen and (max-width: $md) {
+        right: 17px;
+      }
+    }
+  }
+}
+
+.accountContainer {
+  position: relative;
+  @include marginX(-3px);
+  margin-bottom: 13px;
+  overflow-y: scroll;
+  height: 571px;
+  .accountCard {
+    @extend .cardContainer;
+    max-width: calc((1600px - 77px) * 33 / 100);
+    margin: 3px;
+    background: #ececec;
+    color: #a5a5a5;
+    font-weight: 600;
+    @include boxShadow(0, 0, 2px, 2px, #d6d6d6);
+    @include aFade(all .5s);
+    & .accountNumber {
+      @include insetShadow(3px, 0, 0, 0, #a7a7a7);
+      text-align: left;
+      padding: 11px 22px;
+      width: 50%;
+      clear: both;
+      height: 60px;
+      background: #f1f1f1;
+      & p {
+        font-family: $montserrat;
+        letter-spacing: .6px;
+        line-height: 1;
+        color: #a0a0a0;
+        font-size: 20px;
+        font-weight: 500;
+        @media screen and (max-width: $md) {
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: $md) {
+        padding-right: 11px;
+      }
+    }
+    & .accountData {
+      width: 100%;
+      background: #f1f1f1;
+      border-top: 1px solid #eaeaea;
+      text-align: left;
+      & .accountValue {
+        display: inline-block;
+        width: 12vw;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-right: 1px solid #d8d8d8;
+        text-align: left;
+        padding: 14px 22px;
+        height: 67px;
+        & p {
+          font-family: $montserrat;
+          letter-spacing: .6px;
+          line-height: 1;
+          color: #a0a0a0;
+          font-size: 20px;
+          font-weight: 500;
+          @media screen and (max-width: $md) {
+            font-size: 16px;
+          }
+        }
+        @media screen and (max-width: $lg) {
+          width: 20vw;
+        }
+        @media screen and (max-width: $md) {
+          padding-right: 11px;
+          width: 21vw;
+        }
+        @media screen and (max-width: $xs) {
+          width: 40vw;
+        }
+      }
+      & .protAmount {
+        display: inline-block;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        text-align: left;
+        padding: 14px 42px;
+        height: 67px;
+        & p {
+          font-family: $montserrat;
+          letter-spacing: .6px;
+          line-height: 1;
+          color: #a0a0a0;
+          font-size: 20px;
+          font-weight: 500;
+          @media screen and (max-width: $md) {
+            font-size: 16px;
+          }
+        }
+        @media screen and (max-width: $lg) {
+          padding-left: 21px;
+        }
+        @media screen and (max-width: $md) {
+          padding-right: 11px;
+        }
+      }
+      & .accountStatus {
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+        @include grayFilter(30%);
+        @media screen and (max-width: $md) {
+          right: 15px;
+        }
+      }
+    }
+    &:hover {
+      background: #f9f9f9;
+      @include boxShadow(2px, 2px, 3px, 2px, #c8c8c8);
+      & > .accountNumber {
+        @include insetShadow(3px, 0, 0, 0, $primary);
+        background: #fff;
+        & p {
+          color: $primary;
+        }
+      }
+      & > .accountData {
+        background: #fff;
+        & > .accountValue p,
+        & > .protAmount p {
+          color: #565353;
+        }
+        & > .accountStatus {
+          @include grayFilter(0, 100%);
+        }
+      }
+    }
+    @media screen and (max-width: 1600px) {
+      max-width: calc((100vw - 77px) * 32 / 100);
+    }
+    @media screen and (max-width: $lg) {
+      max-width: calc((100vw - 77px) * 48.7 / 100);
+    }
+    @media screen and (max-width: $xs) {
+      max-width: calc((100vw - 77px) * 99 / 100);
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: $primary;
+  }
+}
+
+.alertContainer {
+  @extend .accountContainer;
+  height: 514px;
+  .accountCard {
+    & .accountTop {
+      width: 100%;
+      text-align: left;
+      & .accountNumber {
+        display: inline-block;
+        vertical-align: middle;
+        width: 60%;
+        & p {
+        }
+      }
+      & .snooze {
+        display: inline-block;
+        width: 35%;
+        text-transform: uppercase;
+        text-align: right;
+        font-size: 16px;
+        font-weight: 800;
+        & .alertSnooze {
+          display: inline-block;
+          margin: auto 10px;
+        }
+      }
+    }
+    & .accountData {
+      & .accountValue {
+        width: 60%;
+        text-transform: uppercase;
+        & p {
+          &.safe {
+            color: $primary;
+          }
+          &.weak {
+            color: #ff9800;
+          }
+          @media screen and (max-width: 1600px) {
+              font-size: 16px;
+          }
+          @media screen and (max-width: 1300px) {
+              font-size: 14px;
+          }
+          @media screen and (max-width: $lg) {
+              font-size: 18px;
+          }
+          @media screen and (max-width: $md) {
+              font-size: 14px;
+          }
+          @media screen and (max-width: $sm) {
+              font-size: 20px;
+          }
+        }
+        @media screen and (max-width: $md) {
+            padding-left: 10px;
+        }
+        @media screen and (max-width: $sm) {
+            padding-left: 17px;
+        }
+      }
+      & .protAmount {
+        width: 35%;
+        @include paddingX(20px);
+        & p {
+          @media screen and (max-width: 1600px) {
+              font-size: 16px;
+          }
+          @media screen and (max-width: 1300px) {
+              font-size: 14px;
+          }
+          @media screen and (max-width: $lg) {
+              font-size: 18px;
+          }
+          @media screen and (max-width: $md) {
+              font-size: 14px;
+          }
+          @media screen and (max-width: $sm) {
+              font-size: 20px;
+          }
+        }
+        @media screen and (max-width: $md) {
+            padding-left: 10px;
+        }
+        @media screen and (max-width: $sm) {
+            padding-left: 17px;
+        }
+      }
+    }
+    &:hover {
+      & > .accountTop {
+        & .accountNumber {
+          background: #fff;
+          & p {
+            color: #565353;
+          }
+        }
+      }
+      & > .accountData {
+        & > .accountValue p,
+        & > .protAmount p {
+        }
+      }
+    }
+    @media screen and (max-width: $sm) {
+      max-width: calc((100vw - 77px) * 99 / 100);
+    }
+  }
+}
+
+.filter {
+  padding: 20px 0;
+  & div {
+    padding: 5px 0;
+  }
+  & label {
+    padding-left: 20px;
+    & input {
+      margin-left: -20px;
+    }
+  }
+}
+
+.highlight {
+  font-size: 22px;
+  color: $primary;
+  font-weight: 800;
+}
+
+.summaryMenu {
+  height: 41px;
+  text-align: right;
+  padding: 0 19px;
+  border-bottom: 1px solid #eaeaea;
+  @include insetShadow(4px, 0, 0, 0, $primary);
+}
+
+.backAccBtn {
+  @extend .btnStd;
+  background: #fff;
+  border: 2px solid $primary;
+  color: $primary;
+  font-size: 12px;
+  margin: 6px;
+  width: 150px;
+  height: 28px;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #007744;
+    border-color: #007744;
+    color: #fff;
+  }
+}
+
+.mkChaBtn {
+  @extend .btnStd;
+  background: #007744;
+  border: 2px solid #007744;
+  color: #fff;
+  font-size: 12px;
+  margin: 6px;
+  width: 150px;
+  height: 28px;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #fff;
+    border-color :$primary;
+    color: $primary;
+  }
+}
+
+.summaryContent {
+  margin: 24px 12px;
+}
+
+.unitList {
+  table-layout: fixed;
+  text-align: left;
+  width: 100%;
+  min-height: 509px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: -15px;
+  font-size: 12.5px;
+  letter-spacing: .5px;
+  & thead {
+    display: block;
+    width: 100%;
+    @include insetShadow(4px, 0, 0, 0, #989898);
+    color: #a9a9a9;
+    text-weight: 400;
+    border-bottom: 1px solid #d8d8d8;
+    & tr {
+      display: block;
+      width: 100%;
+      padding: 3px 16px;
+      & th {
+        padding: 13px 10px;
+        &:first-child {
+          width: 60%;
+        }
+        &:last-child {
+          font-weight: 500;
+          width: 200px;
+          font-family: $montserrat;
+        }
+      }
+    }
+  }
+  & tbody {
+    display: block;
+    overflow: auto;
+    max-height: 427px;
+    width: 100%;
+    color: #565353;
+    & tr {
+      display: block;
+      width: 90%;
+      margin: 0 16px;
+      border-bottom: 1px solid #d8d8d8;
+      & td {
+        padding: 13px 10px;
+        &:first-child {
+          width: 66%;
+        }
+        &:last-child {
+          font-weight: 500;
+          width: 200px;
+          font-family: $montserrat;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: $primary;
+    }
+  }
+}
+
+.doubleSlider {
+  padding: 24px 12px 18px;
+}
+
+.sumHead {
+  font-weight: 600;
+}
+
+.accValue {
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 22px;
+  font-family: $montserrat;
+  font-weight: 500;
+  margin-top: -15px;
+  margin-left: -8px;
+  padding-left: 8px;
+  padding-bottom: 13px;
+}
+
+.protValue {
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding-top: 18px;
+  margin-left: -8px;
+  padding-left: 8px;
+  & p {
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 3px;
+    margin-bottom: -12px;
+    font-family: $montserrat;
+    font-weight: 500;
+  }
+}
+
+.growTable {
+  margin-top: -40px;
+  margin-left: -8px;
+  margin-bottom: -20px;
+  text-transform: uppercase;
+  width: 105%;
+  color: #a9a9a9;
+  & tbody {
+    & tr {
+      & td {
+        position: relative;
+        width: 50%;
+        padding-top: 28px;
+        padding-left: 10px;
+        padding-bottom: 18px;
+        &:last-child {
+          border-left: 1px solid #d6d6d6;
+          padding-left: 24px;
+        }
+        & p {
+          font-family: $montserrat;
+          font-weight: 500;
+          color: #565353;
+        }
+        & .percentIcon {
+          position: absolute;
+          right: 6px;
+          bottom: 13px;
+        }
+      }
+      &:first-child {
+        border-bottom: 1px solid #d6d6d6;
+        & td {
+          padding-bottom: 28px;
+          padding-top: 18px;
+          & .percentIcon {
+            bottom: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.printMenu {
+  text-align: right;
+  width: 100%;
+}
+
+.printBtn {
+  @extend .btnStd;
+  margin: 14px 12px 20px;
+  color: $primary;
+  background: #fff;
+  border: 2px solid $primary;
+  padding: 6px 30px;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background: $primary;
+  }
+}
+
+.planMenu {
+  height: 41px;
+  text-align: right;
+  padding: 0 19px;
+  border-bottom: 1px solid #eaeaea;
+  @include insetShadow(4px, 0, 0, 0, #e0dfdf);
+}
+
+.contPlanBtn {
+  @extend .btnStd;
+  background: #007744;
+  border: 2px solid #007744;
+  color: #fff;
+  font-size: 12px;
+  margin: 6px;
+  width: 150px;
+  height: 28px;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #fff;
+    border-color :$primary;
+    color: $primary;
+  }
+}
+
+.stratContainer {
+  padding: 0 7px;
+}
+
+.strategyCard {
+  background: #fafafa;
+  border: 1px solid #d6d6d6;
+  margin: 26px 15px 30px;
+  @media screen and (max-width: 1400px) {
+    margin: 26px 5px 30px;
+  }
+  @media screen and (max-width: $md) {
+    margin: 10px 5px 10px;
+  }
+  & .row {
+    padding: 0 14px;
+    & [class*="col"] {
+      padding: 0px 9px;
+    }
+    @media screen and (max-width: 1400px) {
+      padding: 0 5px;
+    }
+  }
+  & .strategyChart {
+    padding: 10px 11px;
+  }
+  & .stratProtTable {
+    text-transform: uppercase;
+    width: 100%;
+    & thead {
+      display: block;
+      color: #565353;
+      font-size: 14px;
+      padding: 12px;
+    }
+    & tbody {
+      display: block;
+      padding: 3px 8px;
+      color: #7d7c7c;
+      background: #fff;
+      font-size: 11px;
+      @include borderRadius(4px);
+      @include boxShadow(0, 0, 3px, 2px, #d6d6d6);
+      @media screen and (max-width: 1400px) {
+        font-size: 10px;
+      }
+      @media screen and (max-width: $md) {
+        font-size: 11px;
+      }
+      @media screen and (max-width: $sm) {
+        font-size: 11px;
+      }
+      & tr {
+        & td {
+          padding: 8px 4px;
+          text-align: left;
+          &:first-child {
+            width: 99%;
+          }
+          &:last-child {
+            white-space: nowrap;
+            text-align: right;
+            color: #565353;
+            font-size: 14px;
+            font-family: $montserrat;
+            font-weight: 500;
+            @media screen and (max-width: 1400px) {
+              font-size: 12px;
+            }
+            @media screen and (max-width: $md) {
+              font-size: 14px;
+            }
+            @media screen and (max-width: $sm) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      & tr:not(:first-child) {
+        border-top: 1px solid #d6d6d6;
+      }
+    }
+  }
+  & .stratUnprotTable {
+    @extend .stratProtTable;
+    & thead {
+      color: #aea6a6;
+    }
+    & tbody {
+      color: #aea6a6;
+      background: #fafafa;
+      @include boxShadow(0, 0, 3px, 2px, #e8e8e8);
+      & tr {
+        & td {
+          &:last-child {
+            color: #878585;
+          }
+        }
+      }
+    }
+  }
+  & .assetTable {
+    @extend .stratProtTable;
+    & thead {
+      & tr {
+        height: 20px;
+      }
+    }
+    & tbody {
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 700;
+      & tr {
+        & td {
+          width: 99%;
+          &:last-child {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+  & .assetTableProt {
+    @extend .assetTable;
+    & thead {
+      & tr {
+        @media screen and (max-width: $lg) {
+          height: 0;
+        }
+        @media screen and (max-width: $sm) {
+          height: 20px;
+        }
+        @media screen and (max-width: $xs) {
+          height: 0;
+        }
+      }
+    }
+  }
+  & .stratInvTable {
+    text-transform: uppercase;
+    color: #565353;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 11px 0;
+    width: 100%;
+    text-align: left;
+    @media screen and (max-width: $lg) {
+      font-size: 12px;
+    }
+    & thead tr th:first-child,
+    & tbody tr td:first-child {
+      width: 99%;
+    }
+    & thead tr th:last-child,
+    & tbody tr td:last-child {
+      white-space: nowrap;
+      font-weight: 500;
+      font-family: $montserrat;
+    }
+    & thead {
+      display: block;
+      padding: 14px 11px;
+      border-bottom: 1px solid #d6d6d6;
+    }
+    & tbody {
+      display: block;
+      padding: 13px 0;
+      & tr {
+        display: block;
+        padding: 3px 11px;
+      }
+    }
+  }
+}
+
+.modalBox {
+  text-align: center;
+  @include borderRadius(4px);
+}
+
+.modalBox:before {
+  content: '';
+  display: inline-block;
+  height: 72%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modalDialog {
+  width: 520px;
+  height: 290px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: #505050;
+  @include boxShadow(0, 0, 5px, 3px, rgba(62, 62, 62, 0.5));
+}
+
+.modalContent {
+  padding: 55px;
+  border: none;
+  @include boxShadow(0, 9px, 0, 0, #e3e3e3);
+  @include borderRadius(2px);
+}
+
+.modalBody {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 35px 25px;
+  font-size: 24.5px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.modalFooter {
+  border: none;
+  justify-content: center;
+}
+
+.yesBtn,
+.cancelBtn {
+  width: 141px;
+  height: 38px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #fff;
+  letter-spacing: 1px;
+  @include aFade(all .3s);
+}
+
+.yesBtn {
+  color: #00a55e;
+  border: 2px solid #00a55e;
+}
+.yesBtn:hover {
+  background-color: #00a55e;
+  color: #fff;
+}
+
+.cancelBtn {
+  color: #e20613;
+  border: 2px solid #e20613;
+}
+.cancelBtn:hover {
+  background-color: #e20613;
+  color: #fff;
+}
+
+@media screen and (max-width: $xs) {
+  .modalBox::before {
+    height: 70%;
+  }
+  .modalDialog {
+    width: 300px;
+  }
+  .modalBody {
+    font-size: 1.3rem;
+  }
+  .yesBtn,
+  .cancelBtn {
+    width: auto;
+  }
 }
 
 .appFooter {
