@@ -67,10 +67,16 @@ $lg: 1199px;
 }
 @mixin grayFilter($gray, $opac: 40%) {
   -webkit-filter: grayscale($gray) opacity($opac);
+  -moz-filter: grayscale($gray) opacity($opac);
+  -ms-filter: grayscale($gray) opacity($opac);
+  -o-filter: grayscale($gray) opacity($opac);
   filter: grayscale($gray) opacity($opac);
 }
 @mixin contFilter($cont, $brig: 30%) {
   -webkit-filter: contrast(0) brightness($brig);
+  -moz-filter: contrast(0) brightness($brig);
+  -ms-filter: contrast(0) brightness($brig);
+  -o-filter: contrast(0) brightness($brig);
   filter: contrast(0) brightness($brig);
 }
 
@@ -364,7 +370,7 @@ $lg: 1199px;
 }
 
 .dropMenu {
-  @include boxShadow(1px, 1px, 2px, 2px, #777);
+  @include boxShadow(1px, 1px, 2px, 2px, rgba(60, 60, 60, 0.3));
 }
 
 .dropItem {
@@ -579,7 +585,7 @@ $lg: 1199px;
   }
 
   td:nth-child(1), th:nth-child(1) {
-    max-width: 320px; width: 20vw;
+    max-width: 320px; width: 15vw;
     @media screen and (max-width: $lg) {
       max-width: 520px;
       width: 40vw;
@@ -591,7 +597,7 @@ $lg: 1199px;
   }
   td:nth-child(2), th:nth-child(2) { min-width: 105px; }
   td:nth-child(3), th:nth-child(3) { min-width: 45px; }
-  td:nth-child(4), th:nth-child(4) { width: 80px; }
+  td:nth-child(4), th:nth-child(4) { width: 85px; }
   td:nth-child(5), th:nth-child(5) { width: 23px; }
 
   & td,
@@ -732,6 +738,7 @@ $lg: 1199px;
   @extend .portBtn;
   width: 194px;
   height: 49px;
+  padding: 13px;
   font-size: 17px;
   @include paddingY(12px);
   @include marginY(40px);
@@ -776,6 +783,9 @@ $lg: 1199px;
   border-color: #a1a1a1;
   margin-top: 18px;
   margin-bottom: 60px;
+  height: 50px;
+  width: 196px;
+  padding: 13px;
 }
 
 .chapterHead {
@@ -890,7 +900,7 @@ $lg: 1199px;
     margin-bottom: 0;
   }
   @media screen and (max-width: $xs) {
-    margin-bottom: 10px;
+    margin: 10px auto 10px;
   }
 }
 .planBtn {
@@ -1330,10 +1340,10 @@ $lg: 1199px;
       }
     }
     @media screen and (max-width: 1600px) {
-      max-width: calc((100vw - 77px) * 32.5 / 100);
+      max-width: calc((100vw - 77px) * 32 / 100);
     }
     @media screen and (max-width: $lg) {
-      max-width: calc((100vw - 77px) * 49 / 100);
+      max-width: calc((100vw - 77px) * 48.7 / 100);
     }
     @media screen and (max-width: $xs) {
       max-width: calc((100vw - 77px) * 99 / 100);
@@ -1867,8 +1877,11 @@ $lg: 1199px;
         @media screen and (max-width: $lg) {
           height: 0;
         }
-        @media screen and (max-width: $md) {
+        @media screen and (max-width: $sm) {
           height: 20px;
+        }
+        @media screen and (max-width: $xs) {
+          height: 0;
         }
       }
     }

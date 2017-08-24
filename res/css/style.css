@@ -8230,11 +8230,11 @@ a.text-dark:focus, a.text-dark:hover {
     border-left: 5px solid transparent; }
 
 .dropMenu {
-  -webkit-box-shadow: 1px 1px 2px 2px #777;
-  -moz-box-shadow: 1px 1px 2px 2px #777;
-  -ms-box-shadow: 1px 1px 2px 2px #777;
-  -o-box-shadow: 1px 1px 2px 2px #777;
-  box-shadow: 1px 1px 2px 2px #777; }
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(60, 60, 60, 0.3);
+  -moz-box-shadow: 1px 1px 2px 2px rgba(60, 60, 60, 0.3);
+  -ms-box-shadow: 1px 1px 2px 2px rgba(60, 60, 60, 0.3);
+  -o-box-shadow: 1px 1px 2px 2px rgba(60, 60, 60, 0.3);
+  box-shadow: 1px 1px 2px 2px rgba(60, 60, 60, 0.3); }
 
 .dropItem {
   text-align: right;
@@ -8408,7 +8408,7 @@ input::-moz-focus-outer {
       background-color: #00a55e; }
   .investList td:nth-child(1), .assetList td:nth-child(1), .investList th:nth-child(1), .assetList th:nth-child(1) {
     max-width: 320px;
-    width: 20vw; }
+    width: 15vw; }
     @media screen and (max-width: 1199px) {
       .investList td:nth-child(1), .assetList td:nth-child(1), .investList th:nth-child(1), .assetList th:nth-child(1) {
         max-width: 520px;
@@ -8422,7 +8422,7 @@ input::-moz-focus-outer {
   .investList td:nth-child(3), .assetList td:nth-child(3), .investList th:nth-child(3), .assetList th:nth-child(3) {
     min-width: 45px; }
   .investList td:nth-child(4), .assetList td:nth-child(4), .investList th:nth-child(4), .assetList th:nth-child(4) {
-    width: 80px; }
+    width: 85px; }
   .investList td:nth-child(5), .assetList td:nth-child(5), .investList th:nth-child(5), .assetList th:nth-child(5) {
     width: 23px; }
   .investList td:first-child, .assetList td:first-child, .investList th:first-child, .assetList th:first-child {
@@ -8432,9 +8432,15 @@ input::-moz-focus-outer {
 
 .downloadBtn {
   -webkit-filter: grayscale(100%) opacity(40%);
+  -moz-filter: grayscale(100%) opacity(40%);
+  -ms-filter: grayscale(100%) opacity(40%);
+  -o-filter: grayscale(100%) opacity(40%);
   filter: grayscale(100%) opacity(40%); }
   .downloadBtn:hover, .downloadBtn:focus, .downloadBtn:active {
     -webkit-filter: grayscale(0) opacity(100%);
+    -moz-filter: grayscale(0) opacity(100%);
+    -ms-filter: grayscale(0) opacity(100%);
+    -o-filter: grayscale(0) opacity(100%);
     filter: grayscale(0) opacity(100%); }
 
 .addBtn, .deleteBtn {
@@ -8442,12 +8448,18 @@ input::-moz-focus-outer {
   padding-bottom: 2px; }
   .addBtn:hover, .deleteBtn:hover, .addBtn:focus, .deleteBtn:focus, .addBtn:active, .deleteBtn:active {
     -webkit-filter: contrast(0) brightness(30%);
+    -moz-filter: contrast(0) brightness(30%);
+    -ms-filter: contrast(0) brightness(30%);
+    -o-filter: contrast(0) brightness(30%);
     filter: contrast(0) brightness(30%); }
   .addBtn.added, .added.deleteBtn {
     padding-top: 0;
     padding-bottom: 0; }
     .addBtn.added:hover, .added.deleteBtn:hover, .addBtn.added:focus, .added.deleteBtn:focus, .addBtn.added:active, .added.deleteBtn:active {
       -webkit-filter: grayscale(0) opacity(80%);
+      -moz-filter: grayscale(0) opacity(80%);
+      -ms-filter: grayscale(0) opacity(80%);
+      -o-filter: grayscale(0) opacity(80%);
       filter: grayscale(0) opacity(80%); }
 
 .assetCard {
@@ -8539,6 +8551,7 @@ input::-moz-focus-outer {
 .dashBtn, .learnBtn {
   width: 194px;
   height: 49px;
+  padding: 13px;
   font-size: 17px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -8574,7 +8587,10 @@ input::-moz-focus-outer {
   color: #a1a1a1;
   border-color: #a1a1a1;
   margin-top: 18px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  height: 50px;
+  width: 196px;
+  padding: 13px; }
 
 .chapterHead, .furtherHead {
   font-size: 16px;
@@ -8671,7 +8687,7 @@ input::-moz-focus-outer {
       margin-bottom: 0; } }
   @media screen and (max-width: 575px) {
     .backBtn {
-      margin-bottom: 10px; } }
+      margin: 10px auto 10px; } }
 
 .planBtn {
   width: 198px;
@@ -8824,6 +8840,9 @@ input::-moz-focus-outer {
   z-index: 999; }
   .calendarBtn:hover, .calendarBtn:focus, .calendarBtn:active {
     -webkit-filter: contrast(0) brightness(30%);
+    -moz-filter: contrast(0) brightness(30%);
+    -ms-filter: contrast(0) brightness(30%);
+    -o-filter: contrast(0) brightness(30%);
     filter: contrast(0) brightness(30%); }
 
 .protectionTable {
@@ -9079,6 +9098,9 @@ input::-moz-focus-outer {
         right: 30px;
         bottom: 20px;
         -webkit-filter: grayscale(30%) opacity(40%);
+        -moz-filter: grayscale(30%) opacity(40%);
+        -ms-filter: grayscale(30%) opacity(40%);
+        -o-filter: grayscale(30%) opacity(40%);
         filter: grayscale(30%) opacity(40%); }
         @media screen and (max-width: 991px) {
           .accountContainer .accountCard .accountData .accountStatus, .alertContainer .accountCard .accountData .accountStatus {
@@ -9105,13 +9127,16 @@ input::-moz-focus-outer {
           color: #565353; }
         .accountContainer .accountCard:hover > .accountData > .accountStatus, .alertContainer .accountCard:hover > .accountData > .accountStatus {
           -webkit-filter: grayscale(0) opacity(100%);
+          -moz-filter: grayscale(0) opacity(100%);
+          -ms-filter: grayscale(0) opacity(100%);
+          -o-filter: grayscale(0) opacity(100%);
           filter: grayscale(0) opacity(100%); }
     @media screen and (max-width: 1600px) {
       .accountContainer .accountCard, .alertContainer .accountCard {
-        max-width: calc((100vw - 77px) * 32.5 / 100); } }
+        max-width: calc((100vw - 77px) * 32 / 100); } }
     @media screen and (max-width: 1199px) {
       .accountContainer .accountCard, .alertContainer .accountCard {
-        max-width: calc((100vw - 77px) * 49 / 100); } }
+        max-width: calc((100vw - 77px) * 48.7 / 100); } }
     @media screen and (max-width: 575px) {
       .accountContainer .accountCard, .alertContainer .accountCard {
         max-width: calc((100vw - 77px) * 99 / 100); } }
@@ -9529,9 +9554,12 @@ input::-moz-focus-outer {
   @media screen and (max-width: 1199px) {
     .strategyCard .assetTableProt thead tr {
       height: 0; } }
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 767px) {
     .strategyCard .assetTableProt thead tr {
       height: 20px; } }
+  @media screen and (max-width: 575px) {
+    .strategyCard .assetTableProt thead tr {
+      height: 0; } }
   .strategyCard .stratInvTable {
     text-transform: uppercase;
     color: #565353;
