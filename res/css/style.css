@@ -8584,7 +8584,10 @@ input::-moz-focus-outer {
     margin: -3px 15px; }
 
 .chapterIndex {
-  height: 100%; }
+  height: 100%;
+  position: relative; }
+  .chapterIndex .cardContent, .chapterIndex .learnContent {
+    margin-bottom: 20px; }
 
 .chapterBox {
   display: block;
@@ -8604,6 +8607,12 @@ input::-moz-focus-outer {
 .lessonActivity {
   padding: 42px 39px;
   height: 100%; }
+  @media screen and (max-width: 1199px) {
+    .lessonActivity {
+      height: auto; } }
+  @media screen and (max-width: 991px) {
+    .lessonActivity {
+      margin-top: 20px; } }
   .lessonActivity .cardContent, .lessonActivity .learnContent {
     font-size: 13px; }
     @media screen and (max-width: 575px) {
@@ -8676,6 +8685,13 @@ input::-moz-focus-outer {
   .planBtn:hover, .planBtn:focus, .planBtn:active {
     background-color: transparent;
     color: #00a55e; }
+
+.furtherCard {
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  margin: 0;
+  width: 100%; }
 
 .furtherHead {
   border-top: 1px solid #d2d2d2; }
@@ -9417,21 +9433,30 @@ input::-moz-focus-outer {
   background: #fafafa;
   border: 1px solid #d6d6d6;
   margin: 26px 15px 30px; }
+  @media screen and (max-width: 1400px) {
+    .strategyCard {
+      margin: 26px 5px 30px; } }
+  @media screen and (max-width: 991px) {
+    .strategyCard {
+      margin: 10px 5px 10px; } }
   .strategyCard .row {
     padding: 0 14px; }
     .strategyCard .row [class*="col"] {
       padding: 0px 9px; }
+    @media screen and (max-width: 1400px) {
+      .strategyCard .row {
+        padding: 0 5px; } }
   .strategyCard .strategyChart {
     padding: 10px 11px; }
-  .strategyCard .stratProtTable, .strategyCard .stratUnprotTable, .strategyCard .assetTable {
+  .strategyCard .stratProtTable, .strategyCard .stratUnprotTable, .strategyCard .assetTable, .strategyCard .assetTableProt {
     text-transform: uppercase;
     width: 100%; }
-    .strategyCard .stratProtTable thead, .strategyCard .stratUnprotTable thead, .strategyCard .assetTable thead {
+    .strategyCard .stratProtTable thead, .strategyCard .stratUnprotTable thead, .strategyCard .assetTable thead, .strategyCard .assetTableProt thead {
       display: block;
       color: #565353;
       font-size: 14px;
       padding: 12px; }
-    .strategyCard .stratProtTable tbody, .strategyCard .stratUnprotTable tbody, .strategyCard .assetTable tbody {
+    .strategyCard .stratProtTable tbody, .strategyCard .stratUnprotTable tbody, .strategyCard .assetTable tbody, .strategyCard .assetTableProt tbody {
       display: block;
       padding: 3px 8px;
       color: #7d7c7c;
@@ -9447,16 +9472,37 @@ input::-moz-focus-outer {
       -ms-box-shadow: 0 0 3px 2px #d6d6d6;
       -o-box-shadow: 0 0 3px 2px #d6d6d6;
       box-shadow: 0 0 3px 2px #d6d6d6; }
-      .strategyCard .stratProtTable tbody tr td, .strategyCard .stratUnprotTable tbody tr td, .strategyCard .assetTable tbody tr td {
-        padding: 8px 4px; }
-        .strategyCard .stratProtTable tbody tr td:last-child, .strategyCard .stratUnprotTable tbody tr td:last-child, .strategyCard .assetTable tbody tr td:last-child {
-          width: 40%;
+      @media screen and (max-width: 1400px) {
+        .strategyCard .stratProtTable tbody, .strategyCard .stratUnprotTable tbody, .strategyCard .assetTable tbody, .strategyCard .assetTableProt tbody {
+          font-size: 10px; } }
+      @media screen and (max-width: 991px) {
+        .strategyCard .stratProtTable tbody, .strategyCard .stratUnprotTable tbody, .strategyCard .assetTable tbody, .strategyCard .assetTableProt tbody {
+          font-size: 11px; } }
+      @media screen and (max-width: 767px) {
+        .strategyCard .stratProtTable tbody, .strategyCard .stratUnprotTable tbody, .strategyCard .assetTable tbody, .strategyCard .assetTableProt tbody {
+          font-size: 11px; } }
+      .strategyCard .stratProtTable tbody tr td, .strategyCard .stratUnprotTable tbody tr td, .strategyCard .assetTable tbody tr td, .strategyCard .assetTableProt tbody tr td {
+        padding: 8px 4px;
+        text-align: left; }
+        .strategyCard .stratProtTable tbody tr td:first-child, .strategyCard .stratUnprotTable tbody tr td:first-child, .strategyCard .assetTable tbody tr td:first-child, .strategyCard .assetTableProt tbody tr td:first-child {
+          width: 99%; }
+        .strategyCard .stratProtTable tbody tr td:last-child, .strategyCard .stratUnprotTable tbody tr td:last-child, .strategyCard .assetTable tbody tr td:last-child, .strategyCard .assetTableProt tbody tr td:last-child {
+          white-space: nowrap;
           text-align: right;
           color: #565353;
           font-size: 14px;
           font-family: "Montserrat", sans-serif;
           font-weight: 500; }
-      .strategyCard .stratProtTable tbody tr:not(:first-child), .strategyCard .stratUnprotTable tbody tr:not(:first-child), .strategyCard .assetTable tbody tr:not(:first-child) {
+          @media screen and (max-width: 1400px) {
+            .strategyCard .stratProtTable tbody tr td:last-child, .strategyCard .stratUnprotTable tbody tr td:last-child, .strategyCard .assetTable tbody tr td:last-child, .strategyCard .assetTableProt tbody tr td:last-child {
+              font-size: 12px; } }
+          @media screen and (max-width: 991px) {
+            .strategyCard .stratProtTable tbody tr td:last-child, .strategyCard .stratUnprotTable tbody tr td:last-child, .strategyCard .assetTable tbody tr td:last-child, .strategyCard .assetTableProt tbody tr td:last-child {
+              font-size: 14px; } }
+          @media screen and (max-width: 767px) {
+            .strategyCard .stratProtTable tbody tr td:last-child, .strategyCard .stratUnprotTable tbody tr td:last-child, .strategyCard .assetTable tbody tr td:last-child, .strategyCard .assetTableProt tbody tr td:last-child {
+              font-size: 12px; } }
+      .strategyCard .stratProtTable tbody tr:not(:first-child), .strategyCard .stratUnprotTable tbody tr:not(:first-child), .strategyCard .assetTable tbody tr:not(:first-child), .strategyCard .assetTableProt tbody tr:not(:first-child) {
         border-top: 1px solid #d6d6d6; }
   .strategyCard .stratUnprotTable thead {
     color: #aea6a6; }
@@ -9470,21 +9516,33 @@ input::-moz-focus-outer {
     box-shadow: 0 0 3px 2px #e8e8e8; }
     .strategyCard .stratUnprotTable tbody tr td:last-child {
       color: #878585; }
-  .strategyCard .assetTable tbody {
+  .strategyCard .assetTable thead tr, .strategyCard .assetTableProt thead tr {
+    height: 20px; }
+  .strategyCard .assetTable tbody, .strategyCard .assetTableProt tbody {
     text-transform: capitalize;
     font-size: 14px;
     font-weight: 700; }
-    .strategyCard .assetTable tbody tr td {
+    .strategyCard .assetTable tbody tr td, .strategyCard .assetTableProt tbody tr td {
       width: 99%; }
-      .strategyCard .assetTable tbody tr td:last-child {
+      .strategyCard .assetTable tbody tr td:last-child, .strategyCard .assetTableProt tbody tr td:last-child {
         white-space: nowrap; }
+  @media screen and (max-width: 1199px) {
+    .strategyCard .assetTableProt thead tr {
+      height: 0; } }
+  @media screen and (max-width: 991px) {
+    .strategyCard .assetTableProt thead tr {
+      height: 20px; } }
   .strategyCard .stratInvTable {
     text-transform: uppercase;
     color: #565353;
     font-size: 14px;
     font-weight: 600;
     margin: 11px 0;
-    width: 100%; }
+    width: 100%;
+    text-align: left; }
+    @media screen and (max-width: 1199px) {
+      .strategyCard .stratInvTable {
+        font-size: 12px; } }
     .strategyCard .stratInvTable thead tr th:first-child, .strategyCard .stratInvTable tbody tr td:first-child {
       width: 99%; }
     .strategyCard .stratInvTable thead tr th:last-child, .strategyCard .stratInvTable tbody tr td:last-child {
@@ -9504,7 +9562,6 @@ input::-moz-focus-outer {
 
 .modalBox {
   text-align: center;
-  padding: 0 !important;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -9543,7 +9600,7 @@ input::-moz-focus-outer {
 
 .modalFooter {
   border: none;
-  text-align: center; }
+  justify-content: center; }
 
 .yesBtn,
 .cancelBtn {

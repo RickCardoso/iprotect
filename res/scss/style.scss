@@ -790,6 +790,10 @@ $lg: 1199px;
 
 .chapterIndex {
   height: 100%;
+  position: relative;
+  & .cardContent {
+    margin-bottom: 20px;
+  }
 }
 
 .chapterBox {
@@ -813,6 +817,12 @@ $lg: 1199px;
 .lessonActivity {
   padding: 42px 39px;
   height: 100%;
+  @media screen and (max-width: $lg) {
+    height: auto;
+  }
+  @media screen and (max-width: $md) {
+    margin-top: 20px;
+  }
   & .cardContent {
     font-size: 13px;
     @media screen and (max-width: $xs) {
@@ -898,6 +908,14 @@ $lg: 1199px;
     background-color: transparent;
     color: $primary;
   }
+}
+
+.furtherCard {
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  margin: 0;
+  width: 100%;
 }
 
 .furtherHead {
@@ -1728,10 +1746,19 @@ $lg: 1199px;
   background: #fafafa;
   border: 1px solid #d6d6d6;
   margin: 26px 15px 30px;
+  @media screen and (max-width: 1400px) {
+    margin: 26px 5px 30px;
+  }
+  @media screen and (max-width: $md) {
+    margin: 10px 5px 10px;
+  }
   & .row {
     padding: 0 14px;
     & [class*="col"] {
       padding: 0px 9px;
+    }
+    @media screen and (max-width: 1400px) {
+      padding: 0 5px;
     }
   }
   & .strategyChart {
@@ -1754,16 +1781,38 @@ $lg: 1199px;
       font-size: 11px;
       @include borderRadius(4px);
       @include boxShadow(0, 0, 3px, 2px, #d6d6d6);
+      @media screen and (max-width: 1400px) {
+        font-size: 10px;
+      }
+      @media screen and (max-width: $md) {
+        font-size: 11px;
+      }
+      @media screen and (max-width: $sm) {
+        font-size: 11px;
+      }
       & tr {
         & td {
           padding: 8px 4px;
+          text-align: left;
+          &:first-child {
+            width: 99%;
+          }
           &:last-child {
-            width: 40%;
+            white-space: nowrap;
             text-align: right;
             color: #565353;
             font-size: 14px;
             font-family: $montserrat;
             font-weight: 500;
+            @media screen and (max-width: 1400px) {
+              font-size: 12px;
+            }
+            @media screen and (max-width: $md) {
+              font-size: 14px;
+            }
+            @media screen and (max-width: $sm) {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -1792,6 +1841,11 @@ $lg: 1199px;
   }
   & .assetTable {
     @extend .stratProtTable;
+    & thead {
+      & tr {
+        height: 20px;
+      }
+    }
     & tbody {
       text-transform: capitalize;
       font-size: 14px;
@@ -1806,6 +1860,19 @@ $lg: 1199px;
       }
     }
   }
+  & .assetTableProt {
+    @extend .assetTable;
+    & thead {
+      & tr {
+        @media screen and (max-width: $lg) {
+          height: 0;
+        }
+        @media screen and (max-width: $md) {
+          height: 20px;
+        }
+      }
+    }
+  }
   & .stratInvTable {
     text-transform: uppercase;
     color: #565353;
@@ -1813,6 +1880,10 @@ $lg: 1199px;
     font-weight: 600;
     margin: 11px 0;
     width: 100%;
+    text-align: left;
+    @media screen and (max-width: $lg) {
+      font-size: 12px;
+    }
     & thead tr th:first-child,
     & tbody tr td:first-child {
       width: 99%;
@@ -1841,7 +1912,6 @@ $lg: 1199px;
 
 .modalBox {
   text-align: center;
-  padding: 0 !important;
   @include borderRadius(4px);
 }
 
@@ -1877,7 +1947,7 @@ $lg: 1199px;
 
 .modalFooter {
   border: none;
-  text-align: center;
+  justify-content: center;
 }
 
 .yesBtn,
