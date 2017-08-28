@@ -8167,7 +8167,7 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 6px 24px 30px;
   text-align: left; }
 
-.inputStd, .dollarLabel, .assetList .percentLabel, .inputCont, .assetList .inputAlloc, .inputYear, .inputDate, .dropDown, .range-slider {
+.inputStd, .dollarLabel, .assetList .percentLabel, .inputCont, .assetList .inputAlloc, .inputDate, .dropDown, .range-slider {
   background: transparent;
   margin-top: -2px;
   padding: 0 4px 4px 7px;
@@ -8188,10 +8188,10 @@ a.text-dark:focus, a.text-dark:hover {
   font-weight: 700;
   color: #b2b2b2; }
 
-.inputCont, .assetList .inputAlloc, .inputYear, .inputDate {
+.inputCont, .assetList .inputAlloc, .inputDate {
   border-bottom: 1px solid #b2b2b2;
   color: #565353; }
-  .inputCont:hover, .assetList .inputAlloc:hover, .inputYear:hover, .inputDate:hover, .inputCont:focus, .assetList .inputAlloc:focus, .inputYear:focus, .inputDate:focus, .inputCont:active, .assetList .inputAlloc:active, .inputYear:active, .inputDate:active {
+  .inputCont:hover, .assetList .inputAlloc:hover, .inputDate:hover, .inputCont:focus, .assetList .inputAlloc:focus, .inputDate:focus, .inputCont:active, .assetList .inputAlloc:active, .inputDate:active {
     border-color: transparent;
     border-bottom: 1px solid #00a55e; }
 
@@ -8201,6 +8201,9 @@ a.text-dark:focus, a.text-dark:hover {
     background: transparent;
     border-color: transparent;
     border-bottom: 2px solid #00a55e; }
+  .dropDownGroup.inputYear {
+    position: relative;
+    margin-left: 0; }
 
 .dropDown {
   padding-top: 6px;
@@ -8228,6 +8231,30 @@ a.text-dark:focus, a.text-dark:hover {
     border-top: 5px solid #0d7e4e;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent; }
+  .inputYear .dropDown {
+    width: 130px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: -13px;
+    padding-bottom: 4px;
+    text-align: left; }
+    .inputYear .dropDown::before {
+      position: absolute;
+      right: 4px;
+      bottom: 11px;
+      content: "";
+      border-top: 5px solid #fff;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      z-index: 3; }
+    .inputYear .dropDown::after {
+      position: absolute;
+      right: 4px;
+      bottom: 10px;
+      border-top: 5px solid #0d7e4e;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      z-index: 2; }
 
 .dropMenu {
   -webkit-box-shadow: 1px 1px 2px 2px rgba(60, 60, 60, 0.3);
@@ -8245,6 +8272,9 @@ a.text-dark:focus, a.text-dark:hover {
   color: #565353; }
   .dropItem:hover, .dropItem:focus {
     color: #00a55e; }
+  .inputYear .dropItem {
+    font-size: 14px;
+    font-weight: 600; }
 
 .cardFlexIcon {
   position: absolute;
@@ -8860,11 +8890,6 @@ input::-moz-focus-outer {
     .inputGroupShort > .inputDate {
       font-size: 11px; } }
 
-.inputYear {
-  width: 130px;
-  font-weight: 500;
-  margin-top: -13px; }
-
 .calendarBtn {
   position: absolute;
   left: 90%;
@@ -8884,6 +8909,7 @@ input::-moz-focus-outer {
 
 .protectionTable {
   text-transform: uppercase;
+  font-size: 12.5px;
   font-weight: 600;
   width: 100%;
   margin-top: -10px;
