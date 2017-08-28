@@ -28,6 +28,13 @@ $lg: 1199px;
   -o-transition: $trans;
   transition: $trans;
 }
+@mixin crossTranform($trans) {
+  -webkit-transform: $trans;
+  -moz-transform: $trans;
+  -ms-transform: $trans;
+  -o-transform: $trans;
+  transform: $trans;
+}
 @mixin boxShadow($x, $y, $blur, $spread, $color) {
   -webkit-box-shadow: $x $y $blur $spread $color;
   -moz-box-shadow: $x $y $blur $spread $color;
@@ -333,6 +340,10 @@ $lg: 1199px;
     border-color: transparent;
     border-bottom: 2px solid $primary;
   }
+  &.inputYear {
+    position: relative;
+    margin-left: 0;
+  }
 }
 
 .dropDown {
@@ -367,6 +378,33 @@ $lg: 1199px;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
   }
+  .inputYear & {
+    width: 130px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: -13px;
+    padding-bottom: 4px;
+    text-align: left;
+    &::before {
+      position: absolute;
+      right: 4px;
+      bottom: 11px;
+      content: "";
+      border-top: 5px solid #fff;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      z-index: 3;
+    }
+    &::after {
+      position: absolute;
+      right: 4px;
+      bottom: 10px;
+      border-top: 5px solid #0d7e4e;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      z-index: 2;
+    }
+  }
 }
 
 .dropMenu {
@@ -384,6 +422,10 @@ $lg: 1199px;
   &:hover,
   &:focus {
     color: $primary;
+  }
+  .inputYear & {
+    font-size: 14px;
+    font-weight: 600;
   }
 }
 
@@ -799,10 +841,13 @@ $lg: 1199px;
 }
 
 .chapterIndex {
-  height: 100%;
+  height: 615px;
   position: relative;
   & .cardContent {
     margin-bottom: 20px;
+  }
+  @media screen and (max-width: $lg) {
+    height: 100%;
   }
 }
 
@@ -826,19 +871,12 @@ $lg: 1199px;
 
 .lessonActivity {
   padding: 42px 39px;
-  height: 100%;
+  height: 615px;
   @media screen and (max-width: $lg) {
     height: auto;
   }
   @media screen and (max-width: $md) {
     margin-top: 20px;
-  }
-  & .cardContent {
-    font-size: 13px;
-    @media screen and (max-width: $xs) {
-      padding: 21px 18px;
-      text-align: center;
-    }
   }
 }
 
@@ -848,6 +886,11 @@ $lg: 1199px;
     padding: 0;
     text-align: center;
   }
+}
+
+.lessonCol {
+  position: relative;
+  height: 443px;
 }
 
 .lessonTitle {
@@ -878,8 +921,41 @@ $lg: 1199px;
   }
 }
 
+.lessonContent {
+  @extend .cardContent;
+  position: absolute;
+  top: 80px;
+  height: 240px;
+  overflow: auto;
+  font-size: 13px;
+  @media screen and (max-width: $xs) {
+    padding: 21px 18px;
+    text-align: center;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: $primary;
+  }
+}
+
 .backBtn {
   @extend .btnStd;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
   width: 198px;
   background-color: transparent;
   font-weight: 700;
@@ -887,8 +963,7 @@ $lg: 1199px;
   border: 2px solid $primary;
   font-size: 17px;
   @include paddingY(10px);
-  margin-top: -10px;
-  margin-bottom: 13px;
+  @include crossTranform(translateX(-50%));
   &:hover,
   &:focus,
   &:active {
@@ -905,6 +980,9 @@ $lg: 1199px;
 }
 .planBtn {
   @extend .btnStd;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
   width: 198px;
   background-color: $primary;
   font-weight: 700;
@@ -912,6 +990,7 @@ $lg: 1199px;
   border: 2px solid $primary;
   font-size: 17px;
   @include paddingY(10px);
+  @include crossTranform(translateX(-50%));
   &:hover,
   &:focus,
   &:active {
@@ -1037,13 +1116,6 @@ $lg: 1199px;
   }
 }
 
-.inputYear {
-  @extend .inputCont;
-  width: 130px;
-  font-weight: 500;
-  margin-top: -13px;
-}
-
 .calendarBtn {
   position: absolute;
   left: 90%;
@@ -1059,6 +1131,7 @@ $lg: 1199px;
 
 .protectionTable {
   text-transform: uppercase;
+  font-size: 12.5px;
   font-weight: 600;
   width: 100%;
   margin-top: -10px;
@@ -1491,6 +1564,19 @@ $lg: 1199px;
   }
 }
 
+.filterBtn {
+  vertical-align: middle;
+  @include borderRadius(50%);
+  opacity: 0.4;
+  @include grayFilter(100%, 100%);
+}
+
+.filterLabel {
+  font-size: 13px;
+  vertical-align: -1px;
+  padding-left: 3px;
+}
+
 .highlight {
   font-size: 22px;
   color: $primary;
@@ -1788,17 +1874,14 @@ $lg: 1199px;
       padding: 3px 8px;
       color: #7d7c7c;
       background: #fff;
-      font-size: 11px;
+      font-size: 12.5px;
       @include borderRadius(4px);
       @include boxShadow(0, 0, 3px, 2px, #d6d6d6);
       @media screen and (max-width: 1400px) {
         font-size: 10px;
       }
       @media screen and (max-width: $md) {
-        font-size: 11px;
-      }
-      @media screen and (max-width: $sm) {
-        font-size: 11px;
+        font-size: 12.5px;
       }
       & tr {
         & td {
@@ -1915,9 +1998,28 @@ $lg: 1199px;
     & tbody {
       display: block;
       padding: 13px 0;
+      height: 200px;
+      overflow: auto;
       & tr {
         display: block;
         padding: 3px 11px;
+      }
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+      }
+
+      &::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: $primary;
       }
     }
   }

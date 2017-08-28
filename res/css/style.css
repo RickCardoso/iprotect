@@ -8162,12 +8162,12 @@ a.text-dark:focus, a.text-dark:hover {
   -o-box-shadow: inset 3px 0 0 0 #e20613;
   box-shadow: inset 3px 0 0 0 #e20613; }
 
-.cardContent, .learnContent {
+.cardContent, .learnContent, .lessonContent {
   position: relative;
   padding: 6px 24px 30px;
   text-align: left; }
 
-.inputStd, .dollarLabel, .assetList .percentLabel, .inputCont, .assetList .inputAlloc, .inputYear, .inputDate, .dropDown, .range-slider {
+.inputStd, .dollarLabel, .assetList .percentLabel, .inputCont, .assetList .inputAlloc, .inputDate, .dropDown, .range-slider {
   background: transparent;
   margin-top: -2px;
   padding: 0 4px 4px 7px;
@@ -8188,10 +8188,10 @@ a.text-dark:focus, a.text-dark:hover {
   font-weight: 700;
   color: #b2b2b2; }
 
-.inputCont, .assetList .inputAlloc, .inputYear, .inputDate {
+.inputCont, .assetList .inputAlloc, .inputDate {
   border-bottom: 1px solid #b2b2b2;
   color: #565353; }
-  .inputCont:hover, .assetList .inputAlloc:hover, .inputYear:hover, .inputDate:hover, .inputCont:focus, .assetList .inputAlloc:focus, .inputYear:focus, .inputDate:focus, .inputCont:active, .assetList .inputAlloc:active, .inputYear:active, .inputDate:active {
+  .inputCont:hover, .assetList .inputAlloc:hover, .inputDate:hover, .inputCont:focus, .assetList .inputAlloc:focus, .inputDate:focus, .inputCont:active, .assetList .inputAlloc:active, .inputDate:active {
     border-color: transparent;
     border-bottom: 1px solid #00a55e; }
 
@@ -8201,6 +8201,9 @@ a.text-dark:focus, a.text-dark:hover {
     background: transparent;
     border-color: transparent;
     border-bottom: 2px solid #00a55e; }
+  .dropDownGroup.inputYear {
+    position: relative;
+    margin-left: 0; }
 
 .dropDown {
   padding-top: 6px;
@@ -8228,6 +8231,30 @@ a.text-dark:focus, a.text-dark:hover {
     border-top: 5px solid #0d7e4e;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent; }
+  .inputYear .dropDown {
+    width: 130px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: -13px;
+    padding-bottom: 4px;
+    text-align: left; }
+    .inputYear .dropDown::before {
+      position: absolute;
+      right: 4px;
+      bottom: 11px;
+      content: "";
+      border-top: 5px solid #fff;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      z-index: 3; }
+    .inputYear .dropDown::after {
+      position: absolute;
+      right: 4px;
+      bottom: 10px;
+      border-top: 5px solid #0d7e4e;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      z-index: 2; }
 
 .dropMenu {
   -webkit-box-shadow: 1px 1px 2px 2px rgba(60, 60, 60, 0.3);
@@ -8245,6 +8272,9 @@ a.text-dark:focus, a.text-dark:hover {
   color: #565353; }
   .dropItem:hover, .dropItem:focus {
     color: #00a55e; }
+  .inputYear .dropItem {
+    font-size: 14px;
+    font-weight: 600; }
 
 .cardFlexIcon {
   position: absolute;
@@ -8600,10 +8630,13 @@ input::-moz-focus-outer {
     margin: -3px 15px; }
 
 .chapterIndex {
-  height: 100%;
+  height: 615px;
   position: relative; }
-  .chapterIndex .cardContent, .chapterIndex .learnContent {
+  .chapterIndex .cardContent, .chapterIndex .learnContent, .chapterIndex .lessonContent {
     margin-bottom: 20px; }
+  @media screen and (max-width: 1199px) {
+    .chapterIndex {
+      height: 100%; } }
 
 .chapterBox {
   display: block;
@@ -8622,19 +8655,13 @@ input::-moz-focus-outer {
 
 .lessonActivity {
   padding: 42px 39px;
-  height: 100%; }
+  height: 615px; }
   @media screen and (max-width: 1199px) {
     .lessonActivity {
       height: auto; } }
   @media screen and (max-width: 991px) {
     .lessonActivity {
       margin-top: 20px; } }
-  .lessonActivity .cardContent, .lessonActivity .learnContent {
-    font-size: 13px; }
-    @media screen and (max-width: 575px) {
-      .lessonActivity .cardContent, .lessonActivity .learnContent {
-        padding: 21px 18px;
-        text-align: center; } }
 
 .lessonVideo {
   padding-right: 9px; }
@@ -8642,6 +8669,10 @@ input::-moz-focus-outer {
     .lessonVideo {
       padding: 0;
       text-align: center; } }
+
+.lessonCol {
+  position: relative;
+  height: 443px; }
 
 .lessonTitle {
   text-transform: capitalize;
@@ -8667,7 +8698,32 @@ input::-moz-focus-outer {
       padding-left: 0;
       text-align: center; } }
 
+.lessonContent {
+  position: absolute;
+  top: 80px;
+  height: 240px;
+  overflow: auto;
+  font-size: 13px; }
+  @media screen and (max-width: 575px) {
+    .lessonContent {
+      padding: 21px 18px;
+      text-align: center; } }
+  .lessonContent::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5; }
+  .lessonContent::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5; }
+  .lessonContent::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #00a55e; }
+
 .backBtn {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
   width: 198px;
   background-color: transparent;
   font-weight: 700;
@@ -8676,8 +8732,11 @@ input::-moz-focus-outer {
   font-size: 17px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: -10px;
-  margin-bottom: 13px; }
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
   .backBtn:hover, .backBtn:focus, .backBtn:active {
     background-color: #00a55e;
     color: #fff; }
@@ -8690,6 +8749,9 @@ input::-moz-focus-outer {
       margin: 10px auto 10px; } }
 
 .planBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
   width: 198px;
   background-color: #00a55e;
   font-weight: 700;
@@ -8697,7 +8759,12 @@ input::-moz-focus-outer {
   border: 2px solid #00a55e;
   font-size: 17px;
   padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
   .planBtn:hover, .planBtn:focus, .planBtn:active {
     background-color: transparent;
     color: #00a55e; }
@@ -8823,11 +8890,6 @@ input::-moz-focus-outer {
     .inputGroupShort > .inputDate {
       font-size: 11px; } }
 
-.inputYear {
-  width: 130px;
-  font-weight: 500;
-  margin-top: -13px; }
-
 .calendarBtn {
   position: absolute;
   left: 90%;
@@ -8847,6 +8909,7 @@ input::-moz-focus-outer {
 
 .protectionTable {
   text-transform: uppercase;
+  font-size: 12.5px;
   font-weight: 600;
   width: 100%;
   margin-top: -10px;
@@ -9241,6 +9304,25 @@ input::-moz-focus-outer {
     .filter label input {
       margin-left: -20px; }
 
+.filterBtn {
+  vertical-align: middle;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  opacity: 0.4;
+  -webkit-filter: grayscale(100%) opacity(100%);
+  -moz-filter: grayscale(100%) opacity(100%);
+  -ms-filter: grayscale(100%) opacity(100%);
+  -o-filter: grayscale(100%) opacity(100%);
+  filter: grayscale(100%) opacity(100%); }
+
+.filterLabel {
+  font-size: 13px;
+  vertical-align: -1px;
+  padding-left: 3px; }
+
 .highlight {
   font-size: 22px;
   color: #00a55e;
@@ -9486,7 +9568,7 @@ input::-moz-focus-outer {
       padding: 3px 8px;
       color: #7d7c7c;
       background: #fff;
-      font-size: 11px;
+      font-size: 12.5px;
       -webkit-border-radius: 4px;
       -moz-border-radius: 4px;
       -ms-border-radius: 4px;
@@ -9502,10 +9584,7 @@ input::-moz-focus-outer {
           font-size: 10px; } }
       @media screen and (max-width: 991px) {
         .strategyCard .stratProtTable tbody, .strategyCard .stratUnprotTable tbody, .strategyCard .assetTable tbody, .strategyCard .assetTableProt tbody {
-          font-size: 11px; } }
-      @media screen and (max-width: 767px) {
-        .strategyCard .stratProtTable tbody, .strategyCard .stratUnprotTable tbody, .strategyCard .assetTable tbody, .strategyCard .assetTableProt tbody {
-          font-size: 11px; } }
+          font-size: 12.5px; } }
       .strategyCard .stratProtTable tbody tr td, .strategyCard .stratUnprotTable tbody tr td, .strategyCard .assetTable tbody tr td, .strategyCard .assetTableProt tbody tr td {
         padding: 8px 4px;
         text-align: left; }
@@ -9583,10 +9662,23 @@ input::-moz-focus-outer {
       border-bottom: 1px solid #d6d6d6; }
     .strategyCard .stratInvTable tbody {
       display: block;
-      padding: 13px 0; }
+      padding: 13px 0;
+      height: 200px;
+      overflow: auto; }
       .strategyCard .stratInvTable tbody tr {
         display: block;
         padding: 3px 11px; }
+      .strategyCard .stratInvTable tbody::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5; }
+      .strategyCard .stratInvTable tbody::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5; }
+      .strategyCard .stratInvTable tbody::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #00a55e; }
 
 .modalBox {
   text-align: center;

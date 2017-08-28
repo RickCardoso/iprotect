@@ -111,7 +111,8 @@ $(document).ready(function() {
   /* range slider - update label */
     // initiator
     $('.range-slider__range').each(function() {
-      $(this).parent().find('.range-slider__value').html($(this).val());
+    $(this).parent().find('.baseRange').html('$' + $(this).val() + 'k');
+    $(this).parent().find('.lockinRange').html($(this).val() + '%');
       $(this).parent().find('.range-slider__value').css('left', (2 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
       $(this).css('box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
       $(this).css('-o-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
@@ -127,8 +128,9 @@ $(document).ready(function() {
       var wid = $(this).width()
       var thumb = 17;
       var pos = (val - min) / (max - min);
-      $(this).parent().find('.range-slider__value').html(val);
-      $(this).parent().find('.range-slider__value').css('left', (5 + pos * (wid - thumb)) + 'px');
+      $(this).parent().find('.baseRange').html('$' + val + 'k');
+      $(this).parent().find('.lockinRange').html(val + '%');
+      $(this).parent().find('.range-slider__value').css('left', (2 + pos * (wid - thumb)) + 'px');
       $(this).css('box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
       $(this).css('-o-box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
       $(this).css('-ms-box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
@@ -139,7 +141,7 @@ $(document).ready(function() {
     $(window).resize(function() {
       $('.range-slider__range').each(function() {
         $(this).parent().find('.range-slider__value').html($(this).val());
-        $(this).parent().find('.range-slider__value').css('left', (5 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
+        $(this).parent().find('.range-slider__value').css('left', (2 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
         $(this).css('box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
         $(this).css('-o-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
         $(this).css('-ms-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
@@ -154,6 +156,53 @@ $(document).ready(function() {
         $('#furtherContent').slideDown();
       } else {
         $('#furtherContent').slideUp();
+      }
+    });
+
+  /* filter buttons */
+    $('.filterBtn').mouseenter(function() {
+      $(this).css({
+        '-webkit-filter': 'none',
+        '-moz-filter': 'none',
+        '-ms-filter': 'none',
+        '-o-filter': 'none',
+        'filter': 'none',
+        'background': '#fff'
+      });
+    });
+    $('.filterBtn').mouseleave(function() {
+      if ($(this).css('opacity') == 0.4) {
+        $(this).css({
+          '-webkit-filter': 'grayscale(100%)',
+          '-moz-filter': 'grayscale(100%)',
+          '-ms-filter': 'grayscale(100%)',
+          '-o-filter': 'grayscale(100%)',
+          'filter': 'grayscale(100%)',
+          'background': 'transparent'
+        });
+      }
+    });
+    $('.filterBtn').click(function() {
+      if ($(this).css('opacity') == 0.4) {
+        $(this).css({
+          'opacity': '1',
+          '-webkit-filter': 'none',
+          '-moz-filter': 'none',
+          '-ms-filter': 'none',
+          '-o-filter': 'none',
+          'filter': 'none',
+          'background': '#fff'
+        });
+      } else {
+        $(this).css({
+          'opacity': '0.4',
+          '-webkit-filter': 'none',
+          '-moz-filter': 'none',
+          '-ms-filter': 'none',
+          '-o-filter': 'none',
+          'filter': 'none',
+          'background': 'transparent'
+        });
       }
     });
 
