@@ -8162,7 +8162,7 @@ a.text-dark:focus, a.text-dark:hover {
   -o-box-shadow: inset 3px 0 0 0 #e20613;
   box-shadow: inset 3px 0 0 0 #e20613; }
 
-.cardContent, .learnContent {
+.cardContent, .learnContent, .lessonContent {
   position: relative;
   padding: 6px 24px 30px;
   text-align: left; }
@@ -8600,10 +8600,13 @@ input::-moz-focus-outer {
     margin: -3px 15px; }
 
 .chapterIndex {
-  height: 100%;
+  height: 615px;
   position: relative; }
-  .chapterIndex .cardContent, .chapterIndex .learnContent {
+  .chapterIndex .cardContent, .chapterIndex .learnContent, .chapterIndex .lessonContent {
     margin-bottom: 20px; }
+  @media screen and (max-width: 1199px) {
+    .chapterIndex {
+      height: 100%; } }
 
 .chapterBox {
   display: block;
@@ -8622,19 +8625,13 @@ input::-moz-focus-outer {
 
 .lessonActivity {
   padding: 42px 39px;
-  height: 100%; }
+  height: 615px; }
   @media screen and (max-width: 1199px) {
     .lessonActivity {
       height: auto; } }
   @media screen and (max-width: 991px) {
     .lessonActivity {
       margin-top: 20px; } }
-  .lessonActivity .cardContent, .lessonActivity .learnContent {
-    font-size: 13px; }
-    @media screen and (max-width: 575px) {
-      .lessonActivity .cardContent, .lessonActivity .learnContent {
-        padding: 21px 18px;
-        text-align: center; } }
 
 .lessonVideo {
   padding-right: 9px; }
@@ -8642,6 +8639,10 @@ input::-moz-focus-outer {
     .lessonVideo {
       padding: 0;
       text-align: center; } }
+
+.lessonCol {
+  position: relative;
+  height: 443px; }
 
 .lessonTitle {
   text-transform: capitalize;
@@ -8667,7 +8668,32 @@ input::-moz-focus-outer {
       padding-left: 0;
       text-align: center; } }
 
+.lessonContent {
+  position: absolute;
+  top: 80px;
+  height: 240px;
+  overflow: auto;
+  font-size: 13px; }
+  @media screen and (max-width: 575px) {
+    .lessonContent {
+      padding: 21px 18px;
+      text-align: center; } }
+  .lessonContent::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5; }
+  .lessonContent::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5; }
+  .lessonContent::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #00a55e; }
+
 .backBtn {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
   width: 198px;
   background-color: transparent;
   font-weight: 700;
@@ -8676,8 +8702,11 @@ input::-moz-focus-outer {
   font-size: 17px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: -10px;
-  margin-bottom: 13px; }
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
   .backBtn:hover, .backBtn:focus, .backBtn:active {
     background-color: #00a55e;
     color: #fff; }
@@ -8690,6 +8719,9 @@ input::-moz-focus-outer {
       margin: 10px auto 10px; } }
 
 .planBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
   width: 198px;
   background-color: #00a55e;
   font-weight: 700;
@@ -8697,7 +8729,12 @@ input::-moz-focus-outer {
   border: 2px solid #00a55e;
   font-size: 17px;
   padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
   .planBtn:hover, .planBtn:focus, .planBtn:active {
     background-color: transparent;
     color: #00a55e; }
