@@ -130,7 +130,7 @@ $(document).ready(function() {
       var pos = (val - min) / (max - min);
       $(this).parent().find('.baseRange').html('$' + val + 'k');
       $(this).parent().find('.lockinRange').html(val + '%');
-      $(this).parent().find('.range-slider__value').css('left', (5 + pos * (wid - thumb)) + 'px');
+      $(this).parent().find('.range-slider__value').css('left', (2 + pos * (wid - thumb)) + 'px');
       $(this).css('box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
       $(this).css('-o-box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
       $(this).css('-ms-box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
@@ -141,7 +141,7 @@ $(document).ready(function() {
     $(window).resize(function() {
       $('.range-slider__range').each(function() {
         $(this).parent().find('.range-slider__value').html($(this).val());
-        $(this).parent().find('.range-slider__value').css('left', (5 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
+        $(this).parent().find('.range-slider__value').css('left', (2 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
         $(this).css('box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
         $(this).css('-o-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
         $(this).css('-ms-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');

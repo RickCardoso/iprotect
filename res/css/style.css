@@ -9568,7 +9568,7 @@ input::-moz-focus-outer {
       padding: 3px 8px;
       color: #7d7c7c;
       background: #fff;
-      font-size: 11px;
+      font-size: 12.5px;
       -webkit-border-radius: 4px;
       -moz-border-radius: 4px;
       -ms-border-radius: 4px;
@@ -9584,10 +9584,7 @@ input::-moz-focus-outer {
           font-size: 10px; } }
       @media screen and (max-width: 991px) {
         .strategyCard .stratProtTable tbody, .strategyCard .stratUnprotTable tbody, .strategyCard .assetTable tbody, .strategyCard .assetTableProt tbody {
-          font-size: 11px; } }
-      @media screen and (max-width: 767px) {
-        .strategyCard .stratProtTable tbody, .strategyCard .stratUnprotTable tbody, .strategyCard .assetTable tbody, .strategyCard .assetTableProt tbody {
-          font-size: 11px; } }
+          font-size: 12.5px; } }
       .strategyCard .stratProtTable tbody tr td, .strategyCard .stratUnprotTable tbody tr td, .strategyCard .assetTable tbody tr td, .strategyCard .assetTableProt tbody tr td {
         padding: 8px 4px;
         text-align: left; }
@@ -9665,10 +9662,23 @@ input::-moz-focus-outer {
       border-bottom: 1px solid #d6d6d6; }
     .strategyCard .stratInvTable tbody {
       display: block;
-      padding: 13px 0; }
+      padding: 13px 0;
+      height: 200px;
+      overflow: auto; }
       .strategyCard .stratInvTable tbody tr {
         display: block;
         padding: 3px 11px; }
+      .strategyCard .stratInvTable tbody::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5; }
+      .strategyCard .stratInvTable tbody::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5; }
+      .strategyCard .stratInvTable tbody::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #00a55e; }
 
 .modalBox {
   text-align: center;

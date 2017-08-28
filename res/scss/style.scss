@@ -1874,17 +1874,14 @@ $lg: 1199px;
       padding: 3px 8px;
       color: #7d7c7c;
       background: #fff;
-      font-size: 11px;
+      font-size: 12.5px;
       @include borderRadius(4px);
       @include boxShadow(0, 0, 3px, 2px, #d6d6d6);
       @media screen and (max-width: 1400px) {
         font-size: 10px;
       }
       @media screen and (max-width: $md) {
-        font-size: 11px;
-      }
-      @media screen and (max-width: $sm) {
-        font-size: 11px;
+        font-size: 12.5px;
       }
       & tr {
         & td {
@@ -2001,9 +1998,28 @@ $lg: 1199px;
     & tbody {
       display: block;
       padding: 13px 0;
+      height: 200px;
+      overflow: auto;
       & tr {
         display: block;
         padding: 3px 11px;
+      }
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+      }
+
+      &::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: $primary;
       }
     }
   }
