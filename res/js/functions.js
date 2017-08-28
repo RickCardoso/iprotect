@@ -111,7 +111,8 @@ $(document).ready(function() {
   /* range slider - update label */
     // initiator
     $('.range-slider__range').each(function() {
-      $(this).parent().find('.range-slider__value').html($(this).val());
+    $(this).parent().find('.baseRange').html('$' + $(this).val() + 'k');
+    $(this).parent().find('.lockinRange').html($(this).val() + '%');
       $(this).parent().find('.range-slider__value').css('left', (2 + ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min')) * ($(this).width() - 17)) + 'px');
       $(this).css('box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
       $(this).css('-o-box-shadow', 'inset ' + Math.floor($(this).width() * ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'))).toString() + 'px 0 0 0 #00a55e');
@@ -127,7 +128,8 @@ $(document).ready(function() {
       var wid = $(this).width()
       var thumb = 17;
       var pos = (val - min) / (max - min);
-      $(this).parent().find('.range-slider__value').html(val);
+      $(this).parent().find('.baseRange').html('$' + val + 'k');
+      $(this).parent().find('.lockinRange').html(val + '%');
       $(this).parent().find('.range-slider__value').css('left', (5 + pos * (wid - thumb)) + 'px');
       $(this).css('box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
       $(this).css('-o-box-shadow', 'inset ' + Math.floor(wid * pos).toString() + 'px 0 0 0 #00a55e');
