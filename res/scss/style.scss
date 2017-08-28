@@ -1564,6 +1564,19 @@ $lg: 1199px;
   }
 }
 
+.filterBtn {
+  vertical-align: middle;
+  @include borderRadius(50%);
+  opacity: 0.4;
+  @include grayFilter(100%, 100%);
+}
+
+.filterLabel {
+  font-size: 13px;
+  vertical-align: -1px;
+  padding-left: 3px;
+}
+
 .highlight {
   font-size: 22px;
   color: $primary;

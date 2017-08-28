@@ -159,4 +159,51 @@ $(document).ready(function() {
       }
     });
 
+  /* filter buttons */
+    $('.filterBtn').mouseenter(function() {
+      $(this).css({
+        '-webkit-filter': 'none',
+        '-moz-filter': 'none',
+        '-ms-filter': 'none',
+        '-o-filter': 'none',
+        'filter': 'none',
+        'background': '#fff'
+      });
+    });
+    $('.filterBtn').mouseleave(function() {
+      if ($(this).css('opacity') == 0.4) {
+        $(this).css({
+          '-webkit-filter': 'grayscale(100%)',
+          '-moz-filter': 'grayscale(100%)',
+          '-ms-filter': 'grayscale(100%)',
+          '-o-filter': 'grayscale(100%)',
+          'filter': 'grayscale(100%)',
+          'background': 'transparent'
+        });
+      }
+    });
+    $('.filterBtn').click(function() {
+      if ($(this).css('opacity') == 0.4) {
+        $(this).css({
+          'opacity': '1',
+          '-webkit-filter': 'none',
+          '-moz-filter': 'none',
+          '-ms-filter': 'none',
+          '-o-filter': 'none',
+          'filter': 'none',
+          'background': '#fff'
+        });
+      } else {
+        $(this).css({
+          'opacity': '0.4',
+          '-webkit-filter': 'none',
+          '-moz-filter': 'none',
+          '-ms-filter': 'none',
+          '-o-filter': 'none',
+          'filter': 'none',
+          'background': 'transparent'
+        });
+      }
+    });
+
 });
